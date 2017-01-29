@@ -115,7 +115,8 @@ html, body {
           position: absolute;
           left: 50%;
           height: 45px;
-          transform: translate(-50%); } }
+          transform: translate(-50%);
+          white-space: nowrap; } }
       .footer .social-media-links > ul > li {
         list-style: none;
         height: inherit; }
