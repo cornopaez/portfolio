@@ -1,0 +1,85 @@
+// Header at full resolution
+.header {
+	background: $header-dark-brown;
+	margin: 0;
+	border: 0;
+	min-height: 45px;
+	border-radius: 0;
+
+	.container-fluid {
+		@media screen and (min-width: 768px) {
+			padding: 0;
+		}
+
+		.navbar-header {
+			.toggle-button-right {
+				@extend %position-absolute;
+				right: 15px;
+				top: 7px;
+				background-color: transparent;
+				border-color: $color-white;
+				margin: 0;
+				
+				.icon-line {
+					background-color: $color-white;
+				}
+			}
+
+			> a {
+				&.navbar-brand {
+					@extend %full-height;
+					display: inline-block;
+					letter-spacing: 1.5px;
+					margin-left: 15px;
+					color: $color-white;
+					padding: 14px 0;
+
+					@media screen and (max-width: 320px) {
+						@include font-properties("Raleway",25px);
+					}
+
+					@media screen and (min-width: 768px) {
+						@include font-properties("Raleway",32px);
+					}
+				}
+			}
+		}
+	}
+
+	.link-container {
+		@media screen and (min-width: 320px) {
+			border-top: 1px solid $color-white;
+		}
+
+		@media screen and (min-width: 768px) {
+			border-top: 0;
+		}
+		//Pills on the right hand side 
+		.main-links {
+			@extend %full-height;
+			@media screen and (min-width: 768px) {
+				position: absolute;
+				right: 0;
+				border: 0;
+				margin: 0;
+			}
+
+			.list-item {
+				@extend %full-height;
+
+				> a {
+					@extend %full-height;
+					border-radius: 0px;
+					color: $color-white;
+					// height: inherit;
+					@include font-properties("Raleway", 17px, 200);
+					letter-spacing: 0.5px;
+
+					&:hover {
+						background: $header-lighter-brown;
+					}
+				}
+			}
+		}
+	}
+}

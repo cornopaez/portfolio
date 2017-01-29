@@ -1,0 +1,74 @@
+// Footer
+.footer {
+	@extend %position-relative;
+	background: $footer-orange;
+	min-height: 45px;
+	text-align: center;
+
+	.social-media-links {
+		margin: 0;
+		min-height: 45px;
+		border: 0;
+
+		> ul {
+			margin-bottom: 0;
+			padding: 0;
+			@media screen and (min-width: 768px) {
+				position: absolute;
+				left: 50%;
+				height: 45px;
+				transform: translate(-50%);
+			}
+
+			> li {
+				@extend %full-height;
+				@media screen and (min-width: 768px) {
+					display: inline-block;
+					margin-top: 0;
+				}
+				list-style: none;
+				height: inherit;
+
+				> a {
+					display: block;
+					border-radius: 0;
+					text-decoration: none;
+					color: $color-white;
+					height: inherit;
+					@include font-properties("Raleway", 17px, 300);
+					padding: 10px 15px;
+
+					&:hover {
+						background: $footer-light-orange;
+					}
+				}
+			}
+		}
+	}
+
+	.footnotes-for-page-content {
+		margin: 0;
+		padding: 10px 0;
+		color: $color-light-gray-1;
+		border-bottom: 1px solid $color-light-gray-1;
+
+		> ol {
+			font-size: 12px;
+			text-align: left;
+			margin: 0;
+			padding: 0 60px;
+
+			> li {
+				> a {
+					text-decoration: none;
+					color: $color-light-gray-2;
+
+					&:hover {
+						text-decoration: underline;
+						color: $color-light-gray-1;
+					}
+				}
+			}
+		}
+	}
+}

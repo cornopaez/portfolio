@@ -1,0 +1,53 @@
+//Font Properties
+@mixin font-properties($family, $size: 17px, $weight: 200) {
+	font: {
+		family: $family;
+		size: $size;
+		weight: $weight;
+	}
+}
+
+@mixin icon-size($size: 3.5em) {
+	.devicon-html5-plain-wordmark,
+	.devicon-css3-plain-wordmark,
+	.devicon-sass-original,
+	.devicon-javascript-plain,
+	.devicon-jquery-plain-wordmark,
+	.devicon-angularjs-plain,
+	.devicon-bootstrap-plain-wordmark,
+	.devicon-java-plain,
+	.fa-database {
+
+		@media screen and (min-width: 320px) {
+			font-size: $size;
+		}
+
+		@media screen and (min-width: 768px) {
+			font-size: $size + 0.5em;
+		}
+	}
+}
+
+%base {
+	padding: 0;
+	margin: 0;
+	background: $color-white;
+}
+
+%position-relative {
+	position: relative;
+}
+
+%position-absolute {
+	position: absolute;
+}
+
+%full-height {
+	height: 100%;
+}
+
+%center-of-container {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
