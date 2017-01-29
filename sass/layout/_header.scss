@@ -45,12 +45,16 @@
 					color: $color-white;
 					padding: 14px 0;
 
-					@media screen and (max-width: 320px) {
-						@include font-properties("Raleway",25px);
+					@media screen and (min-width: 320px) {
+						@include font-properties("Raleway",25px, 200);
+					}
+
+					@media screen and (min-width: 375px) {
+						@include font-properties("Raleway",28px, 200);
 					}
 
 					@media screen and (min-width: 768px) {
-						@include font-properties("Raleway",32px);
+						@include font-properties("Raleway",32px, 200);
 					}
 				}
 			}
@@ -68,12 +72,12 @@
 
 		//Pills on the right hand side 
 		.main-links {
-			@extend %full-height;
 			@media screen and (min-width: 768px) {
 				position: absolute;
 				right: 0;
 				border: 0;
 				margin: 0;
+				height: 100%;
 			}
 
 			@media screen and (min-width: 1440px) {
@@ -85,11 +89,14 @@
 			}
 
 			.list-item {
-				@extend %full-height;
-				display: inline-block;
+				@media screen and (min-width: 768px) {
+					height: 100%;
+				}
 
 				> a {
-					@extend %full-height;
+					@media screen and (min-width: 768px) {
+						height: 100%;
+					}
 					border-radius: 0px;
 					color: $color-white;
 					// height: inherit;
