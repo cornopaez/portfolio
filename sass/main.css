@@ -138,8 +138,8 @@ html, body {
   .footer .footnotes-for-page-content {
     margin: 0;
     padding: 10px 0;
-    color: #999;
-    border-bottom: 1px solid #999; }
+    color: #fff;
+    border-bottom: 1px solid #fff; }
     .footer .footnotes-for-page-content > ol {
       font-size: 12px;
       text-align: left;
@@ -147,10 +147,10 @@ html, body {
       padding: 0 60px; }
       .footer .footnotes-for-page-content > ol > li > a {
         text-decoration: none;
-        color: #D6D6D6; }
+        color: #fff; }
         .footer .footnotes-for-page-content > ol > li > a:hover {
           text-decoration: underline;
-          color: #999; }
+          color: #fff; }
 
 body {
   font-family: "Open Sans", sans-serif;
