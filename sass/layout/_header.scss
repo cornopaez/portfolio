@@ -29,6 +29,17 @@
 				&.navbar-brand {
 					@extend %full-height;
 					display: inline-block;
+
+					@media screen and (min-width: 1440px) {
+						position: absolute;
+						left: 15%;
+					}
+
+					@media screen and (min-width: 2000px) {
+						position: absolute;
+						left: 25%;
+					}
+
 					letter-spacing: 1.5px;
 					margin-left: 15px;
 					color: $color-white;
@@ -54,6 +65,7 @@
 		@media screen and (min-width: 768px) {
 			border-top: 0;
 		}
+
 		//Pills on the right hand side 
 		.main-links {
 			@extend %full-height;
@@ -64,8 +76,17 @@
 				margin: 0;
 			}
 
+			@media screen and (min-width: 1440px) {
+				right: 15%;
+			}
+
+			@media screen and (min-width: 2000px) {
+				right: 25%;
+			}
+
 			.list-item {
 				@extend %full-height;
+				display: inline-block;
 
 				> a {
 					@extend %full-height;

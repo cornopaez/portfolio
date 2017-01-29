@@ -41,6 +41,14 @@ html, body {
     margin-left: 15px;
     color: #fff;
     padding: 14px 0; }
+    @media screen and (min-width: 1440px) {
+      .header .container-fluid .navbar-header > a.navbar-brand {
+        position: absolute;
+        left: 15%; } }
+    @media screen and (min-width: 2000px) {
+      .header .container-fluid .navbar-header > a.navbar-brand {
+        position: absolute;
+        left: 25%; } }
     @media screen and (max-width: 320px) {
       .header .container-fluid .navbar-header > a.navbar-brand {
         font-family: "Raleway";
@@ -63,15 +71,23 @@ html, body {
       right: 0;
       border: 0;
       margin: 0; } }
-  .header .link-container .main-links .list-item > a {
-    border-radius: 0px;
-    color: #fff;
-    font-family: "Raleway";
-    font-size: 17px;
-    font-weight: 200;
-    letter-spacing: 0.5px; }
-    .header .link-container .main-links .list-item > a:hover {
-      background: #5e4f4d; }
+  @media screen and (min-width: 1440px) {
+    .header .link-container .main-links {
+      right: 15%; } }
+  @media screen and (min-width: 2000px) {
+    .header .link-container .main-links {
+      right: 25%; } }
+  .header .link-container .main-links .list-item {
+    display: inline-block; }
+    .header .link-container .main-links .list-item > a {
+      border-radius: 0px;
+      color: #fff;
+      font-family: "Raleway";
+      font-size: 17px;
+      font-weight: 200;
+      letter-spacing: 0.5px; }
+      .header .link-container .main-links .list-item > a:hover {
+        background: #5e4f4d; }
 
 .footer {
   background: #cd5510;
