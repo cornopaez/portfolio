@@ -1,0 +1,34 @@
+body {
+	// font-size: 16px;
+}
+
+.main-content {
+	max-width: 800px;
+
+	.row {
+		.adventure-text {
+			height: 500px;
+			border: 1px solid black;
+		}
+
+		.main-form {
+			.input-wrap {
+				padding: 0;
+
+				.user-input {
+					width: 100%;
+					border-radius: 0;
+				}
+			}
+
+			.button-wrap {
+				padding: 0;
+
+				.user-button {
+					width: 100%;
+					border-radius: 0;
+				}
+			}
+		}
+	}
+}

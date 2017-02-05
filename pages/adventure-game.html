@@ -2,14 +2,32 @@
 <html>
 <head>
 	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../sass/main.css">
 	<link rel="icon" type="image/png" href="../img/favicon.ico" sizes="32x32" />
-	<title>Mauricio_P&aacuteez | Adventure Game</title>
+	<title>Mauricio_P&aacuteez | Murders in the Rue Morgue</title>
 </head>
 <body>
-
+	<div class="main-content container">
+		<div class="row">
+			<div class="adventure-text col-md-12">
+				<!-- Adventure text -->
+			</div>
+		</div>
+		<div class="row">
+			<form class="main-form" >
+				<div class="col-sm-10 input-wrap">
+					<input type="input" class="user-input form-control" name="user-input" placeholder="What's next?">
+				</div>
+				<div class="col-sm-2 button-wrap"> 
+					<button type="submit" class="user-button btn btn-primary">Enter</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	
 <!-- Script Import -->
-	<script type="text/javascript" src="../js/adventure-game/controller/controller.js"></script>
 	<script type="text/javascript" src="../js/adventure-game/model/model.js"></script>
+	<script type="text/javascript" src="../js/adventure-game/controller/controller.js"></script>
 </body>
 </html>
