@@ -43,4 +43,4 @@ Credits
 
 - Built by: Mauricio Paez, 2017  
 - Written and adapted by: Elizabeth Paez, 2017  
-- Original story by: Edgar Alan Poe
+- Original story by: Edgar Allan Poe
