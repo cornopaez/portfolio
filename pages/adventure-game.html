@@ -11,22 +11,43 @@
 	<div class="main-content container">
 		<div class="row">
 			<div class="adventure-text col-md-12">
-				<!-- Adventure text -->
+				<h1>
+					Murders in the Rue Morgue
+				</h1>
+				<span class="breadcrums"></span>
+				<span class="welcome-text">
+					<p>
+						Welcome! In this game you are trying to solved the mysterious murders in the Rue Morgue. You are a detective, very much the Sherlock Holmes-type. You are accompanied by your friend, who will occationally aid you when your lost. <br>
+						<br>
+						Here are the basic rules: <br>
+						<ul>
+							<li>Use "Go to", "look at", "inspect" and "talk to" to perform actions on the world's items/people or move around the world.</li>
+							<li>Collect all the necessary clues to solved the mystery. You collect them by perfoming certain actions on the items that hold the clues.</li>
+							<li>Once you're ready to solve the mystery, type "Solve Mystery"</li>
+							<li><em><strong>Beware!</strong></em> You get 2 strikes on trying to solve the mystery before gathering all the necessary clues. At the third one, you lose!</li>
+						</ul>
+						<br>
+						Once you're ready to start the game, type "Start" in the box below. <br>
+						<br>
+						<span>Good luck!</span>
+					</p>
+				</span>
 			</div>
 		</div>
 		<div class="row">
-			<form class="main-form" >
-				<div class="col-sm-10 input-wrap">
+			<form class="main-form">
+				<div class="col-xs-10 input-wrap">
 					<input type="input" class="user-input form-control" name="user-input" placeholder="What's next?">
 				</div>
-				<div class="col-sm-2 button-wrap"> 
-					<button type="submit" class="user-button btn btn-primary">Enter</button>
+				<div class="col-xs-2 button-wrap"> 
+					<input type="button" class="user-button btn btn-primary" value="Enter">
 				</div>
 			</form>
 		</div>
 	</div>
-	
+
 <!-- Script Import -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/adventure-game/model/model.js"></script>
 	<script type="text/javascript" src="../js/adventure-game/controller/controller.js"></script>
 </body>
