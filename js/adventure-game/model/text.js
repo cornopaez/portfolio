@@ -1,5 +1,5 @@
 //This file contains all text variables necessary to run the game.
-var start_warning = "You have already started the game! Try a different command next time."
+var start_warning = "Don't be silly, you- The game has already started!"
 
 var introduction = "<p>"
 + "One morning, in the heat of the Paris summer, we read in the newspaper about a terrible killing. An old woman and her daughter, who had lived alone in an old house "
