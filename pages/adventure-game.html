@@ -14,7 +14,7 @@
 				<h1>
 					Murders in the Rue Morgue
 				</h1>
-				<span class="breadcrums"></span>
+				<h3 class="breadcrums"></h3>
 				<span class="welcome-text">
 					<p>
 						Welcome! In this game you are trying to solved the mysterious murders in the Rue Morgue. You are a detective, very much the Sherlock Holmes-type. You are accompanied by your friend, who will occationally aid you when your lost. <br>
@@ -32,22 +32,22 @@
 						<span>Good luck!</span>
 					</p>
 				</span>
+				<div class="game-content"></div>
 			</div>
 		</div>
 		<div class="row">
-			<form class="main-form">
-				<div class="col-xs-10 input-wrap">
-					<input type="input" class="user-input form-control" name="user-input" placeholder="What's next?">
-				</div>
-				<div class="col-xs-2 button-wrap"> 
-					<input type="button" class="user-button btn btn-primary" value="Enter">
-				</div>
-			</form>
+			<div class="col-xs-10 input-wrap">
+				<input type="input" class="user-input form-control" name="user-input" placeholder="What's next?" autocomplete="off">
+			</div>
+			<div class="col-xs-2 button-wrap"> 
+				<input type="button" class="user-button btn btn-primary" value="Enter">
+			</div>
 		</div>
 	</div>
 
 <!-- Script Import -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/adventure-game/model/text.js"></script>
 	<script type="text/javascript" src="../js/adventure-game/model/model.js"></script>
 	<script type="text/javascript" src="../js/adventure-game/controller/controller.js"></script>
 </body>

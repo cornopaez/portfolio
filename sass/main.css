@@ -403,17 +403,17 @@ body {
 
 .main-content {
   max-width: 800px; }
-  .main-content .row .main-form .input-wrap {
+  .main-content .row .input-wrap {
     padding: 0; }
-    .main-content .row .main-form .input-wrap .user-input {
+    .main-content .row .input-wrap .user-input {
       width: 100%;
-      height: 6vh;
+      height: 45px;
       border-radius: 0; }
-  .main-content .row .main-form .button-wrap {
+  .main-content .row .button-wrap {
     padding: 0; }
-    .main-content .row .main-form .button-wrap .user-button {
+    .main-content .row .button-wrap .user-button {
       width: 100%;
-      height: 6vh;
+      height: 45px;
       border-radius: 0; }
 
 /*# sourceMappingURL=main.css.map */
