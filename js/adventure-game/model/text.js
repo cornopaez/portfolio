@@ -1,5 +1,12 @@
 //This file contains all text variables necessary to run the game.
+
+/*General text variables
+-------------------------------------------------------*/
 var start_warning = "Don't be silly, you- The game has already started!";
+
+var going_outside = "<p>Good idea. Let\'s have some fresh air.</p>";
+
+var already_outside = "<p>We\'re already outside.</p>";
 
 var location_error = "<p>I can\'t do that from here.</p>"
 
@@ -44,6 +51,18 @@ var house_start = "<p id=\"house\">Sounds like fun. I\'ll get my coat.</p>"
 +	"<br>"
 +"</p>";
 
+/*Street
+---------------------------------------------------*/
+
+var street_start = "<h3>The Neighborhood</h3>"
++ "<p>We walk around the house. We note a long, thin metal pole which went from the top of the building to the ground \- a lightning rod, put there to carry down "
++ "to the ground a charge of electricity that might come out of the clouds during a bad summer storm. This could be a possible way for someone to go up or down the wall, "
++ "and then to go in or out the window. </p>"
++ "<p>No other buildings are close to the house where the murder occurred. People still mill around gossiping about the murder. Several neighbors are still in the street.</p>"
++ "<p>\"Now what?\"</p>";
+
+var rod_response = "<p>\"Iron, I guess. Though I do not know if I would be able to climb it going up or down.\"</p>";
+
 /*Apartment
 ---------------------------------------------------*/
 
@@ -81,8 +100,7 @@ var interview_start = "<p>Looks like they have stuck around. Let\'s see who is h
 +	"<li>Passers By</li>"
 + "</ul>"
 
-var police_response = "<h4>Isidore Muset, A Policeman</h4>"
-+ "<p>Isidore Muset, a policeman, says that he was with the group that first entered the house. While he was going up the stairs he heard two voices, one low "
+var police_response = "<p>Isidore Muset, a policeman, says that he was with the group that first entered the house. While he was going up the stairs he heard two voices, one low "
 + "and soft, and one hard, high, and very strange \- the voice of someone who was certainly not French, the voice of a foreigner. Spanish perhaps. It was not a " 
 + "woman\'s voice. He could not understand what it said. But the low voice, the softer voice, said, in French, \“My God!\” the room where the daughter\'s body "
 + "was found was locked on the inside.</p>"
@@ -91,24 +109,19 @@ var police_response = "<h4>Isidore Muset, A Policeman</h4>"
 + "escaped through them. It took four or five people to pull the daughter\'s body out of the opening over the fireplace. A careful search was made through the "
 + "whole house. It was four or five minutes from the time they heard the voices to the moment they forced open the door of the room.</p>";
 
-var acquaintance_response = "<h4>Pauline Dubourg, A Washwoman</h4>"
-+ "<p>Pauline Dubourg, a washwoman, says she has known both of the dead women for more than three years, and has washed their clothes during that period. "
+var acquaintance_response ="<p>Pauline Dubourg, a washwoman, says she has known both of the dead women for more than three years, and has washed their clothes during that period. "
 + "The old lady and her daughter seemed to love each other dearly. They always paid her well. She did not know where their money came from, she said. She "
 + "never met anyone in the house. Only the two women lived on the fourth floor.  Almost no one ever went into the house and Mrs. L\'Espanaye and her daughter "
 + "were not often seen.</p>"
-+ "<h4>Pierre Moreau, A Shopkeeper</h4>"
 + "<p>Pierre Moreau, a shopkeeper, says Mrs. L\'Espanaye had bought food at his shop for nearly four years. She owned the house and had lived in it for more "
 + "than six years. People said they had money. He never saw anyone enter the door except the old lady and her daughter, and a doctor eight or ten times, perhaps.</p>"
-+ "<h4>Jules Mignaud, A Banker</h4>"
 + "<p>Jules Mignaud, a banker, says that Mrs. L\'Espanaye had put money in his bank, beginning eight years before. Three days before her death she took out of "
 + "the bank a large amount of money, in gold. A man from the bank carried it for her to her house.</p>";
-var neighbor_response = "<h4>Alfonso Garcia, A Neighbor</h4>"
-+ "<p>Alfonso Garcia, who is Spanish and lives on the Rue Morgue, says he entered the house but did not go up the stairs; he is nervous and he was afraid he "
+var neighbor_response = "<p>Alfonso Garcia, who is Spanish and lives on the Rue Morgue, says he entered the house but did not go up the stairs; he is nervous and he was afraid he "
 + "might be ill. He heard the voices. He believes the high voice was not that of a Frenchman. Perhaps it was English; but he doesn’t understand English, so he "
 + "is not sure.</p>";
 
-var passerby_response = "<h4>Willliam Bird and Alberto Montani , Passersby</h4>"
-+ "<p>William Bird, another foreigner, an Englishman, says he was one of the persons who entered the house. He has lived in Paris for two years. He heard the "
+var passerby_response = "<p>William Bird, another foreigner, an Englishman, says he was one of the persons who entered the house. He has lived in Paris for two years. He heard the "
 + "voices. The low voice was that of a Frenchman, he was sure, because he heard it say, in French, \“My God!\” The high voice was very loud. He is sure it was "
 + "not the voice of an Englishman, nor the voice of a Frenchman. It seemed to be that of an Italian. It might have been a woman\'s voice. He does not "
 + "understand Italian.</p>"
@@ -121,7 +134,7 @@ var passerby_response = "<h4>Willliam Bird and Alberto Montani , Passersby</h4>"
 
 var scene_start = "<h3>Inspect the Bodies</h3>"
 + "<p>We meet with the doctor, Paul Dumas, first.</p>"
-+ "<p>Doctor Dumas says, \“I was called to see the bodies soon after they were found. They were in a horrible condition, badly marked and broken. Such results "
++ "<p>Doctor Dumas says, \"I was called to see the bodies soon after they were found. They were in a horrible condition, badly marked and broken. Such results "
 + "could not have come from a woman\'s hands, only from those of a very powerful man. The daughter had been killed by strong hands around her neck.\"</p>"
 + "<p>The good doctor is kind enough to let us inspect the bodies for ourselves.</p>"
 + "<p>\"Which body should we inspect first?\"</p>";
@@ -137,3 +150,42 @@ var daughter_response = "<h4>The Daughter</h4>"
 + "how the murderer could have gotten her up there on his own.\"</p>"
 + "<p>There was blood on the face, and on the neck there were dark, deep marks which seemed to have been made by strong fingers. The doctor provides us with "
 + "a picture of the marks on the daughter's neck. The hand marks are larger than both of our hands.</p>";
+
+/*Dicover the Escape route
+-----------------------------------------------------*/
+
+var escape_start = "<h3>Discover the Escape Route</h3>"
++ "<p>It is clear that the killers were in the room where the daughter was found. Though, it had been necessary for the neighbors to break down the door in "
++ "order to enter the room. There was no other door. From this room they must have escaped. The only available exits were the locked door, the chimney, and "
++ "the two windows. One window is easily seen. The other window is partly out of sight behind the big bed. </p>"
++ "<p>\"Let us look, one at a time, at the possible ways to escape. Which should we check first?\"</p>";
+
+var door_response = "<h4>The Door</h4>"
++ "<p>\"The door was firmly closed and locked from the inside. The key is in the room. You can see the forced entry by the neighbors.\"</p>";
+
+var chimney_response = "<h4>Chimney</h4>"
++ "<p>The opening above the fireplace is not big enough, near the top, for even a small animal.</p>"
++ "<p>Plus the daughter was stuffed up the fireplace already.</p>";
+
+var visible_window_response = "<h4>Visible Window</h4>"
++ "<p>It is firmly closed, fastened, like the door, on the inside. To keep the window closed, to fasten it, someone had put a strong iron nail into the wood "
++ "at the side of the window in such a way that the window could not be raised. At least it seemed that the nail held the window closed. The nail was easy to " 
++ "see. There it was. And the people who discovered the killings used their greatest strength and could not raise the window.</p>"
++ "<p>We try to raise the window and cannot. Even after removing the nail, we cannot raise the window.</p>"
++ "<p>Perhaps there is a hidden lock inside the window. You feel the window carefully with your fingers. Indeed, a button which, when pressed, opens an inner "
++ "lock. With almost no effort you raise the window.</p>"
++ "<p>The killer could close the window from outside and the window would lock itself. But there was still the nail.</p>"
++ "<p>You carefully put the nail back into the hole from which you had taken it. Then you press the button and try to raise the window. You cannot. The nail "
++ "also was holding the window closed!</p>"
++ "<p>\"Then…then the murderer could not possibly have gone out this window. Where do we look next?\"</p>";
+
+var hidden_window_response = "<h4>Window Behind the Bed</h4>"
++ "<p>We go to the second window and look behind the bed at the lower half of the window. There was a nail here, too, which holds the window closed. Without "
++ "moving the bed, you try to open this window also, and again you cannot do so.</p>"
++ "<p>Next, we try to see whether the two windows are in some way different.</p>"
++ "<p>The nail in the second window looks the same as the one we had just seen. We move the bed so that we can look closely. Yes. There is a button here, "
++ "too. Without touching the nail you press the button and try to raise the window. Up it goes!</p>"
++ "<p>As the window went up it carried with it the top part of the nail, the head. When we close the window, the head of the nail is again in its place. It "
++ "looks just as it had looked before. The head of the nail comes off easliy into your fingers away from the window. The nail had been broken. When you put "
++ "the nail head back in its place, the nail again looks whole.</p>"
++ "<p>\"The murderer must have escaped through that window! Now that we know how he got out, what should we do next?\"</p>";
