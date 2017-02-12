@@ -8,7 +8,7 @@ var running_game = false;
 var current_location = "";
 
 var append_text = function(html_to_append) {
-	$(".game-content").append(html_to_append);
+	$(".game-content").append("<p><em>" + $(".user-input").val() + "</em></p>" + html_to_append);
 	$(".user-input").val("");
 };
 
@@ -40,6 +40,7 @@ var parse_input = function(){
 	var street = /(?=.*\bstreet\b).+/g;
 	var neigborhood = /(?=.*\bneighborhood\b)/g;
 	var outside = /(?=\boutside\b)/g;
+	var inside = /(?=.*\bin\b)|(?=.*\binside\b)/g;
 	var scene = /(?=.*\bscene\b)/g;
 	var victims = /(?=.*\bvictims\b)/g;
 	var papers = /(?=.*\bpapers\b)/g;
@@ -53,7 +54,10 @@ var parse_input = function(){
 	var lightning_rod = /(?=.*\brod\b)/g;
 	var police = /(?=.*\bpolice\b)/g;
 	var witness = /(?=.*\bwitnes.+\b)/g;
+	var acquaintance = /(?=.*\bacquaintance\b)/g;
+	var neighbor = /(?=.*\bneighbor+\b)/g;
 	var people = /(?=.*\bpeople\b)/g;
+	var passerby = /(?=.*\bpassersby\b)/g;
 	var escape = /(?=.*\bescape\b)|(?=.*\broute\b)/g;
 	var door = /(?=.*\bdoor\b)/g;
 	var chimney = /(?=.*\bchimney\b)|(?=.*\bfireplace\b)/g;
@@ -62,6 +66,7 @@ var parse_input = function(){
 
 	// Actions
 	var go_to = /^go .+$/g;
+	var look_around = /^look around .+$/g;
 	var look_at = /^look at .+$/g;
 	var inspect = /^inspect .+$/g;
 	var talk_to = /^talk to .+$/g;
@@ -77,29 +82,40 @@ var parse_input = function(){
 		switch (input_string) {
 			// Go to Action
 			case (go_to.test(input_string) ? input_string : ""):
+			case (look_around.test(input_string) ? input_string : ""):
 				obj.action = "go to"
 				world_item = input_string.substring(3);
 				switch (world_item) {
 					case (house.test(world_item) ? world_item : ""):
-					case (scene.test(world_item) ? world_item : ""):
-						obj.world_item = "house";
-						obj.location = "";
-						console.log(obj);
-						break;
 					case (street.test(world_item) ? world_item : ""):
 					case (neigborhood.test(world_item) ? world_item : ""):
-						obj.world_item = "street";
-						obj.location = "";
-						console.log(obj);
+						current_location = "street";
+						append_text(house_html.start_text);
+						// console.log(obj);
 						break;
 					case (outside.test(world_item) ? world_item : ""):
 						obj.world_item = "outside"
-						obj.location = "house";
-						console.log(obj);
+						obj.location = "";
+						current_location = "street";
+						// console.log(obj);
 						break;
+					case (inside.test(world_item) ? world_item : ""):
+						obj.world_item = "apartment";
+						obj.location = "house";
+						current_location = "apartment";
+						append_text(apartment_html.start_text);
+						// console.log(obj);
+						break;
+					// case (scene.test(world_item) ? world_item : ""):
+					// 	if (current_location === "apartment") {
+					// 		append_text(scene_html.start_text);
+					// 	} else {
+					// 		append_text(location_error);
+					// 	}
+					// 	break;
 					default:
 						obj.world_item = "unknown"
-						console.log(obj);
+						// console.log(obj);
 						break;
 				}
 				break;
@@ -111,46 +127,59 @@ var parse_input = function(){
 				switch (world_item) {
 					case (scene.test(world_item) ? world_item : ""):
 					case (victims.test(world_item) ? world_item : ""):
-						// console.log("Inside Look At Scene case");
-						obj.world_item = "scene";
-						obj.location = "house";
-
-						console.log(obj);
+						if (current_location === "apartment") {
+							append_text(scene_html.start_text);
+						} else {
+							append_text(location_error);
+						}
 						break;
 					case (papers.test(world_item) ? world_item : ""):
 					case (box.test(world_item) ? world_item : ""):
-					// case (old_letters.test(world_item) ? world_item : ""):
-						// console.log("Inside Look At Scene case");
-						obj.world_item = "papers";
-						obj.location = "house";
-						console.log(obj);
+						if (current_location === "apartment") {
+							append_text(valuables_html.papers);
+						} else {
+							append_text(location_error);
+						}
 						break;
 					case (knife.test(world_item) ? world_item : ""):
-						// console.log("Inside Look At Scene case");
-						obj.world_item = "knife";
-						obj.location = "house";
-						console.log(obj);
+						if (current_location === "apartment") {
+							append_text(valuables_html.knife);
+						} else {
+							append_text(location_error);
+						}
 						break;
 					case (gray_hairs.test(world_item) ? world_item : ""):
-						// console.log("Inside Look At Scene case");
-						obj.world_item = "gray hairs";
-						obj.location = "house";
-						console.log(obj);
+						if (current_location === "apartment") {
+							append_text(valuables_html.hairs);
+						} else {
+							append_text(location_error);
+						}
 						break;
 					case (gold.test(world_item) ? world_item : ""):
 					case (earring.test(world_item) ? world_item : ""):
 					case (silver.test(world_item) ? world_item : ""):
+						if (current_location === "apartment") {
+							append_text(valuables_html.expensive);
+						} else {
+							append_text(location_error);
+						}
+						break;
 					case (clothes.test(world_item) ? world_item : ""):
-						// console.log("Inside Look At Scene case");
-						obj.world_item = "valuables";
-						obj.location = "house";
-						console.log(obj);
+						if (current_location === "apartment") {
+							append_text(valuables_html.clothes);
+						} else {
+							append_text(location_error);
+						}
 						break;
 					case (lightning_rod.test(world_item) ? world_item : ""):
-						// console.log("Inside Look At Scene case");
+						if (current_location === "street") {
+							// append_text(valuables.papers);
+						} else {
+							append_text(location_error);
+						}
 						obj.world_item = "rod";
 						obj.location = "street";
-						console.log(obj);
+						// console.log(obj);
 						break;
 					case (windows.test(world_item) ? world_item : ""):
 						// console.log("Inside Look At Scene case");
@@ -159,25 +188,25 @@ var parse_input = function(){
 						} else {
 							obj.world_item = "visible window";
 						}
-						obj.location = "house";
-						console.log(obj);
+						obj.location = "apartment";
+						// console.log(obj);
 						break;
 					case (door.test(world_item) ? world_item : ""):
 						// console.log("Inside Look At Scene case");
 						obj.world_item = "door"
-						obj.location = "house";
-						console.log(obj);
+						obj.location = "apartment";
+						// console.log(obj);
 						break;
 					case (chimney.test(world_item) ? world_item : ""):
 						// console.log("Inside Look At Scene case");
 						obj.world_item = "chimney";
-						obj.location = "house";
-						console.log(obj);
+						obj.location = "apartment";
+						// console.log(obj);
 						break;
 					default:
 						obj.world_item = "unknown"
 						obj.location = "";
-						console.log(obj);
+						// console.log(obj);
 						break;
 				}
 				break;
@@ -187,22 +216,42 @@ var parse_input = function(){
 				obj.action = "talk to"
 				world_item = input_string.substring(8);
 				switch (world_item) {
-					case (police.test(world_item) ? world_item : ""):
-						// console.log("Inside Look At Scene case");
-						obj.world_item = "police"
-						obj.location = "street";
-						console.log(obj);
-						break;
 					case (witness.test(world_item) ? world_item : ""):
 					case (people.test(world_item) ? world_item : ""):
-						// console.log("Inside Look At Scene case");
-						obj.world_item = "witness"
-						obj.location = "street";
-						console.log(obj);
+						append_text(interviews.start_text);
+						current_location = "witness"
+						break;
+					case (police.test(world_item) ? world_item : ""):
+						if (current_location === "witness") {
+							append_text(interviews_html.police);
+						} else {
+							append_text(location_error);
+						}
+						break;
+					case (acquaintance.test(world_item) ? world_item : ""):
+						if (current_location === "witness") {
+							append_text(interviews_html.acquaintance);
+						} else {
+							append_text(location_error);
+						}
+						break;
+					case (neighbor.test(world_item) ? world_item : ""):
+						if (current_location === "witness") {
+							append_text(interviews_html.neighbor);
+						} else {
+							append_text(location_error);
+						}
+						break;
+					case (passerby.test(world_item) ? world_item : ""):
+						if (current_location === "witness") {
+							append_text(interviews_html.passerby);
+						} else {
+							append_text(location_error);
+						}
 						break;
 					default:
 						obj.world_item = "unknown"
-						console.log(obj);
+						// console.log(obj);
 						break;
 				}
 				break;
@@ -214,12 +263,13 @@ var parse_input = function(){
 					case (escape.test(world_item) ? world_item : ""):
 						// console.log("Inside Look At Scene case");
 						obj.world_item = "escape";
-						obj.location = "house";
-						console.log(obj);
+						obj.location = "apartment";
+
+						// console.log(obj);
 						break;
 					default:
 						obj.world_item = "unknown"
-						console.log(obj);
+						// console.log(obj);
 						break;
 				}
 

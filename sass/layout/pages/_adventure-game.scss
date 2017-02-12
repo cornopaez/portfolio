@@ -1,10 +1,12 @@
 .main-content {
 	max-width: 800px;
+	// max-height: 100vh;
 
 	.row {
 		.adventure-text {
 			// height: 91vh;
 			// border: 1px solid black;
+			// overflow: scroll;
 		}
 
 		.input-wrap {
