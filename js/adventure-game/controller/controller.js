@@ -1,17 +1,17 @@
-// var user_click = function(){
-// 	$(".welcome-text").hide();
-// 	$(".adventure-text").append("<p>" + $(".user-input").val() + "</p>");
-// };
-
+// Global Game variables
 var step_count = 0;
 var running_game = false;
 var current_location = "";
+var current_task = "";
 
+// Function to append text
+// 		html_to_append: a pre-formatted HTML string.
 var append_text = function(html_to_append) {
 	$(".game-content").append("<p><em>" + $(".user-input").val() + "</em></p>" + html_to_append);
 	$(".user-input").val("");
 };
 
+// Game starting function
 var start = function(){
 	if (!running_game) {
 		running_game = true;
@@ -22,16 +22,12 @@ var start = function(){
 	}
 };
 
+// Function to parse input from user
 var parse_input = function(){
 	// Function Variables
 	var input_string = "";
 	var action = "";
 	var world_item = "";
-	var obj = {
-		action: "",
-		world_item: "",
-		location: ""
-	};
 
 	/*RegEx variables
 	-------------------------------------------*/
@@ -80,10 +76,9 @@ var parse_input = function(){
 	if (running_game) {
 		// Parse through text to create object to be returned
 		switch (input_string) {
+
 			// Go to Action
 			case (go_to.test(input_string) ? input_string : ""):
-			case (look_around.test(input_string) ? input_string : ""):
-				obj.action = "go to"
 				world_item = input_string.substring(3);
 				switch (world_item) {
 					case (house.test(world_item) ? world_item : ""):
@@ -91,38 +86,28 @@ var parse_input = function(){
 					case (neigborhood.test(world_item) ? world_item : ""):
 						current_location = "street";
 						append_text(house_html.start_text);
-						// console.log(obj);
 						break;
 					case (outside.test(world_item) ? world_item : ""):
-						obj.world_item = "outside"
-						obj.location = "";
-						current_location = "street";
-						// console.log(obj);
+						if (current_location === "apartment") {
+							current_location = "street";
+							append_text(going_outside);
+						} else {
+							append_text(already_outside);
+						}
 						break;
 					case (inside.test(world_item) ? world_item : ""):
-						obj.world_item = "apartment";
-						obj.location = "house";
 						current_location = "apartment";
 						append_text(apartment_html.start_text);
-						// console.log(obj);
 						break;
-					// case (scene.test(world_item) ? world_item : ""):
-					// 	if (current_location === "apartment") {
-					// 		append_text(scene_html.start_text);
-					// 	} else {
-					// 		append_text(location_error);
-					// 	}
-					// 	break;
 					default:
-						obj.world_item = "unknown"
-						// console.log(obj);
+						// obj.world_item = "unknown"
 						break;
 				}
 				break;
+
 			// Look At and Inspect Action
 			case (look_at.test(input_string) ? input_string : ""):
 			case (inspect.test(input_string) ? input_string : ""):
-				obj.action = "look at";
 				world_item = input_string.substring(8);
 				switch (world_item) {
 					case (scene.test(world_item) ? world_item : ""):
@@ -173,53 +158,69 @@ var parse_input = function(){
 						break;
 					case (lightning_rod.test(world_item) ? world_item : ""):
 						if (current_location === "street") {
-							// append_text(valuables.papers);
+							append_text(street_html.rod);
+						} else {	
+							append_text(location_error);
+						}
+						break;
+					case (windows.test(world_item) ? world_item : ""):
+						if (current_location === "apartment") {
+							if (current_task === "escape") {
+								if (hidden.test(world_item) ? world_item : "") {
+									append_text(escape_html.hidden_window);
+								} else {
+									append_text(escape_html.visible_window);
+								}
+							} else {
+								// Warning about not being in the correct task
+							}
 						} else {
 							append_text(location_error);
 						}
-						obj.world_item = "rod";
-						obj.location = "street";
-						// console.log(obj);
-						break;
-					case (windows.test(world_item) ? world_item : ""):
-						// console.log("Inside Look At Scene case");
-						if (hidden.test(world_item) ? world_item : "") {
-							obj.world_item = "hidden window";
-						} else {
-							obj.world_item = "visible window";
-						}
-						obj.location = "apartment";
-						// console.log(obj);
 						break;
 					case (door.test(world_item) ? world_item : ""):
-						// console.log("Inside Look At Scene case");
-						obj.world_item = "door"
-						obj.location = "apartment";
-						// console.log(obj);
+						if (current_location === "apartment") {
+							if (current_task === "escape") {
+								append_text(escape_html.door);
+							} else {
+								// Warning about not being in the correct task
+							}
+						} else {	
+							append_text(location_error);
+						}
 						break;
 					case (chimney.test(world_item) ? world_item : ""):
-						// console.log("Inside Look At Scene case");
-						obj.world_item = "chimney";
-						obj.location = "apartment";
-						// console.log(obj);
+						if (current_location === "apartment") {
+							if (current_task === "escape") {
+								append_text(escape_html.chimney);
+							} else {
+								// Warning about not being in the correct task
+							}
+						} else {	
+							append_text(location_error);
+						}
 						break;
 					default:
-						obj.world_item = "unknown"
-						obj.location = "";
-						// console.log(obj);
+
 						break;
 				}
 				break;
+
 			// Talk to Action
 			case (talk_to.test(input_string) ? input_string : ""):
 			case (interview.test(world_item) ? world_item : ""):
-				obj.action = "talk to"
 				world_item = input_string.substring(8);
 				switch (world_item) {
 					case (witness.test(world_item) ? world_item : ""):
 					case (people.test(world_item) ? world_item : ""):
-						append_text(interviews.start_text);
-						current_location = "witness"
+						if (current_location === "street") {
+							append_text(interviews_html.start_text);
+							current_location = "witness"
+							// The above var needs to be refactored to current task
+							// for better game management
+						} else {
+							append_text(location_error);
+						}
 						break;
 					case (police.test(world_item) ? world_item : ""):
 						if (current_location === "witness") {
@@ -250,34 +251,51 @@ var parse_input = function(){
 						}
 						break;
 					default:
-						obj.world_item = "unknown"
-						// console.log(obj);
+
 						break;
 				}
 				break;
+
 			// Look for Action
 			case (look_for.test(input_string) ? input_string : ""):
-				obj.action = "look for"
 				world_item = input_string.substring(9);
 				switch (world_item) {
 					case (escape.test(world_item) ? world_item : ""):
-						// console.log("Inside Look At Scene case");
-						obj.world_item = "escape";
-						obj.location = "apartment";
-
-						// console.log(obj);
+						if (current_location === "apartment") {							
+							append_text(escape_html.start_text);
+							current_task = "escape"
+						} else {
+							append_text(location_error);
+						}
 						break;
 					default:
-						obj.world_item = "unknown"
-						// console.log(obj);
+
 						break;
 				}
 
 				break;
+			//Look Around action
+			case (look_around.test(input_string) ? input_string : ""):
+				world_item = input_string.substring(12);
+				switch (world_item) {
+					case (neigborhood.test(world_item) ? world_item : ""):
+						if (current_location === "street") {
+							append_text(street_html.start_text);
+						} else {
+							append_text(location_error);
+						}
+						break;
+					default:
+
+						break;
+				}
+				break;
+
 			case "start":
 				step_count++;
 				start();
 				break;
+
 			// Annoying, trying-to-brake-game action
 			default:
 				action = "unknown"
