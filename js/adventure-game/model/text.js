@@ -1,7 +1,8 @@
 //This file contains all text variables necessary to run the game.
 var start_warning = "Don't be silly, you- The game has already started!"
 
-var introduction = "<p>"
+var introduction = "<h3>Introduction</h3>"
++"<p>"
 + "One morning, in the heat of the Paris summer, we read in the newspaper about a terrible killing. An old woman and her daughter, who had lived alone in an old house "
 + "in the Rue Morgue, had been killed in the middle of the night. <br>"
 + "<blockquote class=\"newspaper_quote\">"
