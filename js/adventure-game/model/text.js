@@ -8,7 +8,7 @@ var going_outside = "<p>Good idea. Let\'s have some fresh air.</p>";
 
 var already_outside = "<p>We\'re already outside.</p>";
 
-var location_error = "<p>I can\'t do that from here.</p>"
+var location_error = "<p class=\"wrong-option\">I can\'t do that from here.</p>"
 
 /*Introduction
 --------------------------------------------------------*/
@@ -91,41 +91,39 @@ var clothes_response = "<p>\"Nothing fancy. Nothing missing either.\"</p>";
 /*Intreviews
 ----------------------------------------------------*/
 
-var interview_start = "<p>Looks like they have stuck around. Let\'s see who is here.</p>"
+var interview_start = "<p>\"Looks like they have stuck around. Let\'s see who is here.\"</p>"
 + "<h3>Interviews</h3>"
-+ "<ul>"
-+ 	"<li>Police</li>"
-+	"<li>Acquaintance</li>"
-+	"<li>Neighbor</li>"
-+	"<li>Passers By</li>"
-+ "</ul>"
++ "<p>The police had detained several witnesses who rushed to the scene when they heard the screams on the night of the murder. Most are still in "
++ "the vicinity of the house. </p>"
++ "<p>\"We can interview the acquaintances, a policeman, the neighbor, and passersby. Who should we talk to first?\"</p>";
 
-var police_response = "<p>Isidore Muset, a policeman, says that he was with the group that first entered the house. While he was going up the stairs he heard two voices, one low "
+var police_response = "<p><b>Isidore Muset</b>, a policeman, says that he was with the group that first entered the house. While he was going up the stairs he heard two voices, one low "
 + "and soft, and one hard, high, and very strange \- the voice of someone who was certainly not French, the voice of a foreigner. Spanish perhaps. It was not a " 
-+ "woman\'s voice. He could not understand what it said. But the low voice, the softer voice, said, in French, \“My God!\” the room where the daughter\'s body "
++ "woman\'s voice. He could not understand what it said. But the low voice, the softer voice, said, in French, \"My God!\" the room where the daughter\'s body "
 + "was found was locked on the inside.</p>"
 + "<p>When they reached the door everything was quiet. When they forced the door open they saw no one. The windows were closed and firmly locked on the inside. "
 + "There are no steps that someone could have gone down while they were going up. They say that the openings over the fireplace are too small for anyone to have "
 + "escaped through them. It took four or five people to pull the daughter\'s body out of the opening over the fireplace. A careful search was made through the "
 + "whole house. It was four or five minutes from the time they heard the voices to the moment they forced open the door of the room.</p>";
 
-var acquaintance_response ="<p>Pauline Dubourg, a washwoman, says she has known both of the dead women for more than three years, and has washed their clothes during that period. "
+var acquaintance_response ="<p><b>Pauline Dubourg</b>, a washwoman, says she has known both of the dead women for more than three years, and has washed their clothes during that period. "
 + "The old lady and her daughter seemed to love each other dearly. They always paid her well. She did not know where their money came from, she said. She "
 + "never met anyone in the house. Only the two women lived on the fourth floor.  Almost no one ever went into the house and Mrs. L\'Espanaye and her daughter "
 + "were not often seen.</p>"
-+ "<p>Pierre Moreau, a shopkeeper, says Mrs. L\'Espanaye had bought food at his shop for nearly four years. She owned the house and had lived in it for more "
++ "<p><b>Pierre Moreau</b>, a shopkeeper, says Mrs. L\'Espanaye had bought food at his shop for nearly four years. She owned the house and had lived in it for more "
 + "than six years. People said they had money. He never saw anyone enter the door except the old lady and her daughter, and a doctor eight or ten times, perhaps.</p>"
-+ "<p>Jules Mignaud, a banker, says that Mrs. L\'Espanaye had put money in his bank, beginning eight years before. Three days before her death she took out of "
++ "<p><b>Jules Mignaud</b>, a banker, says that Mrs. L\'Espanaye had put money in his bank, beginning eight years before. Three days before her death she took out of "
 + "the bank a large amount of money, in gold. A man from the bank carried it for her to her house.</p>";
-var neighbor_response = "<p>Alfonso Garcia, who is Spanish and lives on the Rue Morgue, says he entered the house but did not go up the stairs; he is nervous and he was afraid he "
-+ "might be ill. He heard the voices. He believes the high voice was not that of a Frenchman. Perhaps it was English; but he doesn’t understand English, so he "
+
+var neighbor_response = "<p><b>Alfonso Garcia</b>, who is Spanish and lives on the Rue Morgue, says he entered the house but did not go up the stairs; he is nervous and he was afraid he "
++ "might be ill. He heard the voices. He believes the high voice was not that of a Frenchman. Perhaps it was English; but he doesn\'t understand English, so he "
 + "is not sure.</p>";
 
-var passerby_response = "<p>William Bird, another foreigner, an Englishman, says he was one of the persons who entered the house. He has lived in Paris for two years. He heard the "
-+ "voices. The low voice was that of a Frenchman, he was sure, because he heard it say, in French, \“My God!\” The high voice was very loud. He is sure it was "
+var passerby_response = "<p><b>William Bird</b>, another foreigner, an Englishman, says he was one of the persons who entered the house. He has lived in Paris for two years. He heard the "
++ "voices. The low voice was that of a Frenchman, he was sure, because he heard it say, in French, \"My God!\" The high voice was very loud. He is sure it was "
 + "not the voice of an Englishman, nor the voice of a Frenchman. It seemed to be that of an Italian. It might have been a woman\'s voice. He does not "
 + "understand Italian.</p>"
-+ "<p>Mr. Alberto Montani, an Italian, was passing the house at the time of the cries. He says that they lasted for about two minutes. They were screams, "
++ "<p><b>Mr. Alberto Montani</b>, an Italian, was passing the house at the time of the cries. He says that they lasted for about two minutes. They were screams, "
 + "long and loud, terrible, fearful sounds. Montani, who speaks Spanish but not French, says that he also heard two voices. He thought both vices were French. "
 + "But he could not understand any of the words spoken.</p>";
 
@@ -139,7 +137,7 @@ var scene_start = "<h3>Inspect the Bodies</h3>"
 + "<p>The good doctor is kind enough to let us inspect the bodies for ourselves.</p>"
 + "<p>\"Which body should we inspect first?\"</p>";
 
-var old_woman_response = "<h4>Mrs. L’Espanaye, the Old Woman</h4>"
+var old_woman_response = "<h4>Mrs. L\'Espanaye, the Old Woman</h4>"
 + "<p>\"Not only was she outside,\" the good doctor says. \"Her neck was almost cut through. I am told that when they tried to lift her up, her head fell off.\""
 + "The body and head are arranged on the floor. The body appears to be broken besides the severed head.</p>"
 + "<p>Upon closer inspection of the old woman\'s hands, hair is stuck under her finger nails. The hair does not look human. We take some hair for reference."
@@ -177,7 +175,7 @@ var visible_window_response = "<h4>Visible Window</h4>"
 + "<p>The killer could close the window from outside and the window would lock itself. But there was still the nail.</p>"
 + "<p>You carefully put the nail back into the hole from which you had taken it. Then you press the button and try to raise the window. You cannot. The nail "
 + "also was holding the window closed!</p>"
-+ "<p>\"Then…then the murderer could not possibly have gone out this window. Where do we look next?\"</p>";
++ "<p>\"Then... then the murderer could not possibly have gone out this window. Where do we look next?\"</p>";
 
 var hidden_window_response = "<h4>Window Behind the Bed</h4>"
 + "<p>We go to the second window and look behind the bed at the lower half of the window. There was a nail here, too, which holds the window closed. Without "
@@ -186,6 +184,6 @@ var hidden_window_response = "<h4>Window Behind the Bed</h4>"
 + "<p>The nail in the second window looks the same as the one we had just seen. We move the bed so that we can look closely. Yes. There is a button here, "
 + "too. Without touching the nail you press the button and try to raise the window. Up it goes!</p>"
 + "<p>As the window went up it carried with it the top part of the nail, the head. When we close the window, the head of the nail is again in its place. It "
-+ "looks just as it had looked before. The head of the nail comes off easliy into your fingers away from the window. The nail had been broken. When you put "
++ "looks just as it had looked before. The head of the nail comes off easily into your fingers away from the window. The nail had been broken. When you put "
 + "the nail head back in its place, the nail again looks whole.</p>"
 + "<p>\"The murderer must have escaped through that window! Now that we know how he got out, what should we do next?\"</p>";
