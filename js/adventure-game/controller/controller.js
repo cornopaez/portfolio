@@ -7,7 +7,7 @@ var current_task = "";
 // Function to append text
 // 		html_to_append: a pre-formatted HTML string.
 var append_text = function(html_to_append) {
-	$(".game-content").append("<p><em>" + $(".user-input").val() + "</em></p>" + html_to_append);
+	$(".game-content").append("<p class=\"valid-command\"><em>" + $(".user-input").val() + "</em></p>" + html_to_append);
 	$(".user-input").val("");
 };
 
@@ -37,8 +37,10 @@ var parse_input = function(){
 	var neigborhood = /(?=.*\bneighborhood\b)/g;
 	var outside = /(?=\boutside\b)/g;
 	var inside = /(?=.*\bin\b)|(?=.*\binside\b)/g;
-	var scene = /(?=.*\bscene\b)/g;
 	var victims = /(?=.*\bvictims\b)/g;
+	var bodies = /(?=.*\bbodies\b)/g;
+	var old_woman = /(?=.*\bold woman\b)|(?=.*\bl.espanaye\b)/g;
+	var daughter = /(?=.*\bdaughter\b)/g;
 	var papers = /(?=.*\bpapers\b)/g;
 	var box = /(?=.*\bbox\b)/g;
 	var knife = /(?=.*\bknife\b)/g;
@@ -48,12 +50,12 @@ var parse_input = function(){
 	var silver = /(?=.*\bsilver\b)/g;
 	var clothes = /(?=.*\bclothes\b)/g;
 	var lightning_rod = /(?=.*\brod\b)/g;
-	var police = /(?=.*\bpolice\b)/g;
+	var police = /(?=.*\bpolice\b)|(?=.*\bpoliceman\b)/g;
 	var witness = /(?=.*\bwitnes.+\b)/g;
-	var acquaintance = /(?=.*\bacquaintance\b)/g;
+	var acquaintance = /(?=.*\bacquaintance\b)|(?=.*\bacquaintances\b)/g;
 	var neighbor = /(?=.*\bneighbor+\b)/g;
 	var people = /(?=.*\bpeople\b)/g;
-	var passerby = /(?=.*\bpassersby\b)/g;
+	var passerby = /(?=.*\bpassersby\b)|(?=.*\bpasserby\b)/g;
 	var escape = /(?=.*\bescape\b)|(?=.*\broute\b)/g;
 	var door = /(?=.*\bdoor\b)/g;
 	var chimney = /(?=.*\bchimney\b)|(?=.*\bfireplace\b)/g;
@@ -65,6 +67,7 @@ var parse_input = function(){
 	var look_around = /^look around .+$/g;
 	var look_at = /^look at .+$/g;
 	var inspect = /^inspect .+$/g;
+	var examine = /^examine .+$/g;
 	var talk_to = /^talk to .+$/g;
 	var look_for = /^look for .+$/g;
 	var interview = /^interview .+$/g;
@@ -108,12 +111,27 @@ var parse_input = function(){
 			// Look At and Inspect Action
 			case (look_at.test(input_string) ? input_string : ""):
 			case (inspect.test(input_string) ? input_string : ""):
+			case (examine.test(input_string) ? input_string : ""):
 				world_item = input_string.substring(8);
 				switch (world_item) {
-					case (scene.test(world_item) ? world_item : ""):
 					case (victims.test(world_item) ? world_item : ""):
+					case (bodies.test(world_item) ? world_item : ""):
 						if (current_location === "apartment") {
 							append_text(scene_html.start_text);
+						} else {
+							append_text(location_error);
+						}
+						break;
+					case (old_woman.test(world_item) ? world_item : ""):
+						if (current_location === "apartment") {
+							append_text(scene_html.old_woman);
+						} else {
+							append_text(location_error);
+						}
+						break;
+					case (daughter.test(world_item) ? world_item : ""):
+						if (current_location === "apartment") {
+							append_text(scene_html.daughter);
 						} else {
 							append_text(location_error);
 						}
@@ -298,7 +316,7 @@ var parse_input = function(){
 
 			// Annoying, trying-to-brake-game action
 			default:
-				action = "unknown"
+				alert("Something's gone wrong");
 				break;
 		}
 	} else {
