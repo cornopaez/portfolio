@@ -36,7 +36,6 @@ html, body {
     .header .container-fluid .navbar-header .toggle-button-right .icon-line {
       background-color: #fff; }
   .header .container-fluid .navbar-header > a.navbar-brand {
-    display: inline-block;
     letter-spacing: 1.5px;
     margin-left: 15px;
     color: #fff;
