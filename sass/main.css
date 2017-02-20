@@ -22,48 +22,52 @@ html, body {
   background: #352c2b;
   margin: 0;
   border: 0;
-  min-height: 45px;
+  height: 50px;
   border-radius: 0; }
-  @media screen and (min-width: 768px) {
-    .header .container-fluid {
-      padding: 0; } }
-  .header .container-fluid .navbar-header .toggle-button-right {
-    right: 15px;
-    top: 7px;
-    background-color: transparent;
-    border-color: #fff;
-    margin: 0; }
-    .header .container-fluid .navbar-header .toggle-button-right .icon-line {
-      background-color: #fff; }
-  .header .container-fluid .navbar-header > a.navbar-brand {
-    display: inline-block;
-    letter-spacing: 1.5px;
-    margin-left: 15px;
-    color: #fff;
-    padding: 14px 0; }
-    @media screen and (min-width: 1440px) {
-      .header .container-fluid .navbar-header > a.navbar-brand {
-        position: absolute;
-        left: 15%; } }
-    @media screen and (min-width: 2000px) {
-      .header .container-fluid .navbar-header > a.navbar-brand {
-        position: absolute;
-        left: 25%; } }
-    @media screen and (min-width: 320px) {
-      .header .container-fluid .navbar-header > a.navbar-brand {
-        font-family: "Raleway";
-        font-size: 25px;
-        font-weight: 200; } }
-    @media screen and (min-width: 375px) {
-      .header .container-fluid .navbar-header > a.navbar-brand {
-        font-family: "Raleway";
-        font-size: 28px;
-        font-weight: 200; } }
+  .header .container-fluid {
+    height: 50px; }
     @media screen and (min-width: 768px) {
-      .header .container-fluid .navbar-header > a.navbar-brand {
-        font-family: "Raleway";
-        font-size: 32px;
-        font-weight: 200; } }
+      .header .container-fluid {
+        padding: 0; } }
+    .header .container-fluid .navbar-header .toggle-button-right {
+      right: 15px;
+      top: 7px;
+      background-color: transparent;
+      border-color: #fff;
+      margin: 0; }
+      .header .container-fluid .navbar-header .toggle-button-right .icon-line {
+        background-color: #fff; }
+    .header .container-fluid .navbar-header > a.navbar-brand {
+      display: flex;
+      height: 50px;
+      letter-spacing: 1.5px;
+      margin-left: 15px;
+      color: #fff;
+      padding: 0;
+      align-items: center; }
+      @media screen and (min-width: 1440px) {
+        .header .container-fluid .navbar-header > a.navbar-brand {
+          position: absolute;
+          left: 15%; } }
+      @media screen and (min-width: 2000px) {
+        .header .container-fluid .navbar-header > a.navbar-brand {
+          position: absolute;
+          left: 25%; } }
+      @media screen and (min-width: 320px) {
+        .header .container-fluid .navbar-header > a.navbar-brand {
+          font-family: "Raleway";
+          font-size: 25px;
+          font-weight: 200; } }
+      @media screen and (min-width: 375px) {
+        .header .container-fluid .navbar-header > a.navbar-brand {
+          font-family: "Raleway";
+          font-size: 28px;
+          font-weight: 200; } }
+      @media screen and (min-width: 768px) {
+        .header .container-fluid .navbar-header > a.navbar-brand {
+          font-family: "Raleway";
+          font-size: 32px;
+          font-weight: 200; } }
   @media screen and (min-width: 320px) {
     .header .link-container {
       border-top: 1px solid #fff; } }
@@ -86,9 +90,14 @@ html, body {
   @media screen and (min-width: 768px) {
     .header .link-container .main-links .list-item {
       height: 100%; } }
+  .header .link-container .main-links .list-item:hover {
+    background: #5e4f4d; }
   .header .link-container .main-links .list-item > a {
+    display: flex;
+    align-items: center;
     border-radius: 0px;
     color: #fff;
+    margin: 0 20px;
     font-family: "Raleway";
     font-size: 17px;
     font-weight: 200;
@@ -96,8 +105,12 @@ html, body {
     @media screen and (min-width: 768px) {
       .header .link-container .main-links .list-item > a {
         height: 100%; } }
-    .header .link-container .main-links .list-item > a:hover {
-      background: #5e4f4d; }
+    @media screen and (min-width: 320px) {
+      .header .link-container .main-links .list-item > a {
+        padding: 10px 15px; } }
+    @media screen and (min-width: 768px) {
+      .header .link-container .main-links .list-item > a {
+        padding: 0; } }
 
 .footer {
   background: #cd5510;
