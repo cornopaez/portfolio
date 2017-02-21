@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Cinzel|Merriweather:300,300i,700,700i&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400|Raleway:200,300,400,500");
 html, body {
   padding: 0;
   margin: 0;
@@ -24,11 +25,8 @@ html, body {
   border: 0;
   height: 50px;
   border-radius: 0; }
-<<<<<<< HEAD
   .header .container-fluid {
     height: 50px; }
-=======
->>>>>>> 729763c0cc656e564ab9c799b56a657e0114da68
     @media screen and (min-width: 768px) {
       .header .container-fluid {
         padding: 0; } }
