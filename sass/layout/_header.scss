@@ -5,12 +5,13 @@
 	border: 0;
 	height: 50px;
 	border-radius: 0;
+	z-index: 5;
 
 	.container-fluid {
 		@media screen and (min-width: 768px) {
 			padding: 0;
 		}
-		height: 50px;
+		min-height: 50px;
 
 		.navbar-header {
 			.toggle-button-right {
@@ -31,7 +32,7 @@
 					@extend %full-height;
 					// display: inline-block;
 					display: flex;
-					height: 50px;
+					min-height: 50px;
 
 					@media screen and (min-width: 1440px) {
 						position: absolute;
@@ -67,6 +68,8 @@
 	}
 
 	.link-container {
+		background: $header-dark-brown;
+
 		@media screen and (min-width: 320px) {
 			border-top: 1px solid $color-white;
 		}

@@ -23,9 +23,10 @@ html, body {
   margin: 0;
   border: 0;
   height: 50px;
-  border-radius: 0; }
+  border-radius: 0;
+  z-index: 5; }
   .header .container-fluid {
-    height: 50px; }
+    min-height: 50px; }
     @media screen and (min-width: 768px) {
       .header .container-fluid {
         padding: 0; } }
@@ -39,7 +40,7 @@ html, body {
         background-color: #fff; }
     .header .container-fluid .navbar-header > a.navbar-brand {
       display: flex;
-      height: 50px;
+      min-height: 50px;
       letter-spacing: 1.5px;
       margin-left: 15px;
       color: #fff;
@@ -68,49 +69,51 @@ html, body {
           font-family: "Raleway";
           font-size: 32px;
           font-weight: 200; } }
-  @media screen and (min-width: 320px) {
-    .header .link-container {
-      border-top: 1px solid #fff; } }
-  @media screen and (min-width: 768px) {
-    .header .link-container {
-      border-top: 0; } }
-  @media screen and (min-width: 768px) {
-    .header .link-container .main-links {
-      position: absolute;
-      right: 0;
-      border: 0;
-      margin: 0;
-      height: 100%; } }
-  @media screen and (min-width: 1440px) {
-    .header .link-container .main-links {
-      right: 15%; } }
-  @media screen and (min-width: 2000px) {
-    .header .link-container .main-links {
-      right: 25%; } }
-  @media screen and (min-width: 768px) {
-    .header .link-container .main-links .list-item {
-      height: 100%; } }
-  .header .link-container .main-links .list-item:hover {
-    background: #5e4f4d; }
-  .header .link-container .main-links .list-item > a {
-    display: flex;
-    align-items: center;
-    border-radius: 0px;
-    color: #fff;
-    margin: 0 20px;
-    font-family: "Raleway";
-    font-size: 17px;
-    font-weight: 200;
-    letter-spacing: 0.5px; }
-    @media screen and (min-width: 768px) {
-      .header .link-container .main-links .list-item > a {
-        height: 100%; } }
+  .header .link-container {
+    background: #352c2b; }
     @media screen and (min-width: 320px) {
-      .header .link-container .main-links .list-item > a {
-        padding: 10px 15px; } }
+      .header .link-container {
+        border-top: 1px solid #fff; } }
     @media screen and (min-width: 768px) {
-      .header .link-container .main-links .list-item > a {
-        padding: 0; } }
+      .header .link-container {
+        border-top: 0; } }
+    @media screen and (min-width: 768px) {
+      .header .link-container .main-links {
+        position: absolute;
+        right: 0;
+        border: 0;
+        margin: 0;
+        height: 100%; } }
+    @media screen and (min-width: 1440px) {
+      .header .link-container .main-links {
+        right: 15%; } }
+    @media screen and (min-width: 2000px) {
+      .header .link-container .main-links {
+        right: 25%; } }
+    @media screen and (min-width: 768px) {
+      .header .link-container .main-links .list-item {
+        height: 100%; } }
+    .header .link-container .main-links .list-item:hover {
+      background: #5e4f4d; }
+    .header .link-container .main-links .list-item > a {
+      display: flex;
+      align-items: center;
+      border-radius: 0px;
+      color: #fff;
+      margin: 0 20px;
+      font-family: "Raleway";
+      font-size: 17px;
+      font-weight: 200;
+      letter-spacing: 0.5px; }
+      @media screen and (min-width: 768px) {
+        .header .link-container .main-links .list-item > a {
+          height: 100%; } }
+      @media screen and (min-width: 320px) {
+        .header .link-container .main-links .list-item > a {
+          padding: 10px 15px; } }
+      @media screen and (min-width: 768px) {
+        .header .link-container .main-links .list-item > a {
+          padding: 0; } }
 
 .footer {
   background: #cd5510;
@@ -175,7 +178,8 @@ body {
   background: url("../img/IMG_1720.png") no-repeat center;
   background-size: cover;
   margin-bottom: 0;
-  padding: 0; }
+  padding: 0;
+  z-index: 1; }
   @media screen and (min-width: 320px) {
     .jumbotron {
       height: 250px; } }
