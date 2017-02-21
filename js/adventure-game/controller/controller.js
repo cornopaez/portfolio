@@ -8,6 +8,10 @@ var current_task = "";
 // 		html_to_append: a pre-formatted HTML string.
 var append_text = function(html_to_append) {
 	$(".game-content").append("<p class=\"valid-command\"><em>" + $(".user-input").val() + "</em></p>" + html_to_append);
+	// On click, it should scroll to have the new text at the top of the page
+	// $('html, body').animate({
+ //        scrollTop: $("#elementtoScrollToID").offset().top
+ //    }, 2000);
 	$(".user-input").val("");
 };
 
