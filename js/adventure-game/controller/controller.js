@@ -1,8 +1,10 @@
 // Global Game variables
 var step_count = 0;
+var error_count = 0;
 var running_game = false;
 var current_location = "";
 var current_task = "";
+var completed_tasks = [];
 
 // Function to append text
 // 		html_to_append: a pre-formatted HTML string.
@@ -13,6 +15,7 @@ var append_text = function(html_to_append) {
  //        scrollTop: $("#elementtoScrollToID").offset().top
  //    }, 2000);
 	$(".user-input").val("");
+	step_count++;
 };
 
 // Game starting function
@@ -23,6 +26,20 @@ var start = function(){
 		append_text(introduction);
 	} else {
 		alert(start_warning);
+	}
+};
+
+// This deals with multiple consecutive errors, remind user what options are
+var error_handle = function(){
+	error_count++;
+	$(".game-content").append(general_error);
+	if (error_count > 3) {
+		if (!running_game) {
+			append_text(guide_text_start);
+		} else {
+			append_text(guide_text_game);
+		}
+		error_count = 0;
 	}
 };
 
@@ -107,7 +124,8 @@ var parse_input = function(){
 						append_text(apartment_html.start_text);
 						break;
 					default:
-						// obj.world_item = "unknown"
+						append_text(go_to_error);
+						error_handle();
 						break;
 				}
 				break;
@@ -124,42 +142,63 @@ var parse_input = function(){
 							append_text(scene_html.start_text);
 						} else {
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					case (old_woman.test(world_item) ? world_item : ""):
 						if (current_location === "apartment") {
 							append_text(scene_html.old_woman);
+							if (completed_tasks.indexOf("old woman") === -1) {
+								completed_tasks.push("old woman");
+							}
 						} else {
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					case (daughter.test(world_item) ? world_item : ""):
 						if (current_location === "apartment") {
 							append_text(scene_html.daughter);
+							if (completed_tasks.indexOf("daughter") === -1) {
+								completed_tasks.push("daughter");
+							}
 						} else {
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					case (papers.test(world_item) ? world_item : ""):
 					case (box.test(world_item) ? world_item : ""):
 						if (current_location === "apartment") {
 							append_text(valuables_html.papers);
+							if (completed_tasks.indexOf("papers") === -1) {
+								completed_tasks.push("papers");
+							}
 						} else {
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					case (knife.test(world_item) ? world_item : ""):
 						if (current_location === "apartment") {
 							append_text(valuables_html.knife);
+							if (completed_tasks.indexOf("knife") === -1) {
+								completed_tasks.push("knife");
+							}
 						} else {
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					case (gray_hairs.test(world_item) ? world_item : ""):
 						if (current_location === "apartment") {
 							append_text(valuables_html.hairs);
+							if (completed_tasks.indexOf("hairs") === -1) {
+								completed_tasks.push("hairs");
+							}
 						} else {
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					case (gold.test(world_item) ? world_item : ""):
@@ -167,22 +206,34 @@ var parse_input = function(){
 					case (silver.test(world_item) ? world_item : ""):
 						if (current_location === "apartment") {
 							append_text(valuables_html.expensive);
+							if (completed_tasks.indexOf("expensive") === -1) {
+								completed_tasks.push("expensive");
+							}
 						} else {
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					case (clothes.test(world_item) ? world_item : ""):
 						if (current_location === "apartment") {
 							append_text(valuables_html.clothes);
+							if (completed_tasks.indexOf("clothes") === -1) {
+								completed_tasks.push("clothes");
+							}
 						} else {
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					case (lightning_rod.test(world_item) ? world_item : ""):
 						if (current_location === "street") {
 							append_text(street_html.rod);
+							if (completed_tasks.indexOf("rod") === -1) {
+								completed_tasks.push("rod");
+							}
 						} else {	
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					case (windows.test(world_item) ? world_item : ""):
@@ -190,40 +241,59 @@ var parse_input = function(){
 							if (current_task === "escape") {
 								if (hidden.test(world_item) ? world_item : "") {
 									append_text(escape_html.hidden_window);
+									if (completed_tasks.indexOf("window2") === -1) {
+										completed_tasks.push("window2");
+									}
 								} else {
 									append_text(escape_html.visible_window);
+									if (completed_tasks.indexOf("window1") === -1) {
+										completed_tasks.push("window1");
+									}
 								}
 							} else {
-								// Warning about not being in the correct task
+								append_text(task_error);
+								error_handle();
 							}
 						} else {
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					case (door.test(world_item) ? world_item : ""):
 						if (current_location === "apartment") {
 							if (current_task === "escape") {
 								append_text(escape_html.door);
+								if (completed_tasks.indexOf("door") === -1) {
+									completed_tasks.push("door");
+								}
 							} else {
-								// Warning about not being in the correct task
+								append_text(task_error);
+								error_handle();
 							}
 						} else {	
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					case (chimney.test(world_item) ? world_item : ""):
 						if (current_location === "apartment") {
 							if (current_task === "escape") {
 								append_text(escape_html.chimney);
+								if (completed_tasks.indexOf("chimney") === -1) {
+									completed_tasks.push("chimney");
+								}
 							} else {
-								// Warning about not being in the correct task
+								append_text(task_error);
+								error_handle();
 							}
 						} else {	
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					default:
-
+							append_text(look_at_error);
+							error_handle();
 						break;
 				}
 				break;
@@ -242,38 +312,56 @@ var parse_input = function(){
 							// for better game management
 						} else {
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					case (police.test(world_item) ? world_item : ""):
 						if (current_location === "witness") {
 							append_text(interviews_html.police);
+							if (completed_tasks.indexOf("police") === -1) {
+								completed_tasks.push("police");
+							}
 						} else {
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					case (acquaintance.test(world_item) ? world_item : ""):
 						if (current_location === "witness") {
 							append_text(interviews_html.acquaintance);
+							if (completed_tasks.indexOf("acquaintance") === -1) {
+								completed_tasks.push("acquaintance");
+							}
 						} else {
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					case (neighbor.test(world_item) ? world_item : ""):
 						if (current_location === "witness") {
 							append_text(interviews_html.neighbor);
+							if (completed_tasks.indexOf("neighbor") === -1) {
+								completed_tasks.push("neighbor");
+							}
 						} else {
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					case (passerby.test(world_item) ? world_item : ""):
 						if (current_location === "witness") {
 							append_text(interviews_html.passerby);
+							if (completed_tasks.indexOf("passerby") === -1) {
+								completed_tasks.push("passerby");
+							}
 						} else {
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					default:
-
+						append_text(look_at_error);
+						error_handle();
 						break;
 				}
 				break;
@@ -288,10 +376,12 @@ var parse_input = function(){
 							current_task = "escape"
 						} else {
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					default:
-
+						append_text(look_at_error);
+						error_handle();
 						break;
 				}
 
@@ -305,10 +395,12 @@ var parse_input = function(){
 							append_text(street_html.start_text);
 						} else {
 							append_text(location_error);
+							error_handle();
 						}
 						break;
 					default:
-
+						append_text(look_around_error);
+						error_handle();
 						break;
 				}
 				break;
@@ -320,14 +412,18 @@ var parse_input = function(){
 
 			// Annoying, trying-to-brake-game action
 			default:
-				alert("Something's gone wrong");
+				error_handle();
 				break;
 		}
 	} else {
+		// Options for before starting game.
 		switch (input_string) {
 			case "start":
 				step_count++;
 				start();
+				break;
+			default: 
+				error_handle();
 				break;
 		}
 	}
