@@ -29,7 +29,7 @@ Neighborhood |<ul><li>Contains all witnesses able to provide clues to user</li><
 Wins and Loses
 --------------
 
-- User needs to collect at least X important clues in order to solve the mytery.
+- User needs to collect all clues in order to solve the mystery.
 
 - Each clue needs to be "saved" by performing an action on the item that holds the clue
 	(i.e.: "look at sky", "inspect shoe", etc.)
@@ -37,6 +37,10 @@ Wins and Loses
 - User needs to call "solve mystery" method to get to the final chapter, after the clues have been gathered
 
 - If user has not collected the minimum amount of clues before calling "solve mystery" a maximum of 3, user loses.
+
+- Once all clues are collected, the final chapter is displayed.
+
+- At the end of the text basic stats will be displayed (steps taken, time elapsed since "start")
 
 Credits
 -------

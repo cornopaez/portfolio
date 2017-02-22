@@ -1,6 +1,7 @@
 // Global Game variables
 var step_count = 0;
 var error_count = 0;
+var solve_attempts = 0;
 var running_game = false;
 var current_location = "";
 var current_task = "";
@@ -33,13 +34,24 @@ var start = function(){
 var error_handle = function(){
 	error_count++;
 	$(".game-content").append(general_error);
-	if (error_count > 3) {
+	if (error_count >= 3) {
 		if (!running_game) {
 			append_text(guide_text_start);
 		} else {
 			append_text(guide_text_game);
 		}
 		error_count = 0;
+	}
+};
+
+// This checks if all clues have been gathered
+var test_solve = function(){
+	if (completed_tasks.length === 16) {
+		// Fill in code for this task
+		// append_text(not_enough_clues);
+	} else {
+		append_text(not_enough_clues);
+		solve_attempts++;
 	}
 };
 
@@ -92,6 +104,7 @@ var parse_input = function(){
 	var talk_to = /^talk to .+$/g;
 	var look_for = /^look for .+$/g;
 	var interview = /^interview .+$/g;
+	var solve = /^solve.+$/g;
 
 	// Clean input a bit
 	input_string = $(".user-input").val().toLowerCase();
@@ -410,9 +423,19 @@ var parse_input = function(){
 				start();
 				break;
 
+			case (solve.test(input_string) ? solve : ""):
+				current_task = "solve"
+
+				break;
+
 			// Annoying, trying-to-brake-game action
 			default:
-				error_handle();
+				if (current_task === "solve") {
+					// Move forward without parsing the input.
+					// append_text(look_around_error);
+				} else {
+					error_handle();
+				}
 				break;
 		}
 	} else {

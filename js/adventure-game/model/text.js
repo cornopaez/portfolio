@@ -12,15 +12,15 @@ var location_error = "<p class=\"wrong-option\">I can\'t do that from here.</p>"
 
 var task_error = "<p class=\"task-error\">Perhaps we should gather more clues before looking at that.</p>";
 
-var guide_text_game = "<p class=\"wrong-option\">"
+var guide_text_game = "<div class=\"wrong-option\">"
 +	"I guess we are lost. We can always:"
 +	"<ul>"
 +		"<li>\"Look at\", \"Look for\" ,\"Examine\", or \"Inspect\" items in the world</li>"
 +		"<li>\"Go to\" or \"Look around\" places</li>"
 +		"<li>\"Talk to\" or \"Interview\" people </li>"
-+	"</ul>"
++	"</ul><br>"
 +	"Let\'s try something different this time."
-+"</p>";
++"</div>";
 
 var guide_text_start = "<p class=\"wrong-option\">"
 +	"Well, there's really only one option: \"start\""
@@ -33,6 +33,10 @@ var look_at_error = "<p class=\"wrong-option\">I don't recorgnize that item.</p>
 var look_around_error = "<p class=\"wrong-option\">There's nothing much to look at here.</p>";
 
 var general_error = "<p class=\"wrong-option\">I'm not sure what you mean...</p>";
+
+var not_enough_clues = "<p class=\"wrong-option\">Huh- We have not gathered enough clues to formulate a solution. <br> Let's look for more of them./p>";
+
+var solve_question = "<p class=\"valid-command\">Who do you think commited the murders?</p>";
 
 /*Introduction
 --------------------------------------------------------*/
