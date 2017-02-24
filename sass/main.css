@@ -402,15 +402,13 @@ body {
         padding: 0;
         font-size: 13px; }
 
-body {
+.text-game {
   font-family: "Merriweather";
   font-size: 16px; }
-
-h1, h2, h3, h4 {
-  font-family: "Cinzel"; }
-
-h3 {
-  text-align: center; }
+  .text-game h1, .text-game h2, .text-game h3, .text-game h4 {
+    font-family: "Cinzel"; }
+  .text-game h3 {
+    text-align: center; }
 
 .main-content {
   max-width: 800px; }
