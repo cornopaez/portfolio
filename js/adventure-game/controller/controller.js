@@ -17,6 +17,7 @@ var append_text = function(html_to_append) {
  //    }, 2000);
 	$(".user-input").val("");
 	step_count++;
+	error_count = 0;
 };
 
 // Game starting function
@@ -41,6 +42,13 @@ var error_handle = function(){
 			append_text(guide_text_game);
 		}
 		error_count = 0;
+	}
+};
+
+// This function pushes items to the completed task list
+var check_completed_tasks = function(task_to_check){
+	if (completed_tasks.indexOf(task_to_check) === -1) {
+		completed_tasks.push(task_to_check);
 	}
 };
 
@@ -313,7 +321,7 @@ var parse_input = function(){
 
 			// Talk to Action
 			case (talk_to.test(input_string) ? input_string : ""):
-			case (interview.test(world_item) ? world_item : ""):
+			case (interview.test(input_string) ? input_string : ""):
 				world_item = input_string.substring(8);
 				switch (world_item) {
 					case (witness.test(world_item) ? world_item : ""):
@@ -428,12 +436,13 @@ var parse_input = function(){
 
 				break;
 
-			// Annoying, trying-to-brake-game action
+			// Solving game logic
 			default:
 				if (current_task === "solve") {
 					// Move forward without parsing the input.
 					// append_text(look_around_error);
 				} else {
+					// If too many times here, you may lose the game.
 					error_handle();
 				}
 				break;
@@ -446,6 +455,7 @@ var parse_input = function(){
 				start();
 				break;
 			default: 
+				// Annoying, trying-to-brake-game action
 				error_handle();
 				break;
 		}
