@@ -145,7 +145,6 @@ var parse_input = function(){
 						append_text(apartment_html.start_text);
 						break;
 					default:
-						// append_text(go_to_error);
 						error_handle(go_to_error);
 						break;
 				}
@@ -162,29 +161,22 @@ var parse_input = function(){
 						if (current_location === "apartment") {
 							append_text(scene_html.start_text);
 						} else {
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
 					case (old_woman.test(world_item) ? world_item : ""):
 						if (current_location === "apartment") {
 							append_text(scene_html.old_woman);
-							if (completed_tasks.indexOf("old woman") === -1) {
-								completed_tasks.push("old woman");
-							}
+							check_completed_tasks("old woman");
 						} else {
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
 					case (daughter.test(world_item) ? world_item : ""):
 						if (current_location === "apartment") {
 							append_text(scene_html.daughter);
-							if (completed_tasks.indexOf("daughter") === -1) {
-								completed_tasks.push("daughter");
-							}
+							check_completed_tasks("daughter");
 						} else {
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
@@ -192,33 +184,24 @@ var parse_input = function(){
 					case (box.test(world_item) ? world_item : ""):
 						if (current_location === "apartment") {
 							append_text(valuables_html.papers);
-							if (completed_tasks.indexOf("papers") === -1) {
-								completed_tasks.push("papers");
-							}
+							check_completed_tasks("papers");
 						} else {
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
 					case (knife.test(world_item) ? world_item : ""):
 						if (current_location === "apartment") {
 							append_text(valuables_html.knife);
-							if (completed_tasks.indexOf("knife") === -1) {
-								completed_tasks.push("knife");
-							}
+							check_completed_tasks("knife");
 						} else {
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
 					case (gray_hairs.test(world_item) ? world_item : ""):
 						if (current_location === "apartment") {
 							append_text(valuables_html.hairs);
-							if (completed_tasks.indexOf("hairs") === -1) {
-								completed_tasks.push("hairs");
-							}
+							check_completed_tasks("hairs");
 						} else {
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
@@ -227,33 +210,24 @@ var parse_input = function(){
 					case (silver.test(world_item) ? world_item : ""):
 						if (current_location === "apartment") {
 							append_text(valuables_html.expensive);
-							if (completed_tasks.indexOf("expensive") === -1) {
-								completed_tasks.push("expensive");
-							}
+							check_completed_tasks("expensive");
 						} else {
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
 					case (clothes.test(world_item) ? world_item : ""):
 						if (current_location === "apartment") {
 							append_text(valuables_html.clothes);
-							if (completed_tasks.indexOf("clothes") === -1) {
-								completed_tasks.push("clothes");
-							}
+							check_completed_tasks("clothes");
 						} else {
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
 					case (lightning_rod.test(world_item) ? world_item : ""):
 						if (current_location === "street") {
 							append_text(street_html.rod);
-							if (completed_tasks.indexOf("rod") === -1) {
-								completed_tasks.push("rod");
-							}
+							check_completed_tasks("rod");
 						} else {	
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
@@ -262,21 +236,15 @@ var parse_input = function(){
 							if (current_task === "escape") {
 								if (hidden.test(world_item) ? world_item : "") {
 									append_text(escape_html.hidden_window);
-									if (completed_tasks.indexOf("window2") === -1) {
-										completed_tasks.push("window2");
-									}
+									check_completed_tasks("window2");
 								} else {
 									append_text(escape_html.visible_window);
-									if (completed_tasks.indexOf("window1") === -1) {
-										completed_tasks.push("window1");
-									}
+									check_completed_tasks("window1");
 								}
 							} else {
-								// append_text(task_error);
 								error_handle(task_error);
 							}
 						} else {
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
@@ -284,15 +252,11 @@ var parse_input = function(){
 						if (current_location === "apartment") {
 							if (current_task === "escape") {
 								append_text(escape_html.door);
-								if (completed_tasks.indexOf("door") === -1) {
-									completed_tasks.push("door");
-								}
+								check_completed_tasks("door");
 							} else {
-								// append_text(task_error);
 								error_handle(task_error);
 							}
 						} else {	
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
@@ -300,20 +264,15 @@ var parse_input = function(){
 						if (current_location === "apartment") {
 							if (current_task === "escape") {
 								append_text(escape_html.chimney);
-								if (completed_tasks.indexOf("chimney") === -1) {
-									completed_tasks.push("chimney");
-								}
+								check_completed_tasks("chimney");
 							} else {
-								// append_text(task_error);
 								error_handle(task_error);
 							}
 						} else {	
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
 					default:
-							// append_text(look_at_error);
 							error_handle(look_at_error);
 						break;
 				}
@@ -329,59 +288,43 @@ var parse_input = function(){
 						if (current_location === "street") {
 							append_text(interviews_html.start_text);
 							current_task = "witness"
-							// The above var needs to be refactored to current task
-							// for better game management
 						} else {
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
 					case (police.test(world_item) ? world_item : ""):
 						if (current_task === "witness") {
 							append_text(interviews_html.police);
-							if (completed_tasks.indexOf("police") === -1) {
-								completed_tasks.push("police");
-							}
+							check_completed_tasks("police");
 						} else {
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
 					case (acquaintance.test(world_item) ? world_item : ""):
 						if (current_task === "witness") {
 							append_text(interviews_html.acquaintance);
-							if (completed_tasks.indexOf("acquaintance") === -1) {
-								completed_tasks.push("acquaintance");
-							}
+							check_completed_tasks("acquaintance");
 						} else {
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
 					case (neighbor.test(world_item) ? world_item : ""):
 						if (current_task === "witness") {
 							append_text(interviews_html.neighbor);
-							if (completed_tasks.indexOf("neighbor") === -1) {
-								completed_tasks.push("neighbor");
-							}
+							check_completed_tasks("neighbor");
 						} else {
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
 					case (passerby.test(world_item) ? world_item : ""):
 						if (current_task === "witness") {
 							append_text(interviews_html.passerby);
-							if (completed_tasks.indexOf("passerby") === -1) {
-								completed_tasks.push("passerby");
-							}
+							check_completed_tasks("passerby");
 						} else {
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
 					default:
-						// append_text(look_at_error);
 						error_handle(look_at_error);
 						break;
 				}
@@ -396,12 +339,10 @@ var parse_input = function(){
 							append_text(escape_html.start_text);
 							current_task = "escape"
 						} else {
-							// append_text(location_error);
 							error_handle(location_error);
 						}
 						break;
 					default:
-						// append_text(look_at_error);
 						error_handle(look_at_error);
 						break;
 				}
@@ -417,7 +358,6 @@ var parse_input = function(){
 						append_text(apartment_html.start_text);
 						break;
 					default:
-						// append_text(look_around_error);
 						error_handle(look_around_error);
 						break;
 				}
