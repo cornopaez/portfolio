@@ -32,9 +32,9 @@ var start = function(){
 };
 
 // This deals with multiple consecutive errors, remind user what options are
-var error_handle = function(){
+var error_handle = function(html_to_append){
 	error_count++;
-	$(".game-content").append(general_error);
+	$(".game-content").append(html_to_append);
 	if (error_count >= 3) {
 		if (!running_game) {
 			append_text(guide_text_start);
@@ -54,7 +54,7 @@ var check_completed_tasks = function(task_to_check){
 
 // This checks if all clues have been gathered
 var test_solve = function(){
-	if (completed_tasks.length === 16) {
+	if (completed_tasks.length === 15) {
 		// Fill in code for this task
 		// append_text(not_enough_clues);
 	} else {
@@ -105,7 +105,7 @@ var parse_input = function(){
 
 	// Actions
 	var go_to = /^go .+$/g;
-	var look_around = /^look around .+$/g;
+	var look_around = /^look around$/g;
 	var look_at = /^look at .+$/g;
 	var inspect = /^inspect .+$/g;
 	var examine = /^examine .+$/g;
@@ -145,8 +145,8 @@ var parse_input = function(){
 						append_text(apartment_html.start_text);
 						break;
 					default:
-						append_text(go_to_error);
-						error_handle();
+						// append_text(go_to_error);
+						error_handle(go_to_error);
 						break;
 				}
 				break;
@@ -162,8 +162,8 @@ var parse_input = function(){
 						if (current_location === "apartment") {
 							append_text(scene_html.start_text);
 						} else {
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					case (old_woman.test(world_item) ? world_item : ""):
@@ -173,8 +173,8 @@ var parse_input = function(){
 								completed_tasks.push("old woman");
 							}
 						} else {
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					case (daughter.test(world_item) ? world_item : ""):
@@ -184,8 +184,8 @@ var parse_input = function(){
 								completed_tasks.push("daughter");
 							}
 						} else {
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					case (papers.test(world_item) ? world_item : ""):
@@ -196,8 +196,8 @@ var parse_input = function(){
 								completed_tasks.push("papers");
 							}
 						} else {
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					case (knife.test(world_item) ? world_item : ""):
@@ -207,8 +207,8 @@ var parse_input = function(){
 								completed_tasks.push("knife");
 							}
 						} else {
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					case (gray_hairs.test(world_item) ? world_item : ""):
@@ -218,8 +218,8 @@ var parse_input = function(){
 								completed_tasks.push("hairs");
 							}
 						} else {
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					case (gold.test(world_item) ? world_item : ""):
@@ -231,8 +231,8 @@ var parse_input = function(){
 								completed_tasks.push("expensive");
 							}
 						} else {
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					case (clothes.test(world_item) ? world_item : ""):
@@ -242,8 +242,8 @@ var parse_input = function(){
 								completed_tasks.push("clothes");
 							}
 						} else {
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					case (lightning_rod.test(world_item) ? world_item : ""):
@@ -253,8 +253,8 @@ var parse_input = function(){
 								completed_tasks.push("rod");
 							}
 						} else {	
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					case (windows.test(world_item) ? world_item : ""):
@@ -272,12 +272,12 @@ var parse_input = function(){
 									}
 								}
 							} else {
-								append_text(task_error);
-								error_handle();
+								// append_text(task_error);
+								error_handle(task_error);
 							}
 						} else {
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					case (door.test(world_item) ? world_item : ""):
@@ -288,12 +288,12 @@ var parse_input = function(){
 									completed_tasks.push("door");
 								}
 							} else {
-								append_text(task_error);
-								error_handle();
+								// append_text(task_error);
+								error_handle(task_error);
 							}
 						} else {	
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					case (chimney.test(world_item) ? world_item : ""):
@@ -304,17 +304,17 @@ var parse_input = function(){
 									completed_tasks.push("chimney");
 								}
 							} else {
-								append_text(task_error);
-								error_handle();
+								// append_text(task_error);
+								error_handle(task_error);
 							}
 						} else {	
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					default:
-							append_text(look_at_error);
-							error_handle();
+							// append_text(look_at_error);
+							error_handle(look_at_error);
 						break;
 				}
 				break;
@@ -328,61 +328,61 @@ var parse_input = function(){
 					case (people.test(world_item) ? world_item : ""):
 						if (current_location === "street") {
 							append_text(interviews_html.start_text);
-							current_location = "witness"
+							current_task = "witness"
 							// The above var needs to be refactored to current task
 							// for better game management
 						} else {
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					case (police.test(world_item) ? world_item : ""):
-						if (current_location === "witness") {
+						if (current_task === "witness") {
 							append_text(interviews_html.police);
 							if (completed_tasks.indexOf("police") === -1) {
 								completed_tasks.push("police");
 							}
 						} else {
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					case (acquaintance.test(world_item) ? world_item : ""):
-						if (current_location === "witness") {
+						if (current_task === "witness") {
 							append_text(interviews_html.acquaintance);
 							if (completed_tasks.indexOf("acquaintance") === -1) {
 								completed_tasks.push("acquaintance");
 							}
 						} else {
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					case (neighbor.test(world_item) ? world_item : ""):
-						if (current_location === "witness") {
+						if (current_task === "witness") {
 							append_text(interviews_html.neighbor);
 							if (completed_tasks.indexOf("neighbor") === -1) {
 								completed_tasks.push("neighbor");
 							}
 						} else {
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					case (passerby.test(world_item) ? world_item : ""):
-						if (current_location === "witness") {
+						if (current_task === "witness") {
 							append_text(interviews_html.passerby);
 							if (completed_tasks.indexOf("passerby") === -1) {
 								completed_tasks.push("passerby");
 							}
 						} else {
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					default:
-						append_text(look_at_error);
-						error_handle();
+						// append_text(look_at_error);
+						error_handle(look_at_error);
 						break;
 				}
 				break;
@@ -396,32 +396,29 @@ var parse_input = function(){
 							append_text(escape_html.start_text);
 							current_task = "escape"
 						} else {
-							append_text(location_error);
-							error_handle();
+							// append_text(location_error);
+							error_handle(location_error);
 						}
 						break;
 					default:
-						append_text(look_at_error);
-						error_handle();
+						// append_text(look_at_error);
+						error_handle(look_at_error);
 						break;
 				}
 
 				break;
 			//Look Around action
 			case (look_around.test(input_string) ? input_string : ""):
-				world_item = input_string.substring(12);
-				switch (world_item) {
-					case (neigborhood.test(world_item) ? world_item : ""):
-						if (current_location === "street") {
-							append_text(street_html.start_text);
-						} else {
-							append_text(location_error);
-							error_handle();
-						}
+				switch (current_location) {
+					case "street":
+						append_text(street_html.start_text);
+						break;
+					case "apartment":
+						append_text(apartment_html.start_text);
 						break;
 					default:
-						append_text(look_around_error);
-						error_handle();
+						// append_text(look_around_error);
+						error_handle(look_around_error);
 						break;
 				}
 				break;
@@ -443,7 +440,7 @@ var parse_input = function(){
 					// append_text(look_around_error);
 				} else {
 					// If too many times here, you may lose the game.
-					error_handle();
+					error_handle(general_error);
 				}
 				break;
 		}
@@ -456,7 +453,7 @@ var parse_input = function(){
 				break;
 			default: 
 				// Annoying, trying-to-brake-game action
-				error_handle();
+				error_handle(general_error);
 				break;
 		}
 	}
