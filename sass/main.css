@@ -418,7 +418,8 @@ body {
   max-width: 800px; }
   .main-content .row .adventure-text {
     font-size: 1em;
-    text-align: justify; }
+    text-align: justify;
+    padding: 15px; }
     .main-content .row .adventure-text h1 {
       font-size: 2.6em;
       text-align: left; }
@@ -431,6 +432,24 @@ body {
       color: #27a325; }
     .main-content .row .adventure-text .wrong-option {
       color: #b71b1b; }
+    .main-content .row .adventure-text .game_end_won,
+    .main-content .row .adventure-text .game_end {
+      background: lightgrey;
+      padding: 20px;
+      border-radius: 10px; }
+      .main-content .row .adventure-text .game_end_won .end-highlight,
+      .main-content .row .adventure-text .game_end .end-highlight {
+        display: inline-block;
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+        padding: 5px 0 2px 0;
+        margin-top: 10px; }
+      .main-content .row .adventure-text .game_end_won ul,
+      .main-content .row .adventure-text .game_end ul {
+        list-style: none; }
+      .main-content .row .adventure-text .game_end_won p:last-child,
+      .main-content .row .adventure-text .game_end p:last-child {
+        margin: 0; }
   .main-content .row .input-wrap {
     padding: 0; }
     .main-content .row .input-wrap .user-input {

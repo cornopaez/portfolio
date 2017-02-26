@@ -43,9 +43,9 @@ var game_lost_text = function(steps, time_elapsed){
 							+ "<p>"
 							+	"*sad trombone sound*"
 							+ "</p>"
-							+ "<p>"
+							+ "<h3 class=\"end-highlight\">"
 							+	"Game Over"
-							+ "</p>"
+							+ "</h3>"
 							+ "<p>"
 							+	"Here are your stats:"
 							+	"<ul>"
@@ -65,9 +65,9 @@ var game_lost_text = function(steps, time_elapsed){
 
 var game_won_text = function(steps, time_elapsed) {
 	var final_text = "<div class=\"game_end_won\">"
-						+ "<p>"
+						+ "<h3 class=\"end-highlight\">"
 						+	"Well done! You've reached the end of the game."
-						+ "</p>"
+						+ "</h3>"
 						+ "<p>"
 						+	"Here are your stats:"
 						+	"<ul>"

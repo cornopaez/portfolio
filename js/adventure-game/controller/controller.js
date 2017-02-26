@@ -388,7 +388,7 @@ var parse_input = function(){
 				start();
 				break;
 
-			case (solve.test(input_string) ? input_string : ""):
+			case "solve mystery":
 				solve_attempts++;
 				if (solve_attempts > 2){
 					// Game ending logic
@@ -416,6 +416,9 @@ var parse_input = function(){
 		// Options for before starting game.
 		switch (input_string) {
 			case "start":
+				solve_attempts = 0;
+				completed_tasks = [];
+				step_count = 0;
 				step_count++;
 				game_start = new Date().getTime();
 				start();
