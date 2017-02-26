@@ -34,7 +34,34 @@ var look_around_error = "<p class=\"wrong-option\">There's nothing much to look 
 
 var general_error = "<p class=\"wrong-option\">I'm not sure what you mean...</p>";
 
-var not_enough_clues = "<p class=\"wrong-option\">Huh- We have not gathered enough clues to formulate a solution. <br> Let's look for more of them./p>";
+var not_enough_clues = function(count){
+	return "<p class=\"wrong-option\">We have not gathered enough clues to formulate a solution. Let's look for more of them. <br><br>You have " + count + " opportunities left.</p>";
+};
+
+var game_lost_text = function(steps, time_elapsed){
+	var final_text = 	"<div class=\"game_end\">"
+							+ "<p>"
+							+	"*sad trombone sound*"
+							+ "</p>"
+							+ "<p>"
+							+	"Game Over"
+							+ "</p>"
+							+ "<p>"
+							+	"Here are your stats:"
+							+	"<ul>"
+							+		"<li>Steps taken: " + steps + "</li>"
+							+		"<li>Game time: " + time_elapsed + "</li>"
+							+	"</ul>"
+							+ "</p>"
+							+ "<p>"
+							+	"If you'd like, you may always try again. Just type \"start\" to get going again."
+							+ "</p>"
+							+ "<p>"
+							+	"Thank you for playing!"
+							+ "</p>"
+						+ "</div>";
+	return final_text;
+};
 
 var solve_question = "<p class=\"valid-command\">Who do you think commited the murders?</p>";
 

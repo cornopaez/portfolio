@@ -1,4 +1,5 @@
-// Global Game variables
+/* Global Game variables
+----------------------------------------------------------*/
 var step_count = 0;
 var error_count = 0;
 var solve_attempts = 0;
@@ -6,6 +7,53 @@ var running_game = false;
 var current_location = "";
 var current_task = "";
 var completed_tasks = [];
+var game_start = 0;
+var game_end = 0;
+
+// RegEx - Items
+var house = /house/g;
+var street = /(?=.*\bstreet\b).+/g;
+var neigborhood = /(?=.*\bneighborhood\b)/g;
+var outside = /(?=\boutside\b)/g;
+var inside = /(?=.*\bin\b)|(?=.*\binside\b)/g;
+var victims = /(?=.*\bvictims\b)/g;
+var bodies = /(?=.*\bbodies\b)/g;
+var old_woman = /(?=.*\bold woman\b)|(?=.*\bl.espanaye\b)/g;
+var daughter = /(?=.*\bdaughter\b)/g;
+var papers = /(?=.*\bpapers\b)/g;
+var box = /(?=.*\bbox\b)/g;
+var knife = /(?=.*\bknife\b)/g;
+var gray_hairs = /(?=.*\bhairs\b)/g;
+var gold = /(?=.*\bgold\b)/g;
+var earring = /(?=.*\bearring.\b)/g;
+var silver = /(?=.*\bsilver\b)/g;
+var clothes = /(?=.*\bclothes\b)/g;
+var lightning_rod = /(?=.*\brod\b)/g;
+var police = /(?=.*\bpolice\b)|(?=.*\bpoliceman\b)/g;
+var witness = /(?=.*\bwitnes.+\b)/g;
+var acquaintance = /(?=.*\bacquaintance\b)|(?=.*\bacquaintances\b)/g;
+var neighbor = /(?=.*\bneighbor+\b)/g;
+var people = /(?=.*\bpeople\b)/g;
+var passerby = /(?=.*\bpassersby\b)|(?=.*\bpasserby\b)/g;
+var escape = /(?=.*\bescape\b)|(?=.*\broute\b)/g;
+var door = /(?=.*\bdoor\b)/g;
+var chimney = /(?=.*\bchimney\b)|(?=.*\bfireplace\b)/g;
+var windows = /(?=\bwindow\b)|(?=\bwindows\b)/g;
+var hidden = /(?=.*\bhidden\b)/g;
+
+// RegEx - Actions
+var go_to = /^go .+$/g;
+var look_around = /^look around$/g;
+var look_at = /^look at .+$/g;
+var inspect = /^inspect .+$/g;
+var examine = /^examine .+$/g;
+var talk_to = /^talk to .+$/g;
+var look_for = /^look for .+$/g;
+var interview = /^interview .+$/g;
+var solve = /^solve mystery$/g;
+
+/*Function for game
+---------------------------------------------------------*/
 
 // Function to append text
 // 		html_to_append: a pre-formatted HTML string.
@@ -25,10 +73,16 @@ var start = function(){
 	if (!running_game) {
 		running_game = true;
 		$(".welcome-text").hide();
+		$(".game-content").empty();
 		append_text(introduction);
 	} else {
 		alert(start_warning);
 	}
+};
+
+var game_lost = function(){
+	$(".game-content").empty();
+	append_text(game_lost_text(step_count, millis_to_readable(game_end - game_start)));
 };
 
 // This deals with multiple consecutive errors, remind user what options are
@@ -56,12 +110,17 @@ var check_completed_tasks = function(task_to_check){
 var test_solve = function(){
 	if (completed_tasks.length === 15) {
 		// Fill in code for this task
-		// append_text(not_enough_clues);
 	} else {
-		append_text(not_enough_clues);
-		solve_attempts++;
+		append_text(not_enough_clues(3 - solve_attempts));
 	}
 };
+
+// Turning milliseconds to readable form
+var millis_to_readable = function(millis) {
+  var minutes = Math.floor(millis / 60000);
+  var seconds = ((millis % 60000) / 1000).toFixed(0);
+  return (seconds == 60 ? (minutes+1) + ":00" : minutes + "min " + (seconds < 10 ? "0" : "") + seconds + "s");
+}
 
 // Function to parse input from user
 var parse_input = function(){
@@ -69,50 +128,6 @@ var parse_input = function(){
 	var input_string = "";
 	var action = "";
 	var world_item = "";
-
-	/*RegEx variables
-	-------------------------------------------*/
-	// Items
-	var house = /house/g;
-	var street = /(?=.*\bstreet\b).+/g;
-	var neigborhood = /(?=.*\bneighborhood\b)/g;
-	var outside = /(?=\boutside\b)/g;
-	var inside = /(?=.*\bin\b)|(?=.*\binside\b)/g;
-	var victims = /(?=.*\bvictims\b)/g;
-	var bodies = /(?=.*\bbodies\b)/g;
-	var old_woman = /(?=.*\bold woman\b)|(?=.*\bl.espanaye\b)/g;
-	var daughter = /(?=.*\bdaughter\b)/g;
-	var papers = /(?=.*\bpapers\b)/g;
-	var box = /(?=.*\bbox\b)/g;
-	var knife = /(?=.*\bknife\b)/g;
-	var gray_hairs = /(?=.*\bhairs\b)/g;
-	var gold = /(?=.*\bgold\b)/g;
-	var earring = /(?=.*\bearring.\b)/g;
-	var silver = /(?=.*\bsilver\b)/g;
-	var clothes = /(?=.*\bclothes\b)/g;
-	var lightning_rod = /(?=.*\brod\b)/g;
-	var police = /(?=.*\bpolice\b)|(?=.*\bpoliceman\b)/g;
-	var witness = /(?=.*\bwitnes.+\b)/g;
-	var acquaintance = /(?=.*\bacquaintance\b)|(?=.*\bacquaintances\b)/g;
-	var neighbor = /(?=.*\bneighbor+\b)/g;
-	var people = /(?=.*\bpeople\b)/g;
-	var passerby = /(?=.*\bpassersby\b)|(?=.*\bpasserby\b)/g;
-	var escape = /(?=.*\bescape\b)|(?=.*\broute\b)/g;
-	var door = /(?=.*\bdoor\b)/g;
-	var chimney = /(?=.*\bchimney\b)|(?=.*\bfireplace\b)/g;
-	var windows = /(?=\bwindow\b)|(?=\bwindows\b)/g;
-	var hidden = /(?=.*\bhidden\b)/g;
-
-	// Actions
-	var go_to = /^go .+$/g;
-	var look_around = /^look around$/g;
-	var look_at = /^look at .+$/g;
-	var inspect = /^inspect .+$/g;
-	var examine = /^examine .+$/g;
-	var talk_to = /^talk to .+$/g;
-	var look_for = /^look for .+$/g;
-	var interview = /^interview .+$/g;
-	var solve = /^solve.+$/g;
 
 	// Clean input a bit
 	input_string = $(".user-input").val().toLowerCase();
@@ -368,20 +383,21 @@ var parse_input = function(){
 				start();
 				break;
 
-			case (solve.test(input_string) ? solve : ""):
-				current_task = "solve"
+			case (solve.test(input_string) ? input_string : ""):
+				solve_attempts++;
+				if (solve_attempts > 2){
+					// Game ending logic
+					running_game = false;
+					game_end = new Date().getTime();
+					game_lost();
 
+				} else {
+					test_solve();
+				}
 				break;
 
-			// Solving game logic
 			default:
-				if (current_task === "solve") {
-					// Move forward without parsing the input.
-					// append_text(look_around_error);
-				} else {
-					// If too many times here, you may lose the game.
-					error_handle(general_error);
-				}
+				error_handle(general_error);
 				break;
 		}
 	} else {
@@ -389,6 +405,7 @@ var parse_input = function(){
 		switch (input_string) {
 			case "start":
 				step_count++;
+				game_start = new Date().getTime();
 				start();
 				break;
 			default: 
@@ -409,4 +426,6 @@ var main_controller = function(){
 	$(".user-button").click(parse_input);
 };
 
+/*Root
+------------------------------------------------------------*/
 $(document).ready(main_controller);
