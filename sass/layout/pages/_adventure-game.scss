@@ -77,6 +77,10 @@
 		.button-wrap {
 			padding: 0;
 
+			@media only screen and (max-width: 480px) {
+				display: none;
+			}
+
 			.user-button {
 				width: 100%;
 				height: 45px;

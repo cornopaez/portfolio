@@ -401,16 +401,16 @@ var parse_input = function(){
 				}
 				break;
 			// Debug game ending logic
-			case "populate array":
-				for (var i = 0; i < 15; i++) {
-					completed_tasks.push(i);
-				}
-				alert("Populated");
-				break;
+			// case "populate array":
+			// 	for (var i = 0; i < 15; i++) {
+			// 		completed_tasks.push(i);
+			// 	}
+			// 	alert("Populated");
+			// 	break;
 
-			default:
-				error_handle(general_error);
-				break;
+			// default:
+			// 	error_handle(general_error);
+			// 	break;
 		}
 	} else {
 		// Options for before starting game.
