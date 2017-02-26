@@ -8,8 +8,8 @@ Game World
 
 Characters                      						|						Attributes |
 --------------------------------------------------------|----------------------------------|
-You (Detective)	                						| <ul><li>Looks for clues in locations</li><li>Solves mystery when all clues have been gathered</li></ul>|
-Sidekick                        						| <ul><li>Acts as guide for game</li><li>Suggests a random section where to go if not valid option is provided</li></ul>|
+detective                								| <ul><li>Looks for clues in locations</li><li>Solves mystery when all clues have been gathered</li></ul>|
+You (Sidekick)                        					| <ul><li>Acts as guide for game</li><li>Suggests a random section where to go if not valid option is provided</li></ul>|
 Doctor (Paul Dumas)             						| Provides insight as to what happened to the bodies discovered |
 Pauline Dubourg (Washwoman)	    						| Witness. Provides clues to detective |
 Pierre Moreau (Shopkeeper)	    						| Witness. Provides clues to detective |
