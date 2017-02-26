@@ -109,13 +109,18 @@ var check_completed_tasks = function(task_to_check){
 // This checks if all clues have been gathered
 var test_solve = function(){
 	if (completed_tasks.length === 15) {
-		// Fill in code for this task
+		running_game = false;
+		game_end = new Date().getTime();
+		append_text(reveal_text);
+		append_text(game_won_text(step_count, millis_to_readable(game_end - game_start)));
 	} else {
 		append_text(not_enough_clues(3 - solve_attempts));
 	}
 };
 
 // Turning milliseconds to readable form
+// Adapted from StackOverflow here (top answer):
+// http://stackoverflow.com/questions/21294302/converting-milliseconds-to-minutes-and-seconds-with-javascript
 var millis_to_readable = function(millis) {
   var minutes = Math.floor(millis / 60000);
   var seconds = ((millis % 60000) / 1000).toFixed(0);
@@ -394,6 +399,13 @@ var parse_input = function(){
 				} else {
 					test_solve();
 				}
+				break;
+			// Debug game ending logic
+			case "populate array":
+				for (var i = 0; i < 15; i++) {
+					completed_tasks.push(i);
+				}
+				alert("Populated");
 				break;
 
 			default:
