@@ -14,10 +14,6 @@ app.config(function($routeProvider) {
 		controller: "AboutController",
 		templateUrl: "views/about.html"
 	})
-	.when("/AdventureGame", {
-		controller: "AdventureGameController",
-		templateUrl: "views/adventure-game.html"
-	})
 	.otherwise({
 		redirectTo: "/"
 	});
