@@ -1,0 +1,32 @@
+<div class="jumbotron">
+	<h1>{{ homeText.jumbotron }}</h1>
+</div>
+<div class="support-1">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<p>{{ homeText.support.paragraph }}</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4" ng-repeat="point in homeText.support.points">
+				<h2>{{ point.title }}</h2>
+				<p>{{ point.text }}</p>
+			</div>
+		</div>
+
+	</div>
+</div>
+<div class="support-2">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<a href="#/Projects" class="btn">See some of my projects</a>
+			</div>
+			<div class="col-md-6">
+				<a href="#/About" class="btn">Learn more about me</a>
+			</div>
+		</div>
+	</div>
+</div>
+

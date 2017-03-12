@@ -46,6 +46,9 @@ body {
 
 // Support sections on the landing page
 .support-1 {
+
+	white-space: pre-line;
+	
 	.row {
 		@media screen and (min-width: 320px) {
 			padding: 0 25px;
