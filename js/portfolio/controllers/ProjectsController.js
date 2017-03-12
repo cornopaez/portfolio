@@ -23,7 +23,7 @@ app.controller("ProjectsController", ["$scope", function($scope){
 			button: {
 				text: "Start Game",
 				classes: "btn",
-				href: "adventure-game.html"
+				href: "#/AdventureGame"
 			},
 			icons: [
 				"devicon-html5-plain-wordmark",
