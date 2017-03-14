@@ -17,11 +17,23 @@ http.createServer( function (request, response) {
          // HTTP Status: 404 : NOT FOUND
          // Content Type: text/plain
          response.writeHead(404, {'Content-Type': 'text/html'});
-      }else {	
+      } else {	
          //Page found	  
          // HTTP Status: 200 : OK
          // Content Type: text/plain
-         response.writeHead(200, {'Content-Type': 'text/html'});
+         if (pathname.indexOf(".css") != -1) {
+            response.writeHead(200, {'Content-Type': 'text/css'});
+         } else if (pathname.indexOf(".js") != -1) {
+            response.writeHead(200, {'Content-Type': 'text/javascript'});
+         } else if (pathname.indexOf(".html") != -1) {
+            response.writeHead(200, {'Content-Type': 'text/html'});
+         } else if (pathname.indexOf(".jpg") != -1) {
+            response.writeHead(200, {'Content-Type': 'image/jpeg'});
+         } else if (pathname.indexOf(".png") != -1) {
+            response.writeHead(200, {'Content-Type': 'image/png'});
+         }
+
+         // response.writeHead(200, {'Content-Type': 'text/html'});
          	
          
          // Write the content of the file to response body
