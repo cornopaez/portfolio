@@ -302,7 +302,8 @@ body {
         .about-content .container .about-details .section-content .lang-icon .devicon-java-plain,
         .about-content .container .about-details .section-content .lang-icon .fa-database,
         .about-content .container .about-details .section-content .lang-icon .devicon-git-plain-wordmark,
-        .about-content .container .about-details .section-content .lang-icon .devicon-github-plain-wordmark {
+        .about-content .container .about-details .section-content .lang-icon .devicon-github-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .fa-font-awesome {
           font-size: 3.5em; } }
       @media screen and (min-width: 768px) {
         .about-content .container .about-details .section-content .lang-icon .devicon-html5-plain-wordmark,
@@ -315,7 +316,8 @@ body {
         .about-content .container .about-details .section-content .lang-icon .devicon-java-plain,
         .about-content .container .about-details .section-content .lang-icon .fa-database,
         .about-content .container .about-details .section-content .lang-icon .devicon-git-plain-wordmark,
-        .about-content .container .about-details .section-content .lang-icon .devicon-github-plain-wordmark {
+        .about-content .container .about-details .section-content .lang-icon .devicon-github-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .fa-font-awesome {
           font-size: 4em; } }
     .about-content .container .about-details .section-content > ul {
       padding-left: 1em; }
@@ -380,7 +382,8 @@ body {
             .project-description .container .detail-row .project-details ul li .devicon-java-plain,
             .project-description .container .detail-row .project-details ul li .fa-database,
             .project-description .container .detail-row .project-details ul li .devicon-git-plain-wordmark,
-            .project-description .container .detail-row .project-details ul li .devicon-github-plain-wordmark {
+            .project-description .container .detail-row .project-details ul li .devicon-github-plain-wordmark,
+            .project-description .container .detail-row .project-details ul li .fa-font-awesome {
               font-size: 2.5em; } }
           @media screen and (min-width: 768px) {
             .project-description .container .detail-row .project-details ul li .devicon-html5-plain-wordmark,
@@ -393,7 +396,8 @@ body {
             .project-description .container .detail-row .project-details ul li .devicon-java-plain,
             .project-description .container .detail-row .project-details ul li .fa-database,
             .project-description .container .detail-row .project-details ul li .devicon-git-plain-wordmark,
-            .project-description .container .detail-row .project-details ul li .devicon-github-plain-wordmark {
+            .project-description .container .detail-row .project-details ul li .devicon-github-plain-wordmark,
+            .project-description .container .detail-row .project-details ul li .fa-font-awesome {
               font-size: 3em; } }
       .project-description .container .detail-row .project-details a {
         font-family: "Raleway";
