@@ -19,7 +19,7 @@ app.controller("ProjectsController", ["$scope", function($scope){
 		},
 		{
 			title: "PYTDance",
-			description: "This is a capstone project for Codecademy's Ready \"Freelance Web Developer\" program. It is built according to the specs provided by the course found <a href=\"https://github.com/cornopaez/cornopaez.github.io/tree/master/pages/pytdance/resources/specs\">here</a>. It is mostly built on Flexbox, though some of the styles (though, not layouts) from Bootstrap have been inherited and expanded upon.",
+			description: "This is a capstone project for Codecademy's Ready \"Freelance Web Developer\" program. It is built according to the specs provided by the course found <a href=\"https://github.com/cornopaez/cornopaez.github.io/tree/master/pages/pytdance/resources/specs\">here</a>. It is mostly built on Flexbox, though some of the styles (though, not layouts) from Bootstrap have been inherited and expanded upon. This site is fully responsive, and works well in tables and mobile phones.",
 			button: {
 				text: "Go to Site",
 				classes: "btn",
@@ -28,7 +28,8 @@ app.controller("ProjectsController", ["$scope", function($scope){
 			icons: [
 				"devicon-html5-plain-wordmark",
 				"devicon-bootstrap-plain-wordmark",
-				"devicon-css3-plain-wordmark"
+				"devicon-css3-plain-wordmark",
+				"fa fa-font-awesome"
 			],
 			footer: "Made by: Mauricio Páez - Pittsburgh, 2017"
 		},
