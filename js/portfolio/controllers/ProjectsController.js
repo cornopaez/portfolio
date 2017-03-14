@@ -19,7 +19,7 @@ app.controller("ProjectsController", ["$scope", function($scope){
 		},
 		{
 			title: "PYTDance",
-			description: "This is a capstone project for Codecademy's Ready \"Freelance Web Developer\" program. It is built according to the specs provided by the course found <a href=\"/pages/pytdance/resources/\">here</a>. It is mostly built on Flexbox, though some of the styles (though, not layouts) from Bootstrap have been inherited and expanded upon.",
+			description: "This is a capstone project for Codecademy's Ready \"Freelance Web Developer\" program. It is built according to the specs provided by the course found <a href=\"https://github.com/cornopaez/cornopaez.github.io/tree/master/pages/pytdance/resources/specs\">here</a>. It is mostly built on Flexbox, though some of the styles (though, not layouts) from Bootstrap have been inherited and expanded upon.",
 			button: {
 				text: "Go to Site",
 				classes: "btn",
