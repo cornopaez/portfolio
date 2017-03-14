@@ -6,7 +6,7 @@
 	    	<div class="row detail-row">
 	    		<div class="col-sm-8 long-text">
 	    			<h2> {{ project.title }} </h2>
-	    			<p>{{ project.description }}</p>
+	    			<p ng-bind-html="project.description"></p>
 	        	</div>
 	        	<div class="col-sm-4 project-details">
 		          	<span>Implemented using:</span>

@@ -6,7 +6,7 @@ app.controller("ProjectsController", ["$scope", function($scope){
 			button: {
 				text: "Go to Main Page",
 				classes: "btn",
-				href: "../index.html"
+				href: "#/"
 			},
 			icons: [
 				"devicon-html5-plain-wordmark",
@@ -14,6 +14,21 @@ app.controller("ProjectsController", ["$scope", function($scope){
 				"devicon-css3-plain-wordmark",
 				"devicon-sass-original",
 				"devicon-angularjs-plain"
+			],
+			footer: "Made by: Mauricio Páez - Pittsburgh, 2017"
+		},
+		{
+			title: "PYTDance",
+			description: "This is a capstone project for Codecademy's Ready \"Freelance Web Developer\" program. It is built according to the specs provided by the course found <a href=\"/pages/pytdance/resources/\">here</a>. It is mostly built on Flexbox, though some of the styles (though, not layouts) from Bootstrap have been inherited and expanded upon.",
+			button: {
+				text: "Go to Site",
+				classes: "btn",
+				href: "/pages/pytdance/index.html"
+			},
+			icons: [
+				"devicon-html5-plain-wordmark",
+				"devicon-bootstrap-plain-wordmark",
+				"devicon-css3-plain-wordmark"
 			],
 			footer: "Made by: Mauricio Páez - Pittsburgh, 2017"
 		},

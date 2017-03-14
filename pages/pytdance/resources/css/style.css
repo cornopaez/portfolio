@@ -1,0 +1,704 @@
+/*Global
+--------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700');
+
+html,
+body {
+	font-size: 16px;
+	font-family: "Roboto", sans-serif;
+	color: #fff;
+}
+
+a {
+	color: #fff;
+}
+
+ul {
+	margin: 0;
+	color: #fff;
+}
+
+/*Navbar
+--------------------------------------*/
+
+nav {
+	background-color: #000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 3.875rem;
+	padding-left: 3.6875rem;
+}
+
+nav .logo .desktop,
+nav .logo .mobile {
+	height: 50px;
+}
+
+nav .logo .mobile {
+	display: none;
+}
+
+nav .nav-links ul li {
+	display: inline-block;
+	margin-right: 3.4375rem;
+}
+
+nav .nav-links ul li a {
+	color: #fff;
+	font-family: "Open Sans";
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+nav .nav-links ul li a.active {
+	color: #f5a623;
+}
+
+@media only screen and (max-width: 576px) {
+
+	nav {
+		padding: 0 0.625rem;
+		height: 2.5rem;
+	}
+
+	nav .logo {
+		height: 100%;
+	}
+
+	nav .logo .desktop {
+		display: none;
+	}
+
+	nav .logo .mobile {
+		display: initial;
+		height: 100%;
+	}
+
+	nav .nav-links ul li {
+		margin-right: 0.75rem;
+	}
+
+	nav .nav-links ul li a {
+		font-size: 0.75rem;
+	}
+}
+
+/*index.html
+----------------------------------------------------------*/
+
+/*Jumbotron
+--------------------------------------*/
+
+.jumbotron {
+	background: url("../images/dancers-photo.png") no-repeat center;
+	background-size: cover;
+	padding-top: 9.4375rem;
+	padding-bottom: 3.125rem;
+}
+
+.jumbotron .container {
+	max-width: 45rem;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.jumbotron .container h1 {
+	font-size: 3.125rem;
+	font-weight: bold;
+	line-height: 1;
+	margin-bottom: 2.6875rem;
+	text-transform: uppercase;
+}
+
+.jumbotron .container p {
+	font-size: 1.5rem;
+	line-height: 1.5;
+	margin-bottom: 5rem;
+}
+
+.jumbotron .container a.btn {
+	border-radius: 2px;
+	background-color: #f5a623;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.375rem;
+	font-weight: bold;
+	padding: 1.25rem 3.125rem;
+	display: inline-block;
+}
+
+@media only screen and (max-width: 768px) {
+	.jumbotron .container {
+		max-width: 31.25rem;
+	}	
+}
+
+@media only screen and (max-width: 576px) {
+	.jumbotron {
+		padding-top: 7.125rem;
+	}
+
+	.jumbotron .container {
+		max-width: 18.5rem;
+	}
+
+	.jumbotron .container h1 {
+		font-size: 1.875rem;
+		margin-bottom: 1.625rem;
+	}
+
+	.jumbotron .container p {
+		font-size: 1rem;
+		line-height: 1.6;
+		margin-bottom: 3.875rem;
+	}
+
+	.jumbotron .container a.btn {
+		font-size: 1rem;
+	}
+}
+
+/*Support
+--------------------------------------*/
+
+/*General*/
+.support {
+	background-size: cover;
+	height: 31.25rem;
+	position: relative;
+}
+
+/*Backgrounds*/
+.support-1 {
+	background: url("../images/graffiti-photo.png") no-repeat center;
+	background-size: cover;
+}
+
+.support-2 {
+	background: url("../images/fire-photo.png") no-repeat center;
+	background-size: cover;
+}
+
+.support-3 {
+	background: url("../images/jump-photo.png") no-repeat center;
+	background-size: cover;
+}
+
+/*Content*/
+.content {
+	max-height: 20rem;
+	width: 25rem;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 5rem 3rem;
+}
+
+.content h2 {
+	font-size: 2.25rem;
+	font-weight: bold;
+	line-height: 1.2;
+	margin-bottom: 1.25rem;
+}
+
+.content p {
+	font-size: 1.125rem;
+	line-height: 1.4;
+	margin-bottom: 1.25rem;
+}
+
+.content a {
+	font-weight: bold;
+}
+
+/*Content Color*/
+.support-1 > .content,
+.support-3 > .content {
+	background-color: rgba(120, 73, 225, 0.9);
+}
+
+.support-2 > .content {
+	background-color: rgba(173, 74, 226, 0.9);
+}
+
+@media only screen and (max-width: 768px) {
+	/*Content*/
+	.content {
+		max-height: 12.1875rem;
+		width: initial;
+		bottom: 0;
+		padding: 1.875rem 3.4375rem 3.4375rem 1.875rem;
+	}
+
+	.content h2 {
+		font-size: 1.875rem;
+		line-height: 1.4;
+		margin-bottom: 0.625rem;
+	}
+
+	.content p {
+		font-size: 1rem;
+		line-height: 1.5;
+		margin-bottom: 1.25rem;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.content {
+		padding: 1.875rem 1.25rem;
+	}
+
+	.content h2 {
+		font-size: 1.25rem;
+		line-height: 1.2;
+	}
+
+	.content p {
+		font-size: 1rem;
+		line-height: 1.5;
+		margin-bottom: 1.25rem;
+	}
+
+	.content a {
+		font-size: 1rem;
+	}
+}
+
+/*Footer
+--------------------------------------*/
+
+footer {
+	background: url("../images/party-photo.png") no-repeat center;
+	background-size: cover;
+}
+
+/*Social Media*/
+
+footer .social-media {
+	height: 3.125rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1rem;
+}
+
+footer .social-media img {
+	padding-left: 0.5rem;
+}
+
+footer .social-media .icons {
+	width: 9.375rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+footer .social-media ul li,
+footer .info .company-info ul li {
+	display: inline-block;
+	padding: 0 0.5rem;
+	border-right: 1px solid #fff;
+}
+
+footer .social-media ul li:last-child,
+footer .info .company-info ul li:last-child  {
+	border-right: none;
+}
+
+/*Information*/
+
+footer .info {
+	background-color: rgba(0,0,0,0.4);
+	height: 15rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+footer .info .company-info {
+	margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+
+	footer {
+		font-size: 0.625rem;
+		letter-spacing: 0.5px;
+	}
+
+	/*Social Media*/
+	footer .social-media {
+		height: 2.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	footer .social-media img {
+		display: none;
+	}
+
+	footer .social-media .icons {
+		width: 5.4375rem;
+		display: flex;
+		justify-content: space-between;
+		/*This needs to be revisited for proper icon size*/
+	}
+
+	footer .social-media ul {
+		display: none;
+	}
+
+	footer .info .company-info ul li:first-child,
+	footer .info .company-info ul li:nth-child(2) {
+		display: block;
+		border-right: none;
+		text-align: center;
+	}
+
+	/*Information*/
+
+	footer .info {
+		height: 8.75rem;
+	}
+}
+
+/*about.html
+----------------------------------------------------------*/
+
+/*Banner
+--------------------------------------*/
+
+.banner {
+	display: flex;
+	align-items: center;
+	border-bottom: 10px solid #794ae2;
+}
+
+.banner img {
+	max-width: 50%;
+}
+
+.banner .about-content {
+	text-align: center;
+	width: 100%;
+	padding: 0 3rem;
+}
+
+.banner .about-content h1 {
+	text-transform: uppercase;
+	color: #794ae2;
+	font-weight: bold;
+	font-size: 3.125rem;
+}
+
+.banner .about-content p {
+	color: #666;
+}
+
+@media only screen and (max-width: 768px) {
+	.banner.about-banner {
+		display: flex;
+		align-items: center;
+		border-bottom: 10px solid #794ae2;
+		flex-direction: column; 
+		background: url("../images/workout-photo.png") no-repeat;
+		background-size: 100%;
+		height: 32rem;
+		position: relative;
+	}
+
+	.banner img {
+		display: none;
+	}
+
+	.banner .about-content {
+		text-align: center;
+		width: 100%;
+		padding: 0 3rem;
+		z-index: 2;
+		background-color: #fff;
+		position: absolute;
+		bottom: 0;
+	}
+
+	.banner .about-content h1 {
+		text-transform: uppercase;
+		color: #794ae2;
+		font-weight: bold;
+		font-size: 1.25rem;
+	}
+
+	.banner .about-content p {
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.banner {
+		background-size: 100%;
+		height: 28.5rem;
+	}
+}
+
+/*Support
+--------------------------------------*/
+.about-support-1 {
+	background-color: #f2f2f2;
+}
+
+.about-support-1, 
+.about-support-2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 4rem 19%;
+}
+
+.about-support-1 img,
+.about-support-2 img {
+	height: 9.375rem;
+	width: auto;
+}
+
+.about-support-1 img,
+.about-support-2 > .about-support-content {
+	margin-right: 5rem;
+}
+
+.about-support-content {
+	text-align: center;
+}
+
+.about-support-content h3 {
+	font-size: 2.25rem;
+	font-weight: bold;
+	color: #794ae2;
+}
+
+.about-support-content p {
+	font-size: 1.5rem;
+	line-height: 1.5;
+	color: #666;
+}
+
+.about-support-map {
+	background: url("../images/map.jpg") no-repeat center;
+	background-size: cover;
+}
+
+.about-support-map > .content {
+	background-color: rgba(120, 73, 225, 0.9);
+	max-height: initial;
+}
+
+@media only screen and (max-width: 768px) {
+	.about-support-1 {
+		flex-direction: column;
+	}
+
+	.about-support-2 {
+		flex-direction: column-reverse;
+	}
+
+	.about-support-1, 
+	.about-support-2 {
+		padding: 1.875rem 19%;
+	}
+
+	.about-support-1 img,
+	.about-support-2 img {
+		height: 6.25rem;
+	}
+
+	.about-support-1 img,
+	.about-support-2 > .about-support-content {
+		margin-right: 0;
+	}
+
+	.about-support-content h3 {
+		font-size: 1.75rem;
+	}
+
+	.about-support-content p {
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+
+	.about-support-map > .content {
+		width: initial;
+	}
+}
+
+/*classes.html
+----------------------------------------------------------*/
+
+/*Classes*/
+
+.classes {
+	display: inline-flex;
+	flex-flow: row wrap;
+	padding: 5.3125rem 0 1.275rem 1.125rem;
+	color: #000;
+	justify-content: center;
+}
+
+.classes.container {
+	width: 100%;
+}
+
+.classes > .class {
+	width: 25rem;
+	margin-right: 1.125rem;
+	margin-bottom: 1.125rem;
+}
+
+.classes > .class h3 {
+	font-size: 1.875rem;
+	font-weight: bold;
+	color: rgba(174,75,227, 0.9);
+	margin-top: 0;
+	margin-bottom: 1.125rem;
+}
+
+.classes > .class > p > .days,
+.classes > .class > p > .hours {
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+.classes > .class > p > .days {
+	font-weight: bold;
+}
+
+.classes > .class > .description {
+	font-size: 0.875rem;
+	line-height: 1.7;
+}
+
+@media only screen and (max-width: 768px) {
+	.banner.classes-banner {
+		display: flex;
+		align-items: center;
+		border-bottom: 10px solid #794ae2;
+		flex-direction: column; 
+		background: url("../images/classes-photo.png") no-repeat;
+		background-size: 100%;
+		height: 32rem;
+		position: relative;
+	}
+
+	.classes > .class {
+		width: 18.75rem;
+		margin-right: 2.25rem;
+		margin-bottom: 2.25rem;
+	}
+
+	.classes > .class > .description {
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+
+	.classes > .class > p > .days,
+	.classes > .class > p > .hours {
+		font-size: 1.125rem;
+	}
+}
+
+@media only screen and (max-width: 380px) {
+	.classes > .class {
+		width: 18.75rem;
+		margin-right: 2.5rem;
+		margin-bottom: 2.5rem;
+	}	
+
+	.classes > .class > .description {
+		font-size: 1rem;
+		line-height: 1.7;
+	}
+
+	.classes > .class > p > .days,
+	.classes > .class > p > .hours {
+		font-size: 1rem;
+	}
+}
+
+/*faculty.html
+----------------------------------------------------------*/
+
+/*Banner*/
+
+.banner.faculty {
+	background: url("../images/faculty-photo.png") no-repeat center;
+	background-size: cover;
+	height: 30.71875rem;
+	position: relative;
+}
+
+.banner.faculty > .about-content {
+	width: 44rem;
+	position: absolute;
+	right: 0;
+}
+
+.faculty-info {
+	display: inline-flex;
+	flex-flow: row wrap;
+	padding: 5.625rem 7.5rem 5rem 7.5rem;
+	justify-content: space-between;
+	color: #000;
+}
+
+.faculty-info > .person {
+	width: 16.875rem;
+	text-align: center;
+	margin-bottom: 6.25rem;
+}
+
+.faculty-info > .person img {
+	margin-bottom: 1.25rem;
+}
+
+.faculty-info > .person h3 {
+	font-size: 1.875rem;
+	font-weight: bold;
+	color: #8a54ff;
+}
+
+.faculty-info > .person .title {
+	padding-bottom: 0.625rem;
+	font-size: 1.125rem;
+	font-weight: bold;
+}
+
+.faculty-info > .person .faculty-about {
+	line-height: 1.5;
+}
+
+@media only screen and (max-width: 768px) {
+
+	.banner.faculty > .about-content {
+		bottom: initial;
+		background-color: transparent;
+		width: 30rem;
+	}
+
+	.faculty-info {
+		padding: 5.625rem 5.5rem 5rem 5.5rem;
+	}
+}
+
+@media only screen and (max-width: 380px) {
+	.banner.faculty > .about-content {
+		bottom: 0;
+		background-color: transparent;
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+
+	.faculty-info {
+		padding: 5.625rem 0 5rem 0;
+		justify-content: center;
+	}
+}
