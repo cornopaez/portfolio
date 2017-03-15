@@ -18,7 +18,7 @@ var outside = /(?=\boutside\b)/g;
 var inside = /(?=.*\bin\b)|(?=.*\binside\b)/g;
 var victims = /(?=.*\bvictims\b)/g;
 var bodies = /(?=.*\bbodies\b)/g;
-var old_woman = /(?=.*\bold woman\b)|(?=.*\bl.espanaye\b)/g;
+var old_woman = /(?=.*\bold woman\b)|(?=.*\bl.espanaye\b)|(?=.*\bmother\b)/g;
 var daughter = /(?=.*\bdaughter\b)/g;
 var papers = /(?=.*\bpapers\b)/g;
 var box = /(?=.*\bbox\b)/g;
@@ -94,6 +94,7 @@ var error_handle = function(html_to_append){
 			append_text(guide_text_start);
 		} else {
 			append_text(guide_text_game);
+			// Based on location, append help text
 		}
 		error_count = 0;
 	}

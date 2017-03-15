@@ -28,7 +28,7 @@ var guide_text_start = "<p class=\"wrong-option\">"
 
 var go_to_error = "<p class=\"wrong-option\">I don't recognize that location.</p>";
 
-var look_at_error = "<p class=\"wrong-option\">I don't recorgnize that item.</p>";
+var look_at_error = "<p class=\"wrong-option\">I don't recognize that item.</p>";
 
 var look_around_error = "<p class=\"wrong-option\">There's nothing much to look at here.</p>";
 
@@ -107,7 +107,7 @@ var introduction = "<h3 id=\"intro\">Introduction</h3>"
 	+ "seemed, from a house in the street called the Rue Morgue. The only persons living in the house were an <b>old woman, Mrs. L\'Espanaye, and her daughter. Several neighbors "
 	+ "and a policeman</b> ran toward the house, but by the time they reached it the cries had stopped. When no one answered their calls, they forced the door open. <br>"
 	+ "As they rushed in they heard voices, two voices; they seemed to come from above. The group hurried from room to room, but they found nothing until they reached the "
-	+ "<b>fourth floor</b>. There they found a d<b>oor that was firmly closed, locked, with the key inside</b>. Quickly they forced the door open, and they saw spread before them "
+	+ "<b>fourth floor</b>. There they found a <b>door that was firmly closed, locked, with the key inside</b>. Quickly they forced the door open, and they saw spread before them "
 	+ "a bloody sickening scene \- a scene of horror! </p>"
 	+ "<p>The room was in the wildest possible order \- broken chairs and tables were lying all around the room. There was only one bed, and from it everything had been "
 	+ "taken and thrown into the middle of the floor.</p>"

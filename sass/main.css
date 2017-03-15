@@ -412,20 +412,23 @@ body {
         padding: 0;
         font-size: 13px; }
 
-.text-game {
-  font-family: "Merriweather";
+html {
   font-size: 16px; }
-  .text-game h1, .text-game h2, .text-game h3, .text-game h4 {
-    font-family: "Cinzel"; }
-  .text-game h3 {
-    text-align: center; }
+
+.text-game h1, .text-game h2, .text-game h3, .text-game h4 {
+  font-family: "Cinzel"; }
+.text-game h3 {
+  text-align: center; }
 
 .main-content {
-  max-width: 800px; }
+  font-family: "Merriweather";
+  max-width: 800px;
+  padding-bottom: 3rem; }
   .main-content .row .adventure-text {
     font-size: 1em;
     text-align: justify;
-    padding: 15px; }
+    padding: 1rem;
+    line-height: 1.6; }
     .main-content .row .adventure-text h1 {
       font-size: 2.6em;
       text-align: left; }
@@ -461,7 +464,8 @@ body {
     .main-content .row .input-wrap .user-input {
       width: 100%;
       height: 45px;
-      border-radius: 0; }
+      border-radius: 0;
+      background-color: #f6f6f6; }
   .main-content .row .button-wrap {
     padding: 0; }
     @media only screen and (max-width: 991px) {
