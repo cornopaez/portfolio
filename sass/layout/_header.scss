@@ -3,9 +3,9 @@
 	background: $header-dark-brown;
 	margin: 0;
 	border: 0;
-	height: 50px;
+	// height: 50px;
 	border-radius: 0;
-	z-index: 5;
+	// z-index: 5;
 
 	.container-fluid {
 		@media screen and (min-width: 768px) {
@@ -68,7 +68,7 @@
 	}
 
 	.link-container {
-		background: $header-dark-brown;
+		// background: $header-dark-brown;
 
 		@media screen and (min-width: 320px) {
 			border-top: 1px solid $color-white;
@@ -115,7 +115,8 @@
 					color: $color-white;
 
 					@media screen and (min-width: 320px) {
-						padding: 10px 15px;
+						// padding: 10px 15px;
+						height: 50px;
 					}
 
 					@media screen and (min-width: 768px) {

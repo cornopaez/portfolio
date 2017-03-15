@@ -1,0 +1,96 @@
+// Top Section
+.top-section {
+	// min-height: 500px;
+	background: url($projects-top-section) no-repeat center;
+	background-size: cover;
+
+	@media screen and (min-width: 320px) {
+		min-height: 250px;
+	}
+
+	@media screen and (min-width: 768px) {
+		min-height: 500px;
+	}
+}
+
+// Project Information
+.project-description {
+
+	margin: 25px;
+
+	.container {
+		max-width: 700px;
+		border: 1px solid black;
+		padding: 20px;
+
+		.detail-row {
+			margin: 0;
+			min-height: 15px;
+
+			.long-text {
+				padding: 0 10px 0 0;
+
+				> h2 {
+					@media screen and (min-width: 320px) {
+						margin: 0 0 10px 0;
+					}
+				}
+			}
+
+			.project-details {
+
+				@media screen and (min-width: 320px) {
+					border-left: none;
+					border-top: 1px solid black;
+					padding: 10px 0 0 0;
+				}
+
+				@media screen and (min-width: 768px) {
+					border-left: 1px solid $color-black;
+					border-top: none;
+					padding: 0 0 0 20px;
+				}
+
+				ul {
+					padding-left: 15px;
+
+					@media screen and (min-width: 320px) {
+						display: flex;
+						margin: 0;
+						padding: 0;
+						justify-content: space-between;
+					}
+
+					@media screen and (min-width: 768px) {
+						display: block;
+						margin: 0 0 10px 0;
+						padding: 0 0 0 15px;
+						justify-content: initial;
+					}
+
+					li {
+						padding-top: 10px;
+						padding-right: 5px;
+						list-style: none;
+						@include icon-size(2.5em);
+						display: inline-block;
+					}
+				}
+
+				a {
+					@include font-properties('Raleway', 17px, 200);
+					display: block;
+					width: 100%;
+					background: $color-burnt-orange;
+					text-decoration: none;
+					color: $color-white;
+				}
+			}
+
+			.project-footer {
+				padding: 0;
+				font-size: 13px;
+			}
+		}
+	}
+}

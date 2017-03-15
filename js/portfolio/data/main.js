@@ -1,7 +1,7 @@
 {
 	"jumbotron": "Hi. I like to code.",
 	"support": {
-		"paragraph": "I'm a Pittsburgh-based developer with enough knowledge of every aspect of the stack to be dangerous (and break things). \n \n What make me stand out from others?",
+		"paragraph": "I'm a Pittsburgh-based developer with enough knowledge of every aspect of the stack to be dangerous (and break things). What make me stand out from others?",
 		"points": [
 			{
 				"title": "Dedication",
