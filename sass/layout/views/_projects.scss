@@ -20,13 +20,52 @@
 		padding: 0;
 		width: 100%;
 
+		>.row {
+			margin: 0;
+		}
+
 		.search {
-			background-color: #9E9657;
+			.form-container {
+				max-width: 700px;
+				margin: 0 auto;
+
+				> .form-control,
+				> p {
+					margin: 16px 0;
+				}
+
+				> .form-control {
+					background-color: #f6f6f6;
+				}
+
+				> .form-control:focus {
+					background-color: #fff;
+					transition: 0.15s linear;
+				}
+
+				> p {
+					text-align: center;
+					font-size: 13px;
+				}
+			}
 		}
 
 		.projects {
-			border-left: 1px solid lightgrey;
-			padding-left: 0;
+			// padding: 0 25px;
+
+			@media screen and (min-width: 320px) {
+				border-top: 1px solid lightgrey;
+				border-left: none;
+				margin: 0 25px;
+				padding: 0;
+			}
+
+			@media screen and (min-width: 992px) {
+				border-top: none;
+				border-left: 1px solid lightgrey;
+				padding: 0 25px;
+				margin: 0;
+			}
 
 			// Project Information
 			.project-description {
