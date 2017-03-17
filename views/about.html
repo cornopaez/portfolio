@@ -1,32 +1,32 @@
 <div class="about-content">
-	<div class="container">
-		<div class="row top_image">
-			<img ng-src="../img/close-up.png" title="Caricature of the developer" />
+	<div class="container" role="presentation">
+		<div class="row top_image" role="presentation">
+			<img ng-src="../img/close-up.png" title="Caricature of the developer" aria-label="Caricature of the developer" />
 		</div>
-		<div class="row background about-details" id="background">
-			<div class="col-md-4 section-title">
+		<div class="row background about-details" id="background" role="presentation">
+			<div class="col-md-4 section-title" role="presentation">
 				<h2>{{ aboutText.background[0].title }}</h2>
 			</div>
-			<div class="col-md-8 section-content">
+			<div class="col-md-8 section-content" role="presentation">
 				<p>{{ aboutText.background[0].text }}</p>
 			</div>
 		</div>
-		<div class="row languages about-details" id="languages">
-			<div class="col-md-4 section-title">
+		<div class="row languages about-details" id="languages" role="presentation">
+			<div class="col-md-4 section-title" role="presentation">
 				<h2>{{ aboutText.languages[0].title }}</h2>
 			</div>
-			<div class="col-md-8 section-content">
-				<span class="lang-icon" ng-repeat="icon in aboutText.languages[0].icons">
+			<div class="col-md-8 section-content" role="presentation">
+				<span class="lang-icon" ng-repeat="icon in aboutText.languages[0].icons" role="presentation">
 					<i class="{{ icon }}"></i>
 				</span>
 			</div>
 		</div>
-		<div class="row work-experience about-details" id="work-experience">
-			<div class="col-md-4 section-title">
+		<div class="row work-experience about-details" id="work-experience" role="presentation">
+			<div class="col-md-4 section-title" role="presentation">
 				<h2>{{ aboutText.experience[0].title }}</h2>
 			</div>
-			<div class="col-md-8 section-content">
-				<div ng-repeat="entity in aboutText.experience[0].entities">
+			<div class="col-md-8 section-content" role="presentation">
+				<div ng-repeat="entity in aboutText.experience[0].entities" role="presentation">
 					<div class="content-subtitle">{{ entity.title }}</div>
 					<ul>
 						<li ng-repeat="point in entity.points" ng-bind-html="point"></li>
@@ -35,12 +35,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="row education about-details" id="education">
-			<div class="col-md-4 section-title">
+		<div class="row education about-details" id="education" role="presentation">
+			<div class="col-md-4 section-title" role="presentation">
 				<h2>{{ aboutText.education[0].title }}</h2>
 			</div>
-			<div class="col-md-8 section-content">
-				<div ng-repeat="entity in aboutText.education[0].entities">
+			<div class="col-md-8 section-content" role="presentation">
+				<div ng-repeat="entity in aboutText.education[0].entities" role="presentation">
 					<div class="content-subtitle">{{ entity.title }}</div>
 					<ul>
 						<li ng-repeat="point in entity.points" ng-bind-html="point"></li>

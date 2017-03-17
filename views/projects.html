@@ -1,29 +1,29 @@
-<div class="top-section"></div>
+<div class="top-section" aria-label="Picture of a Concert Hall"></div>
 
 <div class="all-projects">
-	<div class="project-description" ng-repeat="project in projects">
-		<div class="container">
-	    	<div class="row detail-row">
-	    		<div class="col-sm-8 long-text">
+	<div class="project-description" ng-repeat="project in projects" role="presentation">
+		<div class="container" role="presentation">
+	    	<div class="row detail-row" role="presentation">
+	    		<div class="col-sm-8 long-text" role="presentation">
 	    			<h2> {{ project.title }} </h2>
 	    			<p ng-bind-html="project.description"></p>
 	        	</div>
-	        	<div class="col-sm-4 project-details">
+	        	<div class="col-sm-4 project-details" role="presentation">
 		          	<span>Implemented using:</span>
 		        	<ul>
-		            	<li ng-repeat="icon in project.icons">
+		            	<li ng-repeat="icon in project.icons" role="presentation">
 		            		<i class="{{ icon }}"></i>
 		            	</li>
 		          	</ul>
-		          	<div class="row detail-row">
+		          	<div class="row detail-row" role="presentation">
 			    			</div>
 		        	<a href="{{ project.button.href }}" class="{{ project.button.classes }}">{{ project.button.text }}</a>
 	        	</div>
 	    	</div>
-	    	<div class="row detail-row">
+	    	<div class="row detail-row" role="presentation">
 	    	</div>
-	    	<div class="row detail-row">
-	    		<div class="col-sm-12 project-footer">
+	    	<div class="row detail-row" role="presentation">
+	    		<div class="col-sm-12 project-footer" role="presentation">
 	    			{{ project.footer }}
 	        </div>
 	      </div>
