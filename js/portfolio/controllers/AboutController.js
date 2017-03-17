@@ -1,5 +1,6 @@
-app.controller("AboutController", ["$scope", "aboutData", function($scope, aboutData){
+app.controller("AboutController", ["$scope", "aboutData","$anchorScroll", function($scope, aboutData, $anchorScroll){
 	aboutData.success(function(data){
 		$scope.aboutText = data;
+		$anchorScroll();
 	});
 }])
