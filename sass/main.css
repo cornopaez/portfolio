@@ -396,7 +396,8 @@ html {
 
 .top-section {
   background: url("../img/yu6a5i_ijtw-radek-grzybowski.png") no-repeat center;
-  background-size: cover; }
+  background-size: cover;
+  background-color: #FFEBCD; }
   @media screen and (min-width: 320px) {
     .top-section {
       min-height: 250px; } }
@@ -404,88 +405,98 @@ html {
     .top-section {
       min-height: 500px; } }
 
-.project-description {
-  margin: 25px; }
-  .project-description .container {
-    max-width: 700px;
-    border: 1px solid black;
-    padding: 20px; }
-    .project-description .container .detail-row {
-      margin: 0;
-      min-height: 15px; }
-      .project-description .container .detail-row .long-text {
-        padding: 0 10px 0 0; }
-        @media screen and (min-width: 320px) {
-          .project-description .container .detail-row .long-text > h2 {
-            margin: 0 0 10px 0; } }
-      @media screen and (min-width: 320px) {
-        .project-description .container .detail-row .project-details {
-          border-left: none;
-          border-top: 1px solid black;
-          padding: 10px 0 0 0; } }
-      @media screen and (min-width: 768px) {
-        .project-description .container .detail-row .project-details {
-          border-left: 1px solid #000;
-          border-top: none;
-          padding: 0 0 0 20px; } }
-      .project-description .container .detail-row .project-details ul {
-        padding-left: 15px; }
-        @media screen and (min-width: 320px) {
-          .project-description .container .detail-row .project-details ul {
-            display: flex;
-            margin: 0;
-            padding: 0;
-            justify-content: space-between; } }
-        @media screen and (min-width: 768px) {
-          .project-description .container .detail-row .project-details ul {
-            display: block;
-            margin: 0 0 10px 0;
-            padding: 0 0 0 15px;
-            justify-content: initial; } }
-        .project-description .container .detail-row .project-details ul li {
-          padding-top: 10px;
-          padding-right: 5px;
-          list-style: none;
-          display: inline-block; }
+.all-projects .container {
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+  .all-projects .container .search {
+    background-color: #9E9657; }
+  .all-projects .container .projects {
+    border-left: 1px solid lightgrey;
+    padding-left: 0; }
+    .all-projects .container .projects .project-description {
+      margin: 25px 0; }
+      .all-projects .container .projects .project-description .container {
+        max-width: 700px;
+        border: 1px solid black;
+        padding: 20px;
+        margin: 0 auto; }
+        .all-projects .container .projects .project-description .container .detail-row {
+          margin: 0;
+          min-height: 15px; }
+          .all-projects .container .projects .project-description .container .detail-row .long-text {
+            padding: 0 10px 0 0; }
+            @media screen and (min-width: 320px) {
+              .all-projects .container .projects .project-description .container .detail-row .long-text > h2 {
+                margin: 0 0 10px 0; } }
           @media screen and (min-width: 320px) {
-            .project-description .container .detail-row .project-details ul li .devicon-html5-plain-wordmark,
-            .project-description .container .detail-row .project-details ul li .devicon-css3-plain-wordmark,
-            .project-description .container .detail-row .project-details ul li .devicon-sass-original,
-            .project-description .container .detail-row .project-details ul li .devicon-javascript-plain,
-            .project-description .container .detail-row .project-details ul li .devicon-jquery-plain-wordmark,
-            .project-description .container .detail-row .project-details ul li .devicon-angularjs-plain,
-            .project-description .container .detail-row .project-details ul li .devicon-bootstrap-plain-wordmark,
-            .project-description .container .detail-row .project-details ul li .devicon-java-plain,
-            .project-description .container .detail-row .project-details ul li .fa-database,
-            .project-description .container .detail-row .project-details ul li .devicon-git-plain-wordmark,
-            .project-description .container .detail-row .project-details ul li .devicon-github-plain-wordmark,
-            .project-description .container .detail-row .project-details ul li .fa-font-awesome {
-              font-size: 2.5em; } }
+            .all-projects .container .projects .project-description .container .detail-row .project-details {
+              border-left: none;
+              border-top: 1px solid black;
+              padding: 10px 0 0 0; } }
           @media screen and (min-width: 768px) {
-            .project-description .container .detail-row .project-details ul li .devicon-html5-plain-wordmark,
-            .project-description .container .detail-row .project-details ul li .devicon-css3-plain-wordmark,
-            .project-description .container .detail-row .project-details ul li .devicon-sass-original,
-            .project-description .container .detail-row .project-details ul li .devicon-javascript-plain,
-            .project-description .container .detail-row .project-details ul li .devicon-jquery-plain-wordmark,
-            .project-description .container .detail-row .project-details ul li .devicon-angularjs-plain,
-            .project-description .container .detail-row .project-details ul li .devicon-bootstrap-plain-wordmark,
-            .project-description .container .detail-row .project-details ul li .devicon-java-plain,
-            .project-description .container .detail-row .project-details ul li .fa-database,
-            .project-description .container .detail-row .project-details ul li .devicon-git-plain-wordmark,
-            .project-description .container .detail-row .project-details ul li .devicon-github-plain-wordmark,
-            .project-description .container .detail-row .project-details ul li .fa-font-awesome {
-              font-size: 3em; } }
-      .project-description .container .detail-row .project-details a {
-        font-family: "Raleway";
-        font-size: 17px;
-        font-weight: 200;
-        display: block;
-        width: 100%;
-        background: #cd5510;
-        text-decoration: none;
-        color: #fff; }
-      .project-description .container .detail-row .project-footer {
-        padding: 0;
-        font-size: 13px; }
+            .all-projects .container .projects .project-description .container .detail-row .project-details {
+              border-left: 1px solid #000;
+              border-top: none;
+              padding: 0 0 0 20px; } }
+          .all-projects .container .projects .project-description .container .detail-row .project-details ul {
+            padding-left: 15px; }
+            @media screen and (min-width: 320px) {
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                justify-content: space-between; } }
+            @media screen and (min-width: 768px) {
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul {
+                display: block;
+                margin: 0 0 10px 0;
+                padding: 0 0 0 15px;
+                justify-content: initial; } }
+            .all-projects .container .projects .project-description .container .detail-row .project-details ul li {
+              padding-top: 10px;
+              padding-right: 5px;
+              list-style: none;
+              display: inline-block; }
+              @media screen and (min-width: 320px) {
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-html5-plain-wordmark,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-css3-plain-wordmark,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-sass-original,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-javascript-plain,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-jquery-plain-wordmark,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-angularjs-plain,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-bootstrap-plain-wordmark,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-java-plain,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-database,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-git-plain-wordmark,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-github-plain-wordmark,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-font-awesome {
+                  font-size: 2.5em; } }
+              @media screen and (min-width: 768px) {
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-html5-plain-wordmark,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-css3-plain-wordmark,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-sass-original,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-javascript-plain,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-jquery-plain-wordmark,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-angularjs-plain,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-bootstrap-plain-wordmark,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-java-plain,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-database,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-git-plain-wordmark,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-github-plain-wordmark,
+                .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-font-awesome {
+                  font-size: 3em; } }
+          .all-projects .container .projects .project-description .container .detail-row .project-details a {
+            font-family: "Raleway";
+            font-size: 17px;
+            font-weight: 200;
+            display: block;
+            width: 100%;
+            background: #cd5510;
+            text-decoration: none;
+            color: #fff; }
+          .all-projects .container .projects .project-description .container .detail-row .project-footer {
+            padding: 0;
+            font-size: 13px; }
 
 /*# sourceMappingURL=main.css.map */

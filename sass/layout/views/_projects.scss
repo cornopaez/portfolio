@@ -3,6 +3,7 @@
 	// min-height: 500px;
 	background: url($projects-top-section) no-repeat center;
 	background-size: cover;
+	background-color: #FFEBCD;
 
 	@media screen and (min-width: 320px) {
 		min-height: 250px;
@@ -13,83 +14,101 @@
 	}
 }
 
-// Project Information
-.project-description {
-
-	margin: 25px;
-
+.all-projects {
 	.container {
-		max-width: 700px;
-		border: 1px solid black;
-		padding: 20px;
+		margin: 0;
+		padding: 0;
+		width: 100%;
 
-		.detail-row {
-			margin: 0;
-			min-height: 15px;
+		.search {
+			background-color: #9E9657;
+		}
 
-			.long-text {
-				padding: 0 10px 0 0;
+		.projects {
+			border-left: 1px solid lightgrey;
+			padding-left: 0;
 
-				> h2 {
-					@media screen and (min-width: 320px) {
-						margin: 0 0 10px 0;
-					}
-				}
-			}
+			// Project Information
+			.project-description {
 
-			.project-details {
+				margin: 25px 0;
 
-				@media screen and (min-width: 320px) {
-					border-left: none;
-					border-top: 1px solid black;
-					padding: 10px 0 0 0;
-				}
+				.container {
+					max-width: 700px;
+					border: 1px solid black;
+					padding: 20px;
+					margin: 0 auto;
 
-				@media screen and (min-width: 768px) {
-					border-left: 1px solid $color-black;
-					border-top: none;
-					padding: 0 0 0 20px;
-				}
-
-				ul {
-					padding-left: 15px;
-
-					@media screen and (min-width: 320px) {
-						display: flex;
+					.detail-row {
 						margin: 0;
-						padding: 0;
-						justify-content: space-between;
-					}
+						min-height: 15px;
 
-					@media screen and (min-width: 768px) {
-						display: block;
-						margin: 0 0 10px 0;
-						padding: 0 0 0 15px;
-						justify-content: initial;
-					}
+						.long-text {
+							padding: 0 10px 0 0;
 
-					li {
-						padding-top: 10px;
-						padding-right: 5px;
-						list-style: none;
-						@include icon-size(2.5em);
-						display: inline-block;
+							> h2 {
+								@media screen and (min-width: 320px) {
+									margin: 0 0 10px 0;
+								}
+							}
+						}
+
+						.project-details {
+
+							@media screen and (min-width: 320px) {
+								border-left: none;
+								border-top: 1px solid black;
+								padding: 10px 0 0 0;
+							}
+
+							@media screen and (min-width: 768px) {
+								border-left: 1px solid $color-black;
+								border-top: none;
+								padding: 0 0 0 20px;
+							}
+
+							ul {
+								padding-left: 15px;
+
+								@media screen and (min-width: 320px) {
+									display: flex;
+									margin: 0;
+									padding: 0;
+									justify-content: space-between;
+								}
+
+								@media screen and (min-width: 768px) {
+									display: block;
+									margin: 0 0 10px 0;
+									padding: 0 0 0 15px;
+									justify-content: initial;
+								}
+
+								li {
+									padding-top: 10px;
+									padding-right: 5px;
+									list-style: none;
+									@include icon-size(2.5em);
+									display: inline-block;
+								}
+							}
+
+							a {
+								@include font-properties('Raleway', 17px, 200);
+								display: block;
+								width: 100%;
+								background: $color-burnt-orange;
+								text-decoration: none;
+								color: $color-white;
+							}
+						}
+
+						.project-footer {
+							padding: 0;
+							font-size: 13px;
+						}
 					}
 				}
-
-				a {
-					@include font-properties('Raleway', 17px, 200);
-					display: block;
-					width: 100%;
-					background: $color-burnt-orange;
-					text-decoration: none;
-					color: $color-white;
-				}
-			}
-
-			.project-footer {
-				padding: 0;
-				font-size: 13px;
 			}
 		}
 	}
