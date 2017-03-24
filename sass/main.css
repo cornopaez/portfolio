@@ -238,6 +238,7 @@ html {
 .jumbotron {
   background: url("../img/IMG_1720.png") no-repeat center;
   background-size: cover;
+  background-color: lightgrey;
   margin-bottom: 0;
   padding: 0; }
   @media screen and (min-width: 320px) {
@@ -411,20 +412,22 @@ html {
   width: 100%; }
   .all-projects .container > .row {
     margin: 0; }
-  .all-projects .container .search .form-container {
-    max-width: 700px;
-    margin: 0 auto; }
-    .all-projects .container .search .form-container > .form-control,
-    .all-projects .container .search .form-container > p {
-      margin: 16px 0; }
-    .all-projects .container .search .form-container > .form-control {
-      background-color: #f6f6f6; }
-    .all-projects .container .search .form-container > .form-control:focus {
-      background-color: #fff;
-      transition: 0.15s linear; }
-    .all-projects .container .search .form-container > p {
-      text-align: center;
-      font-size: 13px; }
+  .all-projects .container .search {
+    padding: 0 25px; }
+    .all-projects .container .search .form-container {
+      max-width: 700px;
+      margin: 0 auto; }
+      .all-projects .container .search .form-container > .form-control,
+      .all-projects .container .search .form-container > p {
+        margin: 25px 0; }
+      .all-projects .container .search .form-container > .form-control {
+        background-color: #f6f6f6; }
+      .all-projects .container .search .form-container > .form-control:focus {
+        background-color: #fff;
+        transition: 0.15s linear; }
+      .all-projects .container .search .form-container > p {
+        text-align: center;
+        font-size: 13px; }
   @media screen and (min-width: 320px) {
     .all-projects .container .projects {
       border-top: 1px solid lightgrey;

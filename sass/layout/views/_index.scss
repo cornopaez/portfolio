@@ -3,6 +3,7 @@
 	@extend %position-relative;
 	background: url($jumbotron-background) no-repeat center;
 	background-size: cover;
+	background-color: lightgrey;
 	margin-bottom: 0;
 	padding: 0;
 	// z-index: 1;

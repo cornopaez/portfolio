@@ -25,13 +25,15 @@
 		}
 
 		.search {
+			padding: 0 25px;
+
 			.form-container {
 				max-width: 700px;
 				margin: 0 auto;
 
 				> .form-control,
 				> p {
-					margin: 16px 0;
+					margin: 25px 0;
 				}
 
 				> .form-control {
