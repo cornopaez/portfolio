@@ -19,6 +19,11 @@
 				"devicon-git-plain-wordmark",
 				"devicon-github-plain-wordmark",
 				"devicon-java-plain",
+				"devicon-nodejs-plain",
+				"devicon-heroku-plain",
+				"devicon-postgresql-plain-wordmark",
+				"devicon-ruby-plain",
+				"devicon-rails-plain-wordmark",
 				"fa fa-database"
 			]
 		}
