@@ -32,7 +32,7 @@
 			"devicon-angularjs-plain",
 			"devicon-nodejs-plain-wordmark",
 			"devicon-nodejs-plain",
-			"devicon-heroku-plain"
+			"devicon-heroku-plain",
 			"devicon-postgresql-plain-wordmark"
 		],
 		"source": "https://github.com/cornopaez/cornopaez.github.io",

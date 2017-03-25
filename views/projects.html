@@ -17,6 +17,7 @@
 				    		<div class="col-sm-8 long-text" role="presentation">
 				    			<h2> {{ project.title }} </h2>
 				    			<p ng-bind-html="project.description"></p>
+				    			[<a href="{{ project.source }}">Source</a>]
 				        	</div>
 				        	<div class="col-sm-4 project-details" role="presentation">
 					          	<span>Implemented using:</span>
@@ -31,7 +32,6 @@
 				        	</div>
 				    	</div>
 				    	<div class="row detail-row" role="presentation">
-				    		[<a href="{{ project.source }}">Source</a>]
 				    	</div>
 				    	<div class="row detail-row" role="presentation">
 				    		<div class="col-sm-12 project-footer" role="presentation">
