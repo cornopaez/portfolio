@@ -482,7 +482,8 @@ html {
               display: flex;
               margin: 0;
               padding: 0;
-              justify-content: space-between; } }
+              justify-content: space-between;
+              flex-wrap: wrap; } }
           @media screen and (min-width: 768px) {
             .all-projects .container .projects .project-description .container .detail-row .project-details ul {
               display: block;
