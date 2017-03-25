@@ -74,7 +74,7 @@
 	},
 	{
 		"title": "Health Cost Estimator",
-		"description": "A basic (and rough looking) health care cost estimator. It is designed to pull information from public datasets (like Medicare) and private APIs (<a href=\"www.pokitdok.com\">PokitDok</a>). For now the data after the query is static but comes from real responses from the datasets.",
+		"description": "A basic (and rough looking) health care cost estimator. It is designed to pull information from public datasets (like Medicare) and private APIs (<a href=\"https://www.pokitdok.com\">PokitDok</a>). For now the data after the query is static but comes from real responses from the datasets.",
 		"button": {
 			"text": "Go to Estimator",
 			"classes": "btn",
