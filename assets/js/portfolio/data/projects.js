@@ -89,7 +89,7 @@
 			"devicon-rails-plain-wordmark",
 			"devicon-heroku-plain"
 		],
-		"source": "https://github.com/cornopaez/cornopaez.github.io",
+		"source": "https://github.com/cornopaez/estimator",
 		"footer": "Made by: Mauricio Páez - Pittsburgh 2017"
 	},
 	{
