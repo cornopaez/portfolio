@@ -39,7 +39,7 @@
 	},
 	{
 		"title": "PYTDance",
-		"description": "This is a capstone project for Codecademy's Ready \"Freelance Web Developer\" program. It is built according to the specs provided by the course found <a href=\"https://github.com/cornopaez/cornopaez.github.io/tree/master/pages/pytdance/resources/specs\">here</a>. It is mostly built on Flexbox, though some of the styles (though, not layouts) from Bootstrap have been inherited and expanded upon. This site is fully responsive, and works well in tablets and mobile phones.",
+		"description": "This is a capstone project for Codecademy's Ready \"Freelance Web Developer\" program. It is built according to the specs provided by the course found <a href=\"https://github.com/cornopaez/codecademy-dance_studio/tree/master/resources/specs\">here</a>. It is mostly built on Flexbox, though some of the styles (though, not layouts) from Bootstrap have been inherited and expanded upon. This site is fully responsive, and works well in tablets and mobile phones.",
 		"button": {
 			"text": "Go to Site",
 			"classes": "btn",
