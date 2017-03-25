@@ -12,9 +12,12 @@ app.get('/', function (req, res) {
   res.render('index.html');
 })
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
-})
+// app.listen(3000, function () {
+//   console.log('Example app listening on port 3000!')
+// })
+
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number);
 
 // Create a server
 // http.createServer( function (request, response) {  
