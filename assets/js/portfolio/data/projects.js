@@ -14,6 +14,7 @@
 			"devicon-sass-original",
 			"devicon-angularjs-plain"
 		],
+		"source": "https://github.com/cornopaez/cornopaez.github.io",
 		"footer": "Made by: Mauricio Páez - Pittsburgh, 2017"
 	},
 	{
@@ -29,8 +30,12 @@
 			"devicon-css3-plain-wordmark",
 			"devicon-sass-original",
 			"devicon-angularjs-plain",
-			"fa fa-database"
+			"devicon-nodejs-plain-wordmark",
+			"devicon-nodejs-plain",
+			"devicon-heroku-plain"
+			"devicon-postgresql-plain-wordmark"
 		],
+		"source": "https://github.com/cornopaez/cornopaez.github.io",
 		"footer": "Made by: Mauricio Páez - Pittsburgh 2017"
 	},
 	{
@@ -47,6 +52,7 @@
 			"devicon-css3-plain-wordmark",
 			"fa fa-font-awesome"
 		],
+		"source": "https://github.com/cornopaez/cornopaez.github.io",
 		"footer": "Made by: Mauricio Páez - Pittsburgh, 2017"
 	},
 	{
@@ -64,6 +70,7 @@
 			"devicon-javascript-plain",
 			"devicon-jquery-plain-wordmark"
 		],
+		"source": "https://github.com/cornopaez/cornopaez.github.io",
 		"footer": "Original text by: Edgar Allan Poe - Adated by: Elizabeth Páez - Made by: Mauricio Páez - Pittsburgh 2017"
 	},
 	{
@@ -82,6 +89,7 @@
 			"devicon-angularjs-plain",
 			"fa fa-database"
 		],
+		"source": "https://github.com/cornopaez/cornopaez.github.io",
 		"footer": "Made by: Mauricio Páez - Pittsburgh 2017"
 	}
 ]
