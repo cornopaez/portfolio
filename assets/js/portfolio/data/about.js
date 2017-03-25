@@ -38,7 +38,7 @@
 						"Proposed and built a database in MS Access for better data management. Front-end in VisualBasic for Applications, SQL queries in AccessSQL/JetSQL.",
 						"Contributed and maintained code in documents necessary for the course of business. Lots of Excel sheets with VisualBasic for calculations. Reviewed formulas provided by Business Analysts for those documents to assure accuracy.",
 						"Assisted in transition from legacy systems and databases to new ones.",
-						"Participated in one Hackaton at the company."
+						"Participated in one Hackaton at the company. Out of this, came out the idea of creating my first Ruby on Rails application. You can see the work in progress <a href=\"https://shielded-falls-32861.herokuapp.com/\">here</a>."
 					]
 				},
 				{

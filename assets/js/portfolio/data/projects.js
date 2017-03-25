@@ -80,7 +80,6 @@
 			"classes": "btn disabled",
 			"href": "#"
 		},
-		"buttonText": "Start Banking",
 		"icons": [
 			"devicon-html5-plain-wordmark",
 			"devicon-css3-plain-wordmark",
