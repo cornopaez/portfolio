@@ -73,6 +73,26 @@
 		"footer": "Original text by: Edgar Allan Poe - Adated by: Elizabeth Páez - Made by: Mauricio Páez - Pittsburgh 2017"
 	},
 	{
+		"title": "Health Cost Estimator",
+		"description": "A basic (and rough looking) health care cost estimator. It is designed to pull information from public datasets (like Medicare) and private APIs (<a href=\"www.pokitdok.com\">PokitDok</a>). For now the data after the query is static but comes from real responses from the datasets.",
+		"button": {
+			"text": "Go to Estimator",
+			"classes": "btn",
+			"href": "https://shielded-falls-32861.herokuapp.com/"
+		},
+		"icons": [
+			"devicon-html5-plain-wordmark",
+			"devicon-css3-plain-wordmark",
+			"devicon-jquery-plain-wordmark",
+			"devicon-sass-original",
+			"devicon-ruby-plain",
+			"devicon-rails-plain-wordmark",
+			"devicon-heroku-plain"
+		],
+		"source": "https://github.com/cornopaez/cornopaez.github.io",
+		"footer": "Made by: Mauricio Páez - Pittsburgh 2017"
+	},
+	{
 		"title": "Banking Application",
 		"description": "A simple banking application. Please bank with us- No fees, no nonsense. All your moneis are belong to us! Coming soon.",
 		"button": {
