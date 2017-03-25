@@ -374,7 +374,9 @@ html {
         .about-content .container .about-details .section-content .lang-icon .fa-font-awesome,
         .about-content .container .about-details .section-content .lang-icon .devicon-nodejs-plain,
         .about-content .container .about-details .section-content .lang-icon .devicon-heroku-plain,
-        .about-content .container .about-details .section-content .lang-icon .devicon-postgresql-plain-wordmark {
+        .about-content .container .about-details .section-content .lang-icon .devicon-postgresql-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-ruby-plain,
+        .about-content .container .about-details .section-content .lang-icon .devicon-rails-plain-wordmark {
           font-size: 3.5em; } }
       @media screen and (min-width: 768px) {
         .about-content .container .about-details .section-content .lang-icon .devicon-html5-plain-wordmark,
@@ -391,7 +393,9 @@ html {
         .about-content .container .about-details .section-content .lang-icon .fa-font-awesome,
         .about-content .container .about-details .section-content .lang-icon .devicon-nodejs-plain,
         .about-content .container .about-details .section-content .lang-icon .devicon-heroku-plain,
-        .about-content .container .about-details .section-content .lang-icon .devicon-postgresql-plain-wordmark {
+        .about-content .container .about-details .section-content .lang-icon .devicon-postgresql-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-ruby-plain,
+        .about-content .container .about-details .section-content .lang-icon .devicon-rails-plain-wordmark {
           font-size: 4em; } }
     .about-content .container .about-details .section-content > ul {
       padding-left: 1em; }
@@ -505,7 +509,9 @@ html {
               .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-font-awesome,
               .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-nodejs-plain,
               .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-heroku-plain,
-              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-postgresql-plain-wordmark {
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-postgresql-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-ruby-plain,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-rails-plain-wordmark {
                 font-size: 2.5em; } }
             @media screen and (min-width: 768px) {
               .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-html5-plain-wordmark,
@@ -522,7 +528,9 @@ html {
               .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-font-awesome,
               .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-nodejs-plain,
               .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-heroku-plain,
-              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-postgresql-plain-wordmark {
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-postgresql-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-ruby-plain,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-rails-plain-wordmark {
                 font-size: 3em; } }
         .all-projects .container .projects .project-description .container .detail-row .project-details a {
           font-family: "Raleway";
