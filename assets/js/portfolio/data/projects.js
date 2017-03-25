@@ -30,7 +30,6 @@
 			"devicon-css3-plain-wordmark",
 			"devicon-sass-original",
 			"devicon-angularjs-plain",
-			"devicon-nodejs-plain-wordmark",
 			"devicon-nodejs-plain",
 			"devicon-heroku-plain",
 			"devicon-postgresql-plain-wordmark"
@@ -52,7 +51,7 @@
 			"devicon-css3-plain-wordmark",
 			"fa fa-font-awesome"
 		],
-		"source": "https://github.com/cornopaez/cornopaez.github.io",
+		"source": "https://github.com/cornopaez/codecademy-dance_studio",
 		"footer": "Made by: Mauricio Páez - Pittsburgh, 2017"
 	},
 	{
@@ -70,7 +69,7 @@
 			"devicon-javascript-plain",
 			"devicon-jquery-plain-wordmark"
 		],
-		"source": "https://github.com/cornopaez/cornopaez.github.io",
+		"source": "https://github.com/cornopaez/cornopaez.github.io/tree/master/assets/js/adventure-game",
 		"footer": "Original text by: Edgar Allan Poe - Adated by: Elizabeth Páez - Made by: Mauricio Páez - Pittsburgh 2017"
 	},
 	{
