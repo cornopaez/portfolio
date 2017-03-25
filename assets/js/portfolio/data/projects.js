@@ -43,7 +43,7 @@
 		"button": {
 			"text": "Go to Site",
 			"classes": "btn",
-			"href": "/pages/pytdance/index.html"
+			"href": "http://cornopaez.com/codecademy-dance_studio/"
 		},
 		"icons": [
 			"devicon-html5-plain-wordmark",
