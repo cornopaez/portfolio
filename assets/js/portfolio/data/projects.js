@@ -78,7 +78,7 @@
 		"button": {
 			"text": "Go to Estimator",
 			"classes": "btn",
-			"href": "https://shielded-falls-32861.herokuapp.com/"
+			"href": "https://shielded-falls-32861.herokuapp.com/home"
 		},
 		"icons": [
 			"devicon-html5-plain-wordmark",
