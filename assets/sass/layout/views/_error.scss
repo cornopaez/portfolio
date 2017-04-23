@@ -1,0 +1,35 @@
+.error {
+	> .container {
+		max-width: 800px;
+		height: 88vh;
+	}
+
+	.error-icon,
+	.error-text {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+
+	.error-text {
+		flex-direction: column;
+
+		> h1,
+		> p {
+			margin-bottom: 20px;
+		}
+	}
+
+	.glyphicon-remove {
+		font-size: 200px;
+		color: #c10f0f;
+	}
+
+	.glyphicon-off {
+		font-size: 200px;
+		color: green;
+	}
+
+}

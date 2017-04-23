@@ -546,4 +546,26 @@ html {
           padding: 0;
           font-size: 13px; }
 
+.error > .container {
+  max-width: 800px;
+  height: 88vh; }
+.error .error-icon,
+.error .error-text {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%); }
+.error .error-text {
+  flex-direction: column; }
+  .error .error-text > h1,
+  .error .error-text > p {
+    margin-bottom: 20px; }
+.error .glyphicon-remove {
+  font-size: 200px;
+  color: #c10f0f; }
+.error .glyphicon-off {
+  font-size: 200px;
+  color: green; }
+
 /*# sourceMappingURL=main.css.map */

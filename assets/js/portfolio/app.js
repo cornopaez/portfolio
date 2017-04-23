@@ -14,6 +14,14 @@ app.config(function($routeProvider) {
 		controller: "AboutController",
 		templateUrl: "views/about.html"
 	})
+	.when("/Error", {
+		controller: "AboutController",
+		templateUrl: "views/error.html"
+	})
+	.when("/Maintenance", {
+		controller: "AboutController",
+		templateUrl: "views/maintenance.html"
+	})
 	.otherwise({
 		redirectTo: "/"
 	});
