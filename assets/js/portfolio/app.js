@@ -23,6 +23,6 @@ app.config(function($routeProvider) {
 		templateUrl: "views/maintenance.html"
 	})
 	.otherwise({
-		redirectTo: "/"
+		redirectTo: "/Error"
 	});
 });
