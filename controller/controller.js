@@ -6,11 +6,15 @@ function set(app){
 
 	return new Promise(function(resolve, reject) {
 		app.all('*', function (req, res) {
-			if(req.headers["x-forwarded-proto"] === "https" || process.env.NODE_ENV){
-				// OK, continue
+			// Check for secure connection
+			if(req.headers["x-forwarded-proto"] === "https"){
 				return next();
 			};
-			res.redirect('https://'+req.hostname+req.url);
+
+			// Check for Prov env
+			if (process.env.NODE_ENV === "Prod") {
+				res.redirect('https://'+req.hostname+req.url);
+			}
 		});
 
 

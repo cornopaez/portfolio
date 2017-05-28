@@ -11,4 +11,4 @@ controller.set(app);
 
 app.listen(process.env.PORT || 3000);
 
-console.log("App running at on port" + (process.env.PORT ? process.env.PORT : 3000));
+console.log("App running at on port " + (process.env.PORT ? process.env.PORT : 3000));
