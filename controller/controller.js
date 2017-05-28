@@ -5,7 +5,7 @@ module.exports = {
 function set(app){
 
 	return new Promise(function(resolve, reject) {
-		app.all('*', function (req, res) {
+		app.all('*', function (req, res, next) {
 			// Check for secure connection
 			if(req.headers["x-forwarded-proto"] === "https"){
 				return next();
