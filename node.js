@@ -1,6 +1,7 @@
 const express = require('express');
 const pgp = require('pg-promise')();
-var http = require('http');
+const http = require('http');
+const express_enforces_ssl = require('express-enforces-ssl');
 const app = express();
 const controller = require("./controller/controller.js");
 
