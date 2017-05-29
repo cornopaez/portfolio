@@ -1,29 +1,11 @@
 [
 	{
 		"title": "Portfolio",
-		"description": "This website is the first project I've taken on, at least on the Web Development front. It is designed with simplicity in mind following most of the concepts I have learned on Codecademy's HTML, CSS, SASS, and AngularJS tracks.",
+		"description": "This website is the first project I've taken on, at least on the Web Development front. It is designed with simplicity in mind following most of the concepts I have learned on Codecademy's HTML, CSS, SASS, and AngularJS tracks. Of course, this site is entirely over engineered to showcase some skills. For example, there's no need for MongoDB to be in the stack, but it currently serves all the text for the site through a NodeJS API on which this site runs on.",
 		"button": {
 			"text": "Go to Main Page",
 			"classes": "btn",
-			"href": "#/"
-		},
-		"icons": [
-			"devicon-html5-plain-wordmark",
-			"devicon-bootstrap-plain-wordmark",
-			"devicon-css3-plain-wordmark",
-			"devicon-sass-original",
-			"devicon-angularjs-plain"
-		],
-		"source": "https://github.com/cornopaez/cornopaez.github.io",
-		"footer": "Made by: Mauricio Páez - Pittsburgh, 2017"
-	},
-	{
-		"title": "Portfolio (Heroku)",
-		"description": "A Heroku-hosted version of this portfolio. Its source is the same as the regular websites, but this version runs on a basic Node.js server.",
-		"button": {
-			"text": "Go to Main Page",
-			"classes": "btn",
-			"href": "https://cornopaez.herokuapp.com"
+			"href": "https://www.cornopaez.com"
 		},
 		"icons": [
 			"devicon-html5-plain-wordmark",
@@ -32,7 +14,7 @@
 			"devicon-angularjs-plain",
 			"devicon-nodejs-plain",
 			"devicon-heroku-plain",
-			"devicon-postgresql-plain-wordmark"
+			"devicon-mongodb-plain-wordmark"
 		],
 		"source": "https://github.com/cornopaez/cornopaez.github.io",
 		"footer": "Made by: Mauricio Páez - Pittsburgh 2017"
@@ -105,7 +87,7 @@
 			"devicon-css3-plain-wordmark",
 			"devicon-sass-original",
 			"devicon-angularjs-plain",
-			"fa fa-database"
+			"devicon-postgresql-plain-wordmark"
 		],
 		"source": "https://github.com/cornopaez/cornopaez.github.io",
 		"footer": "Made by: Mauricio Páez - Pittsburgh 2017"
