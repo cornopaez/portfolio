@@ -24,7 +24,7 @@ function set(app){
 
 
 		app.get('/', function (req, res) {
-			// console.log("In get");
+			// Load landing page
 			resolve(res.sendFile('index.html', {root: "./" }));
 		})
 	});
