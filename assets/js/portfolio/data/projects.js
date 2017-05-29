@@ -1,7 +1,7 @@
 [
 	{
 		"title": "Portfolio",
-		"description": "This website is the first project I've taken on, at least on the Web Development front. It is designed with simplicity in mind following most of the concepts I have learned on Codecademy's HTML, CSS, SASS, and AngularJS tracks. Of course, this site is entirely over engineered to showcase some skills. For example, there's no need for MongoDB to be in the stack, but it currently serves all the text for the site through a NodeJS API on which this site runs on.",
+		"description": "This website is the first project I've taken on, at least on the Web Development front. It is designed with simplicity in mind following most of the concepts I have learned on Codecademy's HTML, CSS, SASS, and AngularJS tracks. Of course, this site is entirely over engineered to showcase some skills.",
 		"button": {
 			"text": "Go to Main Page",
 			"classes": "btn",
@@ -13,8 +13,7 @@
 			"devicon-sass-original",
 			"devicon-angularjs-plain",
 			"devicon-nodejs-plain",
-			"devicon-heroku-plain",
-			"devicon-mongodb-plain-wordmark"
+			"devicon-heroku-plain"
 		],
 		"source": "https://github.com/cornopaez/cornopaez.github.io",
 		"footer": "Made by: Mauricio Páez - Pittsburgh 2017"
