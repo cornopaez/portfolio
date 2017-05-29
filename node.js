@@ -1,13 +1,11 @@
 const express = require('express');
-const pgp = require('pg-promise')();
+// const pgp = require('pg-promise')();
 const app = express();
-const controller = require("./controller/controller.js");
+const routes = require("./routes/routes.js");
 
-app.use(express.static(__dirname));
-app.engine('html', require('ejs').renderFile);
+routes.set(app);
+app.use(express.static("./"));
 app.set('view engine', 'html');
-
-controller.set(app);
 
 app.listen(process.env.PORT || 3000);
 
