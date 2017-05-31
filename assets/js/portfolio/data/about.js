@@ -2,12 +2,12 @@
 	"background": [
 		{
 			"title": "Background",
-			"text": "I am a former musician who's discovered the joy of coding. I initially learned to code in Java, building small programs for my classes. Relational databases proved fascinating as well, and SQL a powerful tool to access the data. I'm currently learning about web development and working to learn about the Full Stack, to round my knowledge. I am familiar and feel comfortable in the languages below. Feel free to poke around the site and contact me if you have any questions."
+			"text": "I am a former musician who's discovered the joy of coding. I initially learned to code in Java, building small programs for my classes, including some that used SQL databases in the stack. I am handy with SQL and traditional relational database schema design and queries. I’ve since moved on to using a MEAN as my main stack, using it to build this site and deploying exclusively to Heroku. I am familiar and feel comfortable in the languages and technologies below. Feel free to poke around the site and contact me if you have any questions."
 		}
 	],
 	"languages": [
 		{
-			"title": "Languages",
+			"title": "Languages and Technologies",
 			"icons": [
 				"devicon-html5-plain-wordmark",
 				"devicon-css3-plain-wordmark",
@@ -15,11 +15,12 @@
 				"devicon-javascript-plain",
 				"devicon-jquery-plain-wordmark",
 				"devicon-angularjs-plain",
+				"devicon-express-original-wordmark",
+				"devicon-nodejs-plain",
 				"devicon-bootstrap-plain-wordmark",
 				"devicon-git-plain-wordmark",
 				"devicon-github-plain-wordmark",
 				"devicon-java-plain",
-				"devicon-nodejs-plain",
 				"devicon-heroku-plain",
 				"devicon-postgresql-plain-wordmark",
 				"devicon-ruby-plain",
@@ -38,7 +39,7 @@
 						"Proposed and built a database in MS Access for better data management. Front-end in VisualBasic for Applications, SQL queries in AccessSQL/JetSQL.",
 						"Contributed and maintained code in documents necessary for the course of business. Lots of Excel sheets with VisualBasic for calculations. Reviewed formulas provided by Business Analysts for those documents to assure accuracy.",
 						"Assisted in transition from legacy systems and databases to new ones.",
-						"Participated in one Hackaton at the company. Out of this, came out the idea of creating my first Ruby on Rails application. You can see the work in progress <a href=\"https://shielded-falls-32861.herokuapp.com/\">here</a>."
+						"Participated in two hackatons at the company. Out of this, came out the idea of creating my first <a href=\"https://shielded-falls-32861.herokuapp.com/\">Ruby on Rails application</a>. I've also worked on Alexa and Google Home skills, creating an API to consume data to be used in Natual Language Procesing applications."
 					]
 				},
 				{
@@ -46,8 +47,9 @@
 					"points": [
 						"I've built and maintained this website on my own. It is a permanent work in progress, so look for continual improvements.",
 						"Solid foundation in front-end web development with HTML & CSS.",
-						"Familiarity with CSS pre-processing with SASS",
-						"Experience with JavaScript and JQuery.",
+						"Excellent skills with NodeJS and Express.",
+						"CSS pre-processing with SASS.",
+						"Experience with JQuery.",
 						"Experience with Twitter's Bootstrap framework and CSS3's Flexbox for building responsive websites."
 					]
 				},
@@ -64,6 +66,12 @@
 		{
 			"title": "Education",
 			"entities": [
+				{
+					"title": "MongoDB University",
+					"points": [
+						"MongoDB for Node.js Developers (currently in progress) - 2017 - [ <a href=\"https://university.mongodb.com/courses/M101JS/about\">View Program Website</a> ]"
+					]
+				},
 				{
 					"title": "Codecademy",
 					"points": [

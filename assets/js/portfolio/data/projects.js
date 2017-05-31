@@ -12,6 +12,7 @@
 			"devicon-css3-plain-wordmark",
 			"devicon-sass-original",
 			"devicon-angularjs-plain",
+			"devicon-express-original-wordmark",
 			"devicon-nodejs-plain",
 			"devicon-heroku-plain"
 		],

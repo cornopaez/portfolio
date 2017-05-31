@@ -1,7 +1,7 @@
 {
 	"jumbotron": "Hi. I like to code.",
 	"support": {
-		"paragraph": "I'm a Pittsburgh-based developer with enough knowledge of every aspect of the stack to be dangerous (and break things). What make me stand out from others?",
+		"paragraph": "I'm a Pittsburgh-based front-end developer deploying projects to Heroku and using a fast, opinionated MEAN stack.",
 		"points": [
 			{
 				"title": "Dedication",
@@ -13,7 +13,7 @@
 			},
 			{
 				"title": "Creativity",
-				"text": "My main background has always been the creative side: a strength that cannot be improvised."
+				"text": "My background cultivated creativity. As such, ideation is my fore-most strength."
 			}
 		]
 	}
