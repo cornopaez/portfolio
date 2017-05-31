@@ -41,7 +41,7 @@
 		"button": {
 			"text": "Start Game",
 			"classes": "btn",
-			"href": "https://www.cornopaez/pages/adventure-game.html"
+			"href": "https://www.cornopaez.com/pages/adventure-game.html"
 		},
 		"icons": [
 			"devicon-html5-plain-wordmark",
