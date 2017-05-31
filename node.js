@@ -8,6 +8,7 @@ app.use("/img", express.static(__dirname + "/assets/img"));
 app.use("/js", express.static(__dirname + "/assets/js"));
 app.use("/sass", express.static(__dirname + "/assets/sass"));
 app.use("/views", express.static(__dirname + "/assets/views"));
+app.use("/pages", express.static(__dirname + "/pages"));
 
 app.use("/", routes);
 

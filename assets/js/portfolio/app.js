@@ -23,7 +23,7 @@ app.config(function($routeProvider, $locationProvider) {
 		templateUrl: "views/maintenance.html"
 	})
 	.otherwise({
-		redirectTo: "views/error.html"
+		redirectTo: "/Error"
 	});
 
 	$locationProvider.html5Mode(true);

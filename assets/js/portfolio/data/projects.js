@@ -5,7 +5,7 @@
 		"button": {
 			"text": "Go to Main Page",
 			"classes": "btn",
-			"href": "https://www.cornopaez.com"
+			"href": "/"
 		},
 		"icons": [
 			"devicon-html5-plain-wordmark",
@@ -24,7 +24,7 @@
 		"button": {
 			"text": "Go to Site",
 			"classes": "btn",
-			"href": "http://cornopaez.com/codecademy-dance_studio/"
+			"href": "https://cornopaez.github.io/codecademy-dance_studio/"
 		},
 		"icons": [
 			"devicon-html5-plain-wordmark",
@@ -41,7 +41,7 @@
 		"button": {
 			"text": "Start Game",
 			"classes": "btn",
-			"href": "/pages/adventure-game.html"
+			"href": "https://www.cornopaez/pages/adventure-game.html"
 		},
 		"icons": [
 			"devicon-html5-plain-wordmark",
