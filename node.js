@@ -4,6 +4,8 @@ const routes = require("./routes/routes.js");
 
 // routes.set(app);
 // app.use(express.static("assets"));
+app.use(require('prerender-node').set('prerenderToken', process.env.PRERENDER_TOKEN));
+
 app.use("/img", express.static(__dirname + "/assets/img"));
 app.use("/js", express.static(__dirname + "/assets/js"));
 app.use("/sass", express.static(__dirname + "/assets/sass"));
