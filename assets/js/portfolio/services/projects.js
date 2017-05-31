@@ -1,5 +1,5 @@
 app.factory("projectsData", ["$http", function($http){
-	return $http.get("assets/js/portfolio/data/projects.js")
+	return $http.get("js/portfolio/data/projects.js")
 	.success(function(data){
 		return data;
 	})

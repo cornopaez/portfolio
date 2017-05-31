@@ -1,5 +1,5 @@
 app.factory("mainText", ["$http", function($http){
-	return $http.get("assets/js/portfolio/data/main.js")
+	return $http.get("js/portfolio/data/main.js")
 	.success(function(data){
 		return data;
 	})

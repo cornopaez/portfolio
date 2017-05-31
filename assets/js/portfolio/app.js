@@ -1,6 +1,6 @@
 var app = angular.module("Portfolio", ["ngRoute", "ngSanitize"]);
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $locationProvider) {
 	$routeProvider
 	.when("/", {
 		controller: "HomeController",
@@ -23,7 +23,9 @@ app.config(function($routeProvider) {
 		templateUrl: "views/maintenance.html"
 	})
 	.otherwise({
-		redirectTo: "/Error"
+		redirectTo: "views/error.html"
 	});
+
+	$locationProvider.html5Mode(true);
 
 });
