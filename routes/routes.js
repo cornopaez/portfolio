@@ -1,4 +1,5 @@
 const express = require("express");
+const validation = require("./vendor/reCaptcha-validation.js")
 const router = express.Router();
 
 module.exports = router;
@@ -18,6 +19,19 @@ router.use('*', function (req, res, next) {
 		// If not headers, move on
 		return next();
 	}
+});
+
+router.post("/contact", function(req,res){
+	// console.log(req.body);
+	validation.validate(req)
+	.then(function(body){
+		res.send(body);
+		// if (body.success = true) {
+		// 	res.redirect("/success")
+		// } else {
+		// 	res.redirect("/error");
+		// }
+	});
 });
 
 router.get('*', function (req, res) {

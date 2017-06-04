@@ -1,4 +1,4 @@
-var app = angular.module("Portfolio", ["ngRoute", "ngSanitize"]);
+var app = angular.module("Portfolio", ["ngRoute", "ngSanitize", "vcRecaptcha"]);
 
 app.config(function($routeProvider, $locationProvider) {
 	$routeProvider
@@ -6,24 +6,32 @@ app.config(function($routeProvider, $locationProvider) {
 		controller: "HomeController",
 		templateUrl: "views/home.html"
 	})
-	.when("/Projects", {
+	.when("/projects", {
 		controller: "ProjectsController",
 		templateUrl: "views/projects.html"
 	})
-	.when("/About", {
+	.when("/about", {
 		controller: "AboutController",
 		templateUrl: "views/about.html"
 	})
-	.when("/Error", {
+	.when("/contact", {
+		controller: "ContactController",
+		templateUrl: "views/contact.html"
+	})
+	.when("/error", {
 		controller: "AboutController",
 		templateUrl: "views/error.html"
 	})
-	.when("/Maintenance", {
+	.when("/maintenance", {
 		controller: "AboutController",
 		templateUrl: "views/maintenance.html"
 	})
+	.when("/success", {
+		controller: "ContactController",
+		templateUrl: "views/contactSuccess.html"
+	})
 	.otherwise({
-		redirectTo: "/Error"
+		redirectTo: "/error"
 	});
 
 	$locationProvider.html5Mode(true);
