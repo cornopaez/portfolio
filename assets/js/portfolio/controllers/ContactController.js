@@ -2,7 +2,7 @@ app.controller('ContactController', ['$scope', function($scope){
 	$scope.response = null;
     $scope.widgetId = null;
     $scope.model = {
-        key: '6LecGCQUAAAAAJIVe7rkDLW5vhb219wCfAy-TIs0'
+        key: '6LfqQyQUAAAAAEUzPV8U48Vr3qiGxHAyaFA0YCBG'
     };
     $scope.setResponse = function (response) {
         console.info('Response available');
