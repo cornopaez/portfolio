@@ -22,10 +22,6 @@ app.config(function($routeProvider, $locationProvider) {
 		controller: "AboutController",
 		templateUrl: "views/error.html"
 	})
-	.when("/maintenance", {
-		controller: "AboutController",
-		templateUrl: "views/maintenance.html"
-	})
 	.when("/success", {
 		controller: "ContactController",
 		templateUrl: "views/contactSuccess.html"

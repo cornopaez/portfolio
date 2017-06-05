@@ -1,5 +1,12 @@
 .contact_container {
-	padding: 5% 10%;
+
+	@media screen and (min-width: 320px) {
+		padding: 5%;
+	}
+
+	@media screen and (min-width: 768px) {
+		padding: 5% 10%;
+	}
 
 	> .social_networks {
 		> ul {
@@ -12,7 +19,15 @@
 			transform: translate(-50%, 0);
 
 			li {
-				padding: 0 20px;
+
+				@media screen and (min-width: 320px) {
+					padding: 0 10px;
+				}
+
+				@media screen and (min-width: 768px) {
+					padding: 0 20px;
+				}
+
 				@include icon-size(3.5em);
 
 				a {
@@ -39,8 +54,15 @@
 .contact_success {
 	position: relative;
 	text-align: center;
-	height: 85vh;
+	height: 87vh;
 	> .success_text {
+
+		.glyphicon-thumbs-up {
+			margin: 10px 0;
+			font-size: 3.5em;
+			color: green;
+		}
+
 		position: absolute;
 		@extend %center-of-container;
 	}
