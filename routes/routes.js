@@ -24,20 +24,21 @@ MongoClient.connect(url, function(err, db) {
 				return next();
 			}
 		} else {
-			// If not headers, move on
+			// If already secure, move on
 			return next();
 		}
 	});
 
 	router.post("/contact", function(req,res){
-		// console.log(req.body);
+		// Perform recaptcha validation
 		validation.validate(req)
 		.then(function(body){
-			// res.send(body);
+			// Check for success
 			if (body.success = true) {
-				// console.log(req);
+
 				var urgent = req.body.urgent_message = "on" ? true : false;
-				
+
+				// Write to db
 				db.collection('contact').insertOne({
 					"name": req.body.user_given_name,
 					"email": req.body.user_email,
@@ -45,14 +46,18 @@ MongoClient.connect(url, function(err, db) {
 					"urgent": urgent
 				})
 				.then(function(){
+					// Redirect if successful
 					console.log("Contact request written to database.")
 					res.redirect("/success")
 				})
 				.catch(function(error){
+					// Redirect if error writing to db
 					console.log("Contact request was not written to database. There was an error.")
 					res.redirect("/error");
 				});
 			} else {
+				// Redirect if error validating recaptcha
+				console.log("reCaptcha validation failed. There was an error.")
 				res.redirect("/error");
 			}
 		});
