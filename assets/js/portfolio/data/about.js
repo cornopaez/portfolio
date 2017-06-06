@@ -14,8 +14,9 @@
 				"devicon-sass-original",
 				"devicon-javascript-plain",
 				"devicon-jquery-plain-wordmark",
-				"devicon-angularjs-plain",
+				"devicon-mongodb-plain-wordmark",
 				"devicon-express-original-wordmark",
+				"devicon-angularjs-plain",
 				"devicon-nodejs-plain",
 				"devicon-bootstrap-plain-wordmark",
 				"devicon-git-plain-wordmark",
@@ -24,8 +25,7 @@
 				"devicon-heroku-plain",
 				"devicon-postgresql-plain-wordmark",
 				"devicon-ruby-plain",
-				"devicon-rails-plain-wordmark",
-				"fa fa-database"
+				"devicon-rails-plain-wordmark"
 			]
 		}
 	],

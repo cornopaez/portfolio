@@ -11,6 +11,7 @@
 			"devicon-html5-plain-wordmark",
 			"devicon-css3-plain-wordmark",
 			"devicon-sass-original",
+			"devicon-mongodb-plain-wordmark",
 			"devicon-angularjs-plain",
 			"devicon-express-original-wordmark",
 			"devicon-nodejs-plain",
