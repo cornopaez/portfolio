@@ -1,4 +1,25 @@
 app.controller('ContactController', ['$scope', function($scope){
+    // Icon links and information
+    $scope.links = [
+        {
+            "icon": "fa fa-facebook-official",
+            "link": "https://www.facebook.com/cornopaez"
+        },
+        {
+            "icon": "fa fa-twitter-square",
+            "link": "https://www.twitter.com/cornopaez"
+        },
+        {
+            "icon": "fa fa-linkedin",
+            "link": "https://www.linkedin.com/in/cornopaez"
+        },
+        {
+            "icon": "fa fa-angellist",
+            "link": "https://angel.co/jose-mauricio-paez"
+        }
+    ];
+
+    // reCaptcha information
 	$scope.response = null;
     $scope.widgetId = null;
     $scope.model = {

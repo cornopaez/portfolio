@@ -2,14 +2,15 @@
 	<h1>Let's Talk</h1>
 	<p>Every now and then, reading through this website is not enough to get the answers you're looking for. I value all input greatly and I want to give you access to every communication channel I have at my disposal, so you contact me however you like contacting people.</p>
 
-	<div class="social_networks">
+	<div class="contact_1">
 		<h3>Social Networks</h3>
 		<P>For those in social networks way too much everyday day, you can find me at the following places:</P>
 		<ul>
-			<li><a href="https://www.facebook.com/cornopaez"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-			<li><a href="https://www.twitter.com/cornopaez"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-			<li><a href="https://www.linkedin.com/in/cornopaez"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-			<li><a href="https://angel.co/jose-mauricio-paez"><i class="fa fa-angellist" aria-hidden="true"></i></a></li>
+			<li ng-repeat="link in links" role="presentation">
+				<a href=" {{ link.link }} ">
+					<i class="{{ link.icon }}" aria-hidden="true"></i>
+				</a>
+			</li>
 		</ul>
 	</div>
 

@@ -615,7 +615,7 @@ html {
 @media screen and (min-width: 768px) {
   .contact_container {
     padding: 5% 10%; } }
-.contact_container > .social_networks > ul {
+.contact_container > .contact_1 > ul {
   position: relative;
   display: inline-flex;
   list-style: none;
@@ -624,64 +624,64 @@ html {
   left: 50%;
   transform: translate(-50%, 0); }
   @media screen and (min-width: 320px) {
-    .contact_container > .social_networks > ul li {
+    .contact_container > .contact_1 > ul li {
       padding: 0 10px; } }
   @media screen and (min-width: 768px) {
-    .contact_container > .social_networks > ul li {
+    .contact_container > .contact_1 > ul li {
       padding: 0 20px; } }
   @media screen and (min-width: 320px) {
-    .contact_container > .social_networks > ul li .devicon-html5-plain-wordmark,
-    .contact_container > .social_networks > ul li .devicon-css3-plain-wordmark,
-    .contact_container > .social_networks > ul li .devicon-sass-original,
-    .contact_container > .social_networks > ul li .devicon-javascript-plain,
-    .contact_container > .social_networks > ul li .devicon-jquery-plain-wordmark,
-    .contact_container > .social_networks > ul li .devicon-angularjs-plain,
-    .contact_container > .social_networks > ul li .devicon-bootstrap-plain-wordmark,
-    .contact_container > .social_networks > ul li .devicon-java-plain,
-    .contact_container > .social_networks > ul li .fa-database,
-    .contact_container > .social_networks > ul li .devicon-git-plain-wordmark,
-    .contact_container > .social_networks > ul li .devicon-github-plain-wordmark,
-    .contact_container > .social_networks > ul li .fa-font-awesome,
-    .contact_container > .social_networks > ul li .devicon-nodejs-plain,
-    .contact_container > .social_networks > ul li .devicon-heroku-plain,
-    .contact_container > .social_networks > ul li .devicon-postgresql-plain-wordmark,
-    .contact_container > .social_networks > ul li .devicon-ruby-plain,
-    .contact_container > .social_networks > ul li .devicon-rails-plain-wordmark,
-    .contact_container > .social_networks > ul li .devicon-mongodb-plain-wordmark,
-    .contact_container > .social_networks > ul li .devicon-express-original-wordmark,
-    .contact_container > .social_networks > ul li .fa-facebook-official,
-    .contact_container > .social_networks > ul li .fa-twitter-square,
-    .contact_container > .social_networks > ul li .fa-linkedin,
-    .contact_container > .social_networks > ul li .fa-angellist,
-    .contact_container > .social_networks > ul li .fa-envelope-o {
+    .contact_container > .contact_1 > ul li .devicon-html5-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-css3-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-sass-original,
+    .contact_container > .contact_1 > ul li .devicon-javascript-plain,
+    .contact_container > .contact_1 > ul li .devicon-jquery-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-angularjs-plain,
+    .contact_container > .contact_1 > ul li .devicon-bootstrap-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-java-plain,
+    .contact_container > .contact_1 > ul li .fa-database,
+    .contact_container > .contact_1 > ul li .devicon-git-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-github-plain-wordmark,
+    .contact_container > .contact_1 > ul li .fa-font-awesome,
+    .contact_container > .contact_1 > ul li .devicon-nodejs-plain,
+    .contact_container > .contact_1 > ul li .devicon-heroku-plain,
+    .contact_container > .contact_1 > ul li .devicon-postgresql-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-ruby-plain,
+    .contact_container > .contact_1 > ul li .devicon-rails-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-mongodb-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-express-original-wordmark,
+    .contact_container > .contact_1 > ul li .fa-facebook-official,
+    .contact_container > .contact_1 > ul li .fa-twitter-square,
+    .contact_container > .contact_1 > ul li .fa-linkedin,
+    .contact_container > .contact_1 > ul li .fa-angellist,
+    .contact_container > .contact_1 > ul li .fa-envelope-o {
       font-size: 3.5em; } }
   @media screen and (min-width: 768px) {
-    .contact_container > .social_networks > ul li .devicon-html5-plain-wordmark,
-    .contact_container > .social_networks > ul li .devicon-css3-plain-wordmark,
-    .contact_container > .social_networks > ul li .devicon-sass-original,
-    .contact_container > .social_networks > ul li .devicon-javascript-plain,
-    .contact_container > .social_networks > ul li .devicon-jquery-plain-wordmark,
-    .contact_container > .social_networks > ul li .devicon-angularjs-plain,
-    .contact_container > .social_networks > ul li .devicon-bootstrap-plain-wordmark,
-    .contact_container > .social_networks > ul li .devicon-java-plain,
-    .contact_container > .social_networks > ul li .fa-database,
-    .contact_container > .social_networks > ul li .devicon-git-plain-wordmark,
-    .contact_container > .social_networks > ul li .devicon-github-plain-wordmark,
-    .contact_container > .social_networks > ul li .fa-font-awesome,
-    .contact_container > .social_networks > ul li .devicon-nodejs-plain,
-    .contact_container > .social_networks > ul li .devicon-heroku-plain,
-    .contact_container > .social_networks > ul li .devicon-postgresql-plain-wordmark,
-    .contact_container > .social_networks > ul li .devicon-ruby-plain,
-    .contact_container > .social_networks > ul li .devicon-rails-plain-wordmark,
-    .contact_container > .social_networks > ul li .devicon-mongodb-plain-wordmark,
-    .contact_container > .social_networks > ul li .devicon-express-original-wordmark,
-    .contact_container > .social_networks > ul li .fa-facebook-official,
-    .contact_container > .social_networks > ul li .fa-twitter-square,
-    .contact_container > .social_networks > ul li .fa-linkedin,
-    .contact_container > .social_networks > ul li .fa-angellist,
-    .contact_container > .social_networks > ul li .fa-envelope-o {
+    .contact_container > .contact_1 > ul li .devicon-html5-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-css3-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-sass-original,
+    .contact_container > .contact_1 > ul li .devicon-javascript-plain,
+    .contact_container > .contact_1 > ul li .devicon-jquery-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-angularjs-plain,
+    .contact_container > .contact_1 > ul li .devicon-bootstrap-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-java-plain,
+    .contact_container > .contact_1 > ul li .fa-database,
+    .contact_container > .contact_1 > ul li .devicon-git-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-github-plain-wordmark,
+    .contact_container > .contact_1 > ul li .fa-font-awesome,
+    .contact_container > .contact_1 > ul li .devicon-nodejs-plain,
+    .contact_container > .contact_1 > ul li .devicon-heroku-plain,
+    .contact_container > .contact_1 > ul li .devicon-postgresql-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-ruby-plain,
+    .contact_container > .contact_1 > ul li .devicon-rails-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-mongodb-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-express-original-wordmark,
+    .contact_container > .contact_1 > ul li .fa-facebook-official,
+    .contact_container > .contact_1 > ul li .fa-twitter-square,
+    .contact_container > .contact_1 > ul li .fa-linkedin,
+    .contact_container > .contact_1 > ul li .fa-angellist,
+    .contact_container > .contact_1 > ul li .fa-envelope-o {
       font-size: 4em; } }
-  .contact_container > .social_networks > ul li a {
+  .contact_container > .contact_1 > ul li a {
     display: block; }
 
 .send_email {
