@@ -1,105 +1,66 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<base href="/" />
 		<meta name=viewport content="width=device-width, initial-scale=1" charset="utf-8">
+		<meta name="google-site-verification" content="F04g04OPFKITr5yQG4Y6y5JQf2BUgbM_oIf5CodB9zQ" />
+		<meta name="msvalidate.01" content="2AA26EAA8FF6BD61EF89916AB548F179" />
+		<meta name="fragment" content="!">
+		<link href="https://use.fontawesome.com/d326b1c71e.css" media="all" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+		<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="sass/main.css">
 		<link rel="icon" type="image/png" href="img/favicon.ico" sizes="32x32" />
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-sanitize.min.js"></script>
 
 		<title>Mauricio_Páez | Developer</title>
 	</head>
-	<body>
+	<body ng-app="Portfolio">
 		<nav class="navbar navbar-default header">
-			<div class="container-fluid">
-				<div class="navbar-header">
+			<div class="container-fluid" role="presentation">
+				<div class="navbar-header" role="presentation">
 					<button type="button" class="navbar-toggle collapsed toggle-button-right" data-toggle="collapse" data-target="#right-pills" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar icon-line"></span>
-						<span class="icon-bar icon-line"></span>
-						<span class="icon-bar icon-line"></span>
+					<span class="sr-only" role="presentation">Toggle navigation</span>
+						<span class="icon-bar icon-line" role="presentation"></span>
+						<span class="icon-bar icon-line" role="presentation"></span>
+						<span class="icon-bar icon-line" role="presentation"></span>
 					</button>
-					<a class="navbar-brand" href="#">Mauricio_Páez</a>
+					<a class="navbar-brand" href="/">Mauricio_Páez</a>
 				</div>
 				<div class="collapse navbar-collapse link-container" id="right-pills">
-					<ul class="nav navbar-nav main-links">
-						<li class="list-item">
-							<a href="pages/projects.html">Projects</a>
+					<ul class="nav navbar-nav main-links" role="presentation">
+						<li class="list-item" role="presentation">
+							<a href="/projects">Projects</a>
 						</li>
-						<li class="list-item">
-							<a href="pages/about.html">About</a>
+						<li class="list-item" role="presentation">
+							<a href="/about">About</a>
+						</li>
+						<li class="list-item" role="presentation">
+							<a href="/contact">Contact</a>
 						</li>
 					</ul>
-				</div> <!-- /.navbar-collapse -->
-			</div> <!-- /.container fluid -->
+				</div>
+			</div> 
 		</nav>
-		<div class="jumbotron">
-			<h1>Hi. I like to code.</h1>
-		</div>
-		<div class="support-1">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<p>
-							I'm a Pittsburgh-based developer with enough knowledge of every aspect of the stack to be dangerous (and break things). <br>
-							<br>
-							What make me stand out from others? Read on...
-						</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<h2>
-							Dedication
-						</h2>
-						<p>
-							Passion drives every project I own
-						</p>
-					</div>
-					<div class="col-md-4">
-						<h2>
-							Character
-						</h2>
-						<p>
-							Flexibility and thoroughness- the two things that define me. That's the difference I make.
-						</p>
-					</div>
-					<div class="col-md-4">
-						<h2>
-							Creativity
-						</h2>
-						<p>
-							My main background has always been the creative side: a strength that cannot be improvised.
-						</p>
-					</div>
-				</div>
 
-			</div>
-		</div>
-		<div class="support-2">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<a href="pages/projects.html" class="btn">See some of my projects</a>
-					</div>
-					<div class="col-md-6">
-						<a href="pages/about.html" class="btn">Learn more about me</a>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div ng-view></div>
+
 		<footer class="footer">
 			<div class="social-media-links">
-				<ul class="nav nav-pills nav-stacked">
+				<ul class="nav nav-pills nav-stacked" role="presentation">
 					<li class="nav-item">
 						<a class="nav-link" href="https://twitter.com/cornopaez">Twitter</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item" role="presentation">
 						<a href="https://www.github.com/cornopaez">GitHub</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item" role="presentation">
 						<a href="https://www.codecademy.com/cornopaez">Codecademy</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item" role="presentation">
 						<a href="https://www.codewars.com/users/cornopaez">Codewars</a>
 					</li>
 				</ul>
@@ -109,5 +70,23 @@
 		<!-- Script Import -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<script type="text/javascript" src="/recaptcha/angular-recaptcha.js"></script>
+
+		<!-- ng-app -->
+		<script src="js/portfolio/app.js"></script>
+
+		<!-- ng-controllers -->
+		<script src="js/portfolio/controllers/HomeController.js"></script>
+		<script src="js/portfolio/controllers/ProjectsController.js"></script>
+		<script src="js/portfolio/controllers/AboutController.js"></script>
+		<script src="js/portfolio/controllers/AdventureGameController.js"></script>
+		<script src="js/portfolio/controllers/ContactController.js"></script>
+
+		<!-- ng-services -->
+		<script src="js/portfolio/services/main.js"></script>
+		<script src="js/portfolio/services/about.js"></script>
+		<script src="js/portfolio/services/projects.js"></script>
+
 	</body>
 </html>

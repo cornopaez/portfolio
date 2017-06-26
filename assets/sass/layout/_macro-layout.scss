@@ -1,0 +1,9 @@
+// Global Settings
+html {
+	@extend %base;
+}
+
+body {
+	@extend %base;
+	@include font-properties($open-sans-default, 17px, 300);
+}

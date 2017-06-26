@@ -1,0 +1,60 @@
+<div class="jumbotron" aria-label="Picture of Pittsburgh from Mount Washington.">
+	<h1>{{ homeText.jumbotron }}</h1>
+</div>
+<div class="support-1" role="presentation">
+	<div class="container" role="presentation">
+		<div class="row" role="presentation">
+			<div class="col-md-12" role="presentation">
+				<p>{{ homeText.support.paragraph }}</p>
+			</div>
+		</div>
+		<div class="row" role="presentation">
+			<div class="col-md-4" ng-repeat="point in homeText.support.points" role="presentation">
+				<h2>{{ point.title }}</h2>
+				<p>{{ point.text }}</p>
+			</div>
+		</div>
+
+	</div>
+</div>
+<div class="support-2" role="presentation">
+	<div class="container" role="presentation">
+		<div class="row" role="presentation">
+			<div class="col-md-6" role="presentation">
+				<a href="/projects" class="btn">See some of my projects</a>
+			</div>
+			<div class="col-md-6" role="presentation">
+				<a href="/about" class="btn">Learn more about me</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+	    "@type": "WebPage",
+	    "about": {
+	        "@type": "Organization",
+	        "name": "Mauricio_Páez | Developer",
+	        "url": "https://www.cornopaez.com",
+	        "address": {
+		        "addressLocality": "Pittsburgh",
+		        "addressRegion": "PA"
+	        },
+	        "Description": "I'm a Pittsburgh-based front-end developer deploying projects to Heroku and using a fast, opinionated MEAN stack."
+	    },
+	    "author": {
+	    	"@type": "person",
+	        "name": "Mauricio Páez",
+	        "sameAs": "https://www.cornopaez.com/about",
+          "sameAs": "https://twitter.com/cornopaez",
+          "sameAs": "https://www.github.com/cornopaez",
+          "sameAs": "https://www.codecademy.com/cornopaez",
+          "sameAs": "https://www.codewars.com/users/cornopaez",
+          "sameAs": "https://angel.co/jose-mauricio-paez",
+          "sameAs": "https://www.linkedin.com/in/cornopaez"
+	    }
+	}
+</script>

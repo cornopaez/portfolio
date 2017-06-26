@@ -1,0 +1,85 @@
+<div class="about-content">
+	<div class="container" role="presentation">
+		<div class="row top_image" role="presentation">
+			<img ng-src="img/close-up.png" title="Caricature of the developer" aria-label="Caricature of the developer" />
+		</div>
+		<div class="row background about-details" id="background" role="presentation">
+			<div class="col-md-4 section-title" role="presentation">
+				<h2>{{ aboutText.background[0].title }}</h2>
+			</div>
+			<div class="col-md-8 section-content" role="presentation">
+				<p>{{ aboutText.background[0].text }}</p>
+			</div>
+		</div>
+		<div class="row languages about-details" id="languages" role="presentation">
+			<div class="col-md-4 section-title" role="presentation">
+				<h2>{{ aboutText.languages[0].title }}</h2>
+			</div>
+			<div class="col-md-8 section-content" role="presentation">
+				<span class="lang-icon" ng-repeat="icon in aboutText.languages[0].icons" role="presentation">
+					<i class="{{ icon }}"></i>
+				</span>
+			</div>
+		</div>
+		<div class="row work-experience about-details" id="work-experience" role="presentation">
+			<div class="col-md-4 section-title" role="presentation">
+				<h2>{{ aboutText.experience[0].title }}</h2>
+			</div>
+			<div class="col-md-8 section-content" role="presentation">
+				<div ng-repeat="entity in aboutText.experience[0].entities" role="presentation">
+					<div class="content-subtitle">{{ entity.title }}</div>
+					<ul>
+						<li ng-repeat="point in entity.points" ng-bind-html="point"></li>
+					</ul>
+					<br>
+				</div>
+			</div>
+		</div>
+		<div class="row education about-details" id="education" role="presentation">
+			<div class="col-md-4 section-title" role="presentation">
+				<h2>{{ aboutText.education[0].title }}</h2>
+			</div>
+			<div class="col-md-8 section-content" role="presentation">
+				<div ng-repeat="entity in aboutText.education[0].entities" role="presentation">
+					<div class="content-subtitle">{{ entity.title }}</div>
+					<ul>
+						<li ng-repeat="point in entity.points" ng-bind-html="point"></li>
+					</ul>
+					<br>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+	    "@type": "AboutPage",
+	    "url": "https://www.cornopaez.com/about",
+	    "about": {
+	    	"@type": "person",
+	        "name": "Mauricio Páez",
+	        "jobTitle": "Front End Developer",
+	        "Description": "I am a former musician who's discovered the joy of coding. I initially learned to code in Java, building small programs for my classes, including some that used SQL databases in the stack. I am handy with SQL and traditional relational database schema design and queries. I’ve since moved on to using a MEAN as my main stack, using it to build this site and deploying exclusively to Heroku. I am familiar and feel comfortable in the languages and technologies below. Feel free to poke around the site and contact me if you have any questions.",
+	        "image": "https://www.cornopaez.com/img/close-up.png",
+	        "owns": {
+	        	"@type": "Organization",
+	            "name": "Mauricio_Páez | Developer",
+	            "sameAs": "https://www.cornopaez.com/about"
+	        }
+	    },
+	    "author": {
+	    	"@type": "person",
+	        "name": "Mauricio Páez",
+	        "sameAs": "https://www.cornopaez.com/about",
+          "sameAs": "https://twitter.com/cornopaez",
+          "sameAs": "https://www.github.com/cornopaez",
+          "sameAs": "https://www.codecademy.com/cornopaez",
+          "sameAs": "https://www.codewars.com/users/cornopaez",
+          "sameAs": "https://angel.co/jose-mauricio-paez",
+          "sameAs": "https://www.linkedin.com/in/cornopaez"
+	    }
+	}
+</script>

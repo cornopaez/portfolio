@@ -1,0 +1,101 @@
+.contact_container {
+
+	@media screen and (min-width: 320px) {
+		padding: 5%;
+	}
+
+	@media screen and (min-width: 768px) {
+		padding: 5% 10%;
+	}
+
+	> .contact_1 {
+		> ul {
+			position: relative;
+			display: inline-flex;
+			list-style: none;
+			padding: 0;
+			margin: 10px 0;
+			left: 50%;
+			transform: translate(-50%, 0);
+
+			li {
+
+				@media screen and (min-width: 320px) {
+					padding: 0 10px;
+				}
+
+				@media screen and (min-width: 768px) {
+					padding: 0 20px;
+				}
+
+				@include icon-size(3.5em);
+
+				a {
+					display: block;
+				}
+			}
+		}
+
+		> small {
+			display: block;
+			text-align: center;
+		}
+	}
+}
+
+.send_email {
+	position: relative;
+	@include icon-size(3.5em);
+
+	a {
+		display: inline-block;
+		position: relative;
+		left: 50%;
+		transform: translate(-50%, 0);
+		
+	}
+}
+
+.contact_success {
+	position: relative;
+	text-align: center;
+	height: 87vh;
+	> .success_text {
+
+		.glyphicon-thumbs-up {
+			margin: 10px 0;
+			font-size: 3.5em;
+			color: green;
+		}
+
+		position: absolute;
+		@extend %center-of-container;
+	}
+}
+
+.form_div {
+	> form {
+
+		margin: 50px auto;
+
+		@media screen and (min-width: 320px) {
+			max-width: 100%;
+		}
+
+		@media screen and (min-width: 768px) {
+			max-width: 70%;
+		}
+
+		@media screen and (min-width: 1441px) {
+			max-width: 900px;
+		}
+
+		.form-check-label {
+			margin-bottom: 30px;
+		}
+
+		button {
+			margin-top: 30px;
+		}
+	}
+}

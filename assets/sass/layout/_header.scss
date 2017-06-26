@@ -1,0 +1,133 @@
+// Header at full resolution
+.header {
+	background: $header-dark-brown;
+	margin: 0;
+	border: 0;
+	// height: 50px;
+	border-radius: 0;
+	// z-index: 5;
+
+	.container-fluid {
+		@media screen and (min-width: 768px) {
+			padding: 0;
+		}
+		min-height: 50px;
+
+		.navbar-header {
+			.toggle-button-right {
+				@extend %position-absolute;
+				right: 15px;
+				top: 7px;
+				background-color: transparent;
+				border-color: $color-white;
+				margin: 0;
+				
+				.icon-line {
+					background-color: $color-white;
+				}
+			}
+
+			> a {
+				&.navbar-brand {
+					@extend %full-height;
+					// display: inline-block;
+					display: flex;
+					min-height: 50px;
+
+					@media screen and (min-width: 1440px) {
+						position: absolute;
+						left: 15%;
+					}
+
+					@media screen and (min-width: 2000px) {
+						position: absolute;
+						left: 25%;
+					}
+
+					letter-spacing: 1.5px;
+					margin-left: 15px;
+					color: $color-white;
+					// padding: 14px 0;
+					padding: 0;
+					align-items: center;
+
+					@media screen and (min-width: 320px) {
+						@include font-properties("Raleway",25px, 200);
+					}
+
+					@media screen and (min-width: 375px) {
+						@include font-properties("Raleway",28px, 200);
+					}
+
+					@media screen and (min-width: 768px) {
+						@include font-properties("Raleway",32px, 200);
+					}
+				}
+			}
+		}
+	}
+
+	.link-container {
+		// background: $header-dark-brown;
+
+		@media screen and (min-width: 320px) {
+			border-top: 1px solid $color-white;
+		}
+
+		@media screen and (min-width: 768px) {
+			border-top: 0;
+		}
+
+		//Pills on the right hand side 
+		.main-links {
+			@media screen and (min-width: 768px) {
+				position: absolute;
+				right: 0;
+				border: 0;
+				margin: 0;
+				height: 100%;
+			}
+
+			@media screen and (min-width: 1440px) {
+				right: 15%;
+			}
+
+			@media screen and (min-width: 2000px) {
+				right: 25%;
+			}
+
+			.list-item {
+				@media screen and (min-width: 768px) {
+					height: 100%;
+				}
+
+				&:hover {
+					background: $header-lighter-brown;
+				}
+
+				> a {
+					@media screen and (min-width: 768px) {
+						height: 100%;
+					}
+					display: flex;
+					align-items: center;
+					border-radius: 0px;
+					color: $color-white;
+
+					@media screen and (min-width: 320px) {
+						// padding: 10px 15px;
+						height: 50px;
+					}
+
+					@media screen and (min-width: 768px) {
+						padding: 0;
+					}
+
+					margin: 0 20px;
+					@include font-properties("Raleway", 17px, 200);
+					letter-spacing: 0.5px;
+				}
+			}
+		}
+	}
+}

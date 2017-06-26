@@ -1,0 +1,777 @@
+@import url("https://fonts.googleapis.com/css?family=Cinzel|Merriweather:300,300i,700,700i&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400|Raleway:200,300,400,500");
+html, body {
+  padding: 0;
+  margin: 0;
+  background: #fff; }
+
+.footer, .jumbotron {
+  position: relative; }
+
+.header .container-fluid .navbar-header .toggle-button-right, .jumbotron h1 {
+  position: absolute; }
+
+.header .container-fluid .navbar-header > a.navbar-brand, .footer .social-media-links > ul > li {
+  height: 100%; }
+
+.jumbotron h1, .contact_success > .success_text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.header {
+  background: #352c2b;
+  margin: 0;
+  border: 0;
+  border-radius: 0; }
+  .header .container-fluid {
+    min-height: 50px; }
+    @media screen and (min-width: 768px) {
+      .header .container-fluid {
+        padding: 0; } }
+    .header .container-fluid .navbar-header .toggle-button-right {
+      right: 15px;
+      top: 7px;
+      background-color: transparent;
+      border-color: #fff;
+      margin: 0; }
+      .header .container-fluid .navbar-header .toggle-button-right .icon-line {
+        background-color: #fff; }
+    .header .container-fluid .navbar-header > a.navbar-brand {
+      display: flex;
+      min-height: 50px;
+      letter-spacing: 1.5px;
+      margin-left: 15px;
+      color: #fff;
+      padding: 0;
+      align-items: center; }
+      @media screen and (min-width: 1440px) {
+        .header .container-fluid .navbar-header > a.navbar-brand {
+          position: absolute;
+          left: 15%; } }
+      @media screen and (min-width: 2000px) {
+        .header .container-fluid .navbar-header > a.navbar-brand {
+          position: absolute;
+          left: 25%; } }
+      @media screen and (min-width: 320px) {
+        .header .container-fluid .navbar-header > a.navbar-brand {
+          font-family: "Raleway";
+          font-size: 25px;
+          font-weight: 200; } }
+      @media screen and (min-width: 375px) {
+        .header .container-fluid .navbar-header > a.navbar-brand {
+          font-family: "Raleway";
+          font-size: 28px;
+          font-weight: 200; } }
+      @media screen and (min-width: 768px) {
+        .header .container-fluid .navbar-header > a.navbar-brand {
+          font-family: "Raleway";
+          font-size: 32px;
+          font-weight: 200; } }
+  @media screen and (min-width: 320px) {
+    .header .link-container {
+      border-top: 1px solid #fff; } }
+  @media screen and (min-width: 768px) {
+    .header .link-container {
+      border-top: 0; } }
+  @media screen and (min-width: 768px) {
+    .header .link-container .main-links {
+      position: absolute;
+      right: 0;
+      border: 0;
+      margin: 0;
+      height: 100%; } }
+  @media screen and (min-width: 1440px) {
+    .header .link-container .main-links {
+      right: 15%; } }
+  @media screen and (min-width: 2000px) {
+    .header .link-container .main-links {
+      right: 25%; } }
+  @media screen and (min-width: 768px) {
+    .header .link-container .main-links .list-item {
+      height: 100%; } }
+  .header .link-container .main-links .list-item:hover {
+    background: #5e4f4d; }
+  .header .link-container .main-links .list-item > a {
+    display: flex;
+    align-items: center;
+    border-radius: 0px;
+    color: #fff;
+    margin: 0 20px;
+    font-family: "Raleway";
+    font-size: 17px;
+    font-weight: 200;
+    letter-spacing: 0.5px; }
+    @media screen and (min-width: 768px) {
+      .header .link-container .main-links .list-item > a {
+        height: 100%; } }
+    @media screen and (min-width: 320px) {
+      .header .link-container .main-links .list-item > a {
+        height: 50px; } }
+    @media screen and (min-width: 768px) {
+      .header .link-container .main-links .list-item > a {
+        padding: 0; } }
+
+.footer {
+  background: #cd5510;
+  min-height: 45px;
+  text-align: center; }
+  .footer .social-media-links {
+    margin: 0;
+    min-height: 45px;
+    border: 0; }
+    .footer .social-media-links > ul {
+      margin-bottom: 0;
+      padding: 0; }
+      @media screen and (min-width: 768px) {
+        .footer .social-media-links > ul {
+          position: absolute;
+          left: 50%;
+          height: 45px;
+          transform: translate(-50%);
+          white-space: nowrap; } }
+      .footer .social-media-links > ul > li {
+        list-style: none;
+        height: inherit; }
+        @media screen and (min-width: 768px) {
+          .footer .social-media-links > ul > li {
+            display: inline-block;
+            margin-top: 0; } }
+        .footer .social-media-links > ul > li > a {
+          display: block;
+          border-radius: 0;
+          text-decoration: none;
+          color: #fff;
+          height: inherit;
+          font-family: "Raleway";
+          font-size: 17px;
+          font-weight: 300;
+          padding: 10px 15px; }
+          .footer .social-media-links > ul > li > a:hover {
+            background: #f67832; }
+  .footer .footnotes-for-page-content {
+    margin: 0;
+    padding: 10px 0;
+    color: #fff;
+    border-bottom: 1px solid #fff; }
+    .footer .footnotes-for-page-content > ol {
+      font-size: 12px;
+      text-align: left;
+      margin: 0;
+      padding: 0 60px; }
+      .footer .footnotes-for-page-content > ol > li > a {
+        text-decoration: none;
+        color: #fff; }
+        .footer .footnotes-for-page-content > ol > li > a:hover {
+          text-decoration: underline;
+          color: #fff; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 300; }
+
+html {
+  font-size: 16px; }
+
+.text-game h1, .text-game h2, .text-game h3, .text-game h4 {
+  font-family: "Cinzel"; }
+.text-game h3 {
+  text-align: center; }
+
+.main-content {
+  font-family: "Merriweather";
+  max-width: 800px;
+  padding-bottom: 3rem; }
+  .main-content .row .adventure-text {
+    font-size: 1em;
+    text-align: justify;
+    padding: 1rem;
+    line-height: 1.6; }
+    .main-content .row .adventure-text h1 {
+      font-size: 2.6em;
+      text-align: left; }
+    .main-content .row .adventure-text .newspaper_quote {
+      margin: 0;
+      padding: 2% 7% 4% 7%;
+      font-size: 1em;
+      border-left: 0; }
+    .main-content .row .adventure-text .valid-command {
+      color: #27a325; }
+    .main-content .row .adventure-text .wrong-option {
+      color: #b71b1b; }
+    .main-content .row .adventure-text .game_end_won,
+    .main-content .row .adventure-text .game_end {
+      background: lightgrey;
+      padding: 20px;
+      border-radius: 10px; }
+      .main-content .row .adventure-text .game_end_won .end-highlight,
+      .main-content .row .adventure-text .game_end .end-highlight {
+        display: inline-block;
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+        padding: 5px 0 2px 0;
+        margin-top: 10px; }
+      .main-content .row .adventure-text .game_end_won ul,
+      .main-content .row .adventure-text .game_end ul {
+        list-style: none; }
+      .main-content .row .adventure-text .game_end_won p:last-child,
+      .main-content .row .adventure-text .game_end p:last-child {
+        margin: 0; }
+  .main-content .row .input-wrap {
+    padding: 0; }
+    .main-content .row .input-wrap .user-input {
+      width: 100%;
+      height: 45px;
+      border-radius: 0;
+      background-color: #f6f6f6; }
+  .main-content .row .button-wrap {
+    padding: 0; }
+    @media only screen and (max-width: 991px) {
+      .main-content .row .button-wrap {
+        display: none; } }
+    .main-content .row .button-wrap .user-button {
+      width: 100%;
+      height: 45px;
+      border-radius: 0; }
+
+.jumbotron {
+  background: url("../img/IMG_1720.png") no-repeat center;
+  background-size: cover;
+  background-color: lightgrey;
+  margin-bottom: 0;
+  padding: 0; }
+  @media screen and (min-width: 320px) {
+    .jumbotron {
+      height: 250px; } }
+  @media screen and (min-width: 768px) {
+    .jumbotron {
+      height: 500px; } }
+  .jumbotron h1 {
+    margin: 0;
+    font-family: "Raleway";
+    font-size: 63px;
+    font-weight: 500;
+    color: #fff; }
+    @media screen and (min-width: 320px) {
+      .jumbotron h1 {
+        font-family: "Raleway";
+        font-size: 36px;
+        font-weight: 500; } }
+    @media screen and (min-width: 768px) {
+      .jumbotron h1 {
+        font-family: "Raleway";
+        font-size: 63px;
+        font-weight: 500; } }
+
+@media screen and (min-width: 320px) {
+  .support-1 .row {
+    padding: 0 25px; } }
+@media screen and (min-width: 768px) {
+  .support-1 .row {
+    padding: 0 50px; } }
+@media screen and (min-width: 320px) {
+  .support-1 .row .col-md-12 {
+    padding: 25px 0; } }
+@media screen and (min-width: 768px) {
+  .support-1 .row .col-md-12 {
+    padding: 50px; } }
+@media screen and (min-width: 768px) {
+  .support-1 .row .col-md-12 > p {
+    font-family: "Raleway";
+    font-size: 20px;
+    font-weight: 400; } }
+.support-1 .row .col-md-4 {
+  border-top: 1px solid #D6D6D6; }
+  @media screen and (min-width: 320px) {
+    .support-1 .row .col-md-4 {
+      padding: 25px; } }
+  @media screen and (min-width: 768px) {
+    .support-1 .row .col-md-4 {
+      padding: 50px; } }
+  .support-1 .row .col-md-4 > h2 {
+    font-family: "Raleway";
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    padding: 0 0 5px 0;
+    margin: 0; }
+  .support-1 .row .col-md-4 > p {
+    padding: 5px 0 0 0; }
+
+.support-2 {
+  background-color: #3c555c;
+  padding: 20px 0; }
+  .support-2 .container .row .col-md-6 {
+    text-align: center;
+    padding: 20px 0; }
+    .support-2 .container .row .col-md-6 > a.btn {
+      font-family: "Raleway";
+      font-size: 14px;
+      font-weight: 200;
+      background: transparent;
+      padding: 10px 50px;
+      border-radius: 0;
+      border: 1px solid #fff;
+      color: #fff; }
+      .support-2 .container .row .col-md-6 > a.btn:hover {
+        background: #65787e; }
+
+.about-content .container .top_image {
+  text-align: center;
+  padding: 50px 50px 25px 50px; }
+  .about-content .container .top_image img {
+    border: 1px solid #000;
+    border-radius: 100%; }
+    @media screen and (min-width: 320px) {
+      .about-content .container .top_image img {
+        width: 10em; } }
+    @media screen and (min-width: 768px) {
+      .about-content .container .top_image img {
+        width: 13em; } }
+@media screen and (min-width: 320px) {
+  .about-content .container > .languages > .section-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; } }
+@media screen and (min-width: 768px) {
+  .about-content .container > .languages > .section-content {
+    display: inline-block;
+    flex-wrap: initial;
+    justify-content: initial; } }
+.about-content .container .about-details {
+  padding: 25px 20px; }
+  .about-content .container .about-details .section-title > h2 {
+    font-family: "Raleway";
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    padding: 0 0 5px 0;
+    margin: 0; }
+  .about-content .container .about-details .section-content {
+    padding: 10px 15px;
+    border-top: 1px solid #D6D6D6; }
+    .about-content .container .about-details .section-content .content-subtitle {
+      font-family: "Raleway";
+      font-size: 17px;
+      font-weight: 500;
+      padding: 5px 0; }
+    .about-content .container .about-details .section-content .lang-icon {
+      display: inline-block;
+      padding: 10px; }
+      @media screen and (min-width: 320px) {
+        .about-content .container .about-details .section-content .lang-icon .devicon-html5-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-css3-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-sass-original,
+        .about-content .container .about-details .section-content .lang-icon .devicon-javascript-plain,
+        .about-content .container .about-details .section-content .lang-icon .devicon-jquery-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-angularjs-plain,
+        .about-content .container .about-details .section-content .lang-icon .devicon-bootstrap-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-java-plain,
+        .about-content .container .about-details .section-content .lang-icon .fa-database,
+        .about-content .container .about-details .section-content .lang-icon .devicon-git-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-github-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .fa-font-awesome,
+        .about-content .container .about-details .section-content .lang-icon .devicon-nodejs-plain,
+        .about-content .container .about-details .section-content .lang-icon .devicon-heroku-plain,
+        .about-content .container .about-details .section-content .lang-icon .devicon-postgresql-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-ruby-plain,
+        .about-content .container .about-details .section-content .lang-icon .devicon-rails-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-mongodb-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-express-original-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .fa-facebook-official,
+        .about-content .container .about-details .section-content .lang-icon .fa-twitter-square,
+        .about-content .container .about-details .section-content .lang-icon .fa-linkedin,
+        .about-content .container .about-details .section-content .lang-icon .fa-angellist,
+        .about-content .container .about-details .section-content .lang-icon .fa-envelope-o {
+          font-size: 3.5em; } }
+      @media screen and (min-width: 768px) {
+        .about-content .container .about-details .section-content .lang-icon .devicon-html5-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-css3-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-sass-original,
+        .about-content .container .about-details .section-content .lang-icon .devicon-javascript-plain,
+        .about-content .container .about-details .section-content .lang-icon .devicon-jquery-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-angularjs-plain,
+        .about-content .container .about-details .section-content .lang-icon .devicon-bootstrap-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-java-plain,
+        .about-content .container .about-details .section-content .lang-icon .fa-database,
+        .about-content .container .about-details .section-content .lang-icon .devicon-git-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-github-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .fa-font-awesome,
+        .about-content .container .about-details .section-content .lang-icon .devicon-nodejs-plain,
+        .about-content .container .about-details .section-content .lang-icon .devicon-heroku-plain,
+        .about-content .container .about-details .section-content .lang-icon .devicon-postgresql-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-ruby-plain,
+        .about-content .container .about-details .section-content .lang-icon .devicon-rails-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-mongodb-plain-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .devicon-express-original-wordmark,
+        .about-content .container .about-details .section-content .lang-icon .fa-facebook-official,
+        .about-content .container .about-details .section-content .lang-icon .fa-twitter-square,
+        .about-content .container .about-details .section-content .lang-icon .fa-linkedin,
+        .about-content .container .about-details .section-content .lang-icon .fa-angellist,
+        .about-content .container .about-details .section-content .lang-icon .fa-envelope-o {
+          font-size: 4em; } }
+    .about-content .container .about-details .section-content > ul {
+      padding-left: 1em; }
+      .about-content .container .about-details .section-content > ul > li {
+        list-style: none;
+        padding: 5px 0 15px 0; }
+    .about-content .container .about-details .section-content > p {
+      padding: 5px 0 0 0; }
+
+.top-section {
+  background: url("../img/yu6a5i_ijtw-radek-grzybowski.png") no-repeat center;
+  background-size: cover;
+  background-color: #FFEBCD; }
+  @media screen and (min-width: 320px) {
+    .top-section {
+      min-height: 250px; } }
+  @media screen and (min-width: 768px) {
+    .top-section {
+      min-height: 500px; } }
+
+.all-projects .container {
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+  .all-projects .container > .row {
+    margin: 0; }
+  .all-projects .container .search {
+    padding: 0 25px; }
+    .all-projects .container .search .form-container {
+      max-width: 700px;
+      margin: 0 auto; }
+      .all-projects .container .search .form-container > .form-control,
+      .all-projects .container .search .form-container > p {
+        margin: 25px 0; }
+      .all-projects .container .search .form-container > .form-control {
+        background-color: #f6f6f6; }
+      .all-projects .container .search .form-container > .form-control:focus {
+        background-color: #fff;
+        transition: 0.15s linear; }
+      .all-projects .container .search .form-container > p {
+        text-align: center;
+        font-size: 13px; }
+  @media screen and (min-width: 320px) {
+    .all-projects .container .projects {
+      border-top: 1px solid lightgrey;
+      border-left: none;
+      margin: 0 25px;
+      padding: 0; } }
+  @media screen and (min-width: 992px) {
+    .all-projects .container .projects {
+      border-top: none;
+      border-left: 1px solid lightgrey;
+      padding: 0 25px;
+      margin: 0; } }
+  .all-projects .container .projects .project-description {
+    margin: 25px 0; }
+    .all-projects .container .projects .project-description .container {
+      max-width: 700px;
+      border: 1px solid black;
+      padding: 20px;
+      margin: 0 auto; }
+      .all-projects .container .projects .project-description .container .detail-row {
+        margin: 0;
+        min-height: 15px; }
+        .all-projects .container .projects .project-description .container .detail-row .long-text {
+          padding: 0 10px 0 0; }
+          @media screen and (min-width: 320px) {
+            .all-projects .container .projects .project-description .container .detail-row .long-text > h2 {
+              margin: 0 0 10px 0; } }
+        @media screen and (min-width: 320px) {
+          .all-projects .container .projects .project-description .container .detail-row .project-details {
+            border-left: none;
+            border-top: 1px solid black;
+            padding: 10px 0 0 0;
+            margin-top: 10px; } }
+        @media screen and (min-width: 768px) {
+          .all-projects .container .projects .project-description .container .detail-row .project-details {
+            border-left: 1px solid #000;
+            border-top: none;
+            padding: 0 0 0 20px;
+            margin-top: 0; } }
+        .all-projects .container .projects .project-description .container .detail-row .project-details ul {
+          padding-left: 15px; }
+          @media screen and (min-width: 320px) {
+            .all-projects .container .projects .project-description .container .detail-row .project-details ul {
+              display: flex;
+              margin: 0;
+              padding: 0;
+              justify-content: space-between;
+              flex-wrap: wrap; } }
+          @media screen and (min-width: 768px) {
+            .all-projects .container .projects .project-description .container .detail-row .project-details ul {
+              display: block;
+              margin: 0 0 10px 0;
+              padding: 0 0 0 15px;
+              justify-content: initial; } }
+          .all-projects .container .projects .project-description .container .detail-row .project-details ul li {
+            padding-top: 10px;
+            padding-right: 5px;
+            list-style: none;
+            display: inline-block; }
+            @media screen and (min-width: 320px) {
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-html5-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-css3-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-sass-original,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-javascript-plain,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-jquery-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-angularjs-plain,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-bootstrap-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-java-plain,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-database,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-git-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-github-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-font-awesome,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-nodejs-plain,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-heroku-plain,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-postgresql-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-ruby-plain,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-rails-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-mongodb-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-express-original-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-facebook-official,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-twitter-square,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-linkedin,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-angellist,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-envelope-o {
+                font-size: 2.5em; } }
+            @media screen and (min-width: 768px) {
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-html5-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-css3-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-sass-original,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-javascript-plain,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-jquery-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-angularjs-plain,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-bootstrap-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-java-plain,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-database,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-git-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-github-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-font-awesome,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-nodejs-plain,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-heroku-plain,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-postgresql-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-ruby-plain,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-rails-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-mongodb-plain-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .devicon-express-original-wordmark,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-facebook-official,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-twitter-square,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-linkedin,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-angellist,
+              .all-projects .container .projects .project-description .container .detail-row .project-details ul li .fa-envelope-o {
+                font-size: 3em; } }
+        .all-projects .container .projects .project-description .container .detail-row .project-details a {
+          font-family: "Raleway";
+          font-size: 17px;
+          font-weight: 200;
+          display: block;
+          width: 100%;
+          background: #cd5510;
+          text-decoration: none;
+          color: #fff; }
+        .all-projects .container .projects .project-description .container .detail-row .project-footer {
+          padding: 0;
+          font-size: 13px; }
+
+.error > .container {
+  max-width: 800px;
+  height: 88vh; }
+.error .error-icon,
+.error .error-text {
+  display: flex;
+  justify-content: center;
+  position: relative; }
+  @media screen and (min-width: 320px) {
+    .error .error-icon,
+    .error .error-text {
+      top: 10%; } }
+  @media screen and (min-width: 375px) {
+    .error .error-icon,
+    .error .error-text {
+      top: 20%; } }
+  @media screen and (min-width: 768px) {
+    .error .error-icon,
+    .error .error-text {
+      top: 50%;
+      transform: translate(0, -50%); } }
+.error .error-text {
+  flex-direction: column; }
+  .error .error-text > h1,
+  .error .error-text > p {
+    margin-bottom: 20px; }
+.error .glyphicon-remove {
+  font-size: 200px;
+  color: #c10f0f; }
+.error .glyphicon-off {
+  font-size: 200px;
+  color: green; }
+
+@media screen and (min-width: 320px) {
+  .contact_container {
+    padding: 5%; } }
+@media screen and (min-width: 768px) {
+  .contact_container {
+    padding: 5% 10%; } }
+.contact_container > .contact_1 > ul {
+  position: relative;
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  left: 50%;
+  transform: translate(-50%, 0); }
+  @media screen and (min-width: 320px) {
+    .contact_container > .contact_1 > ul li {
+      padding: 0 10px; } }
+  @media screen and (min-width: 768px) {
+    .contact_container > .contact_1 > ul li {
+      padding: 0 20px; } }
+  @media screen and (min-width: 320px) {
+    .contact_container > .contact_1 > ul li .devicon-html5-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-css3-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-sass-original,
+    .contact_container > .contact_1 > ul li .devicon-javascript-plain,
+    .contact_container > .contact_1 > ul li .devicon-jquery-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-angularjs-plain,
+    .contact_container > .contact_1 > ul li .devicon-bootstrap-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-java-plain,
+    .contact_container > .contact_1 > ul li .fa-database,
+    .contact_container > .contact_1 > ul li .devicon-git-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-github-plain-wordmark,
+    .contact_container > .contact_1 > ul li .fa-font-awesome,
+    .contact_container > .contact_1 > ul li .devicon-nodejs-plain,
+    .contact_container > .contact_1 > ul li .devicon-heroku-plain,
+    .contact_container > .contact_1 > ul li .devicon-postgresql-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-ruby-plain,
+    .contact_container > .contact_1 > ul li .devicon-rails-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-mongodb-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-express-original-wordmark,
+    .contact_container > .contact_1 > ul li .fa-facebook-official,
+    .contact_container > .contact_1 > ul li .fa-twitter-square,
+    .contact_container > .contact_1 > ul li .fa-linkedin,
+    .contact_container > .contact_1 > ul li .fa-angellist,
+    .contact_container > .contact_1 > ul li .fa-envelope-o {
+      font-size: 3.5em; } }
+  @media screen and (min-width: 768px) {
+    .contact_container > .contact_1 > ul li .devicon-html5-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-css3-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-sass-original,
+    .contact_container > .contact_1 > ul li .devicon-javascript-plain,
+    .contact_container > .contact_1 > ul li .devicon-jquery-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-angularjs-plain,
+    .contact_container > .contact_1 > ul li .devicon-bootstrap-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-java-plain,
+    .contact_container > .contact_1 > ul li .fa-database,
+    .contact_container > .contact_1 > ul li .devicon-git-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-github-plain-wordmark,
+    .contact_container > .contact_1 > ul li .fa-font-awesome,
+    .contact_container > .contact_1 > ul li .devicon-nodejs-plain,
+    .contact_container > .contact_1 > ul li .devicon-heroku-plain,
+    .contact_container > .contact_1 > ul li .devicon-postgresql-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-ruby-plain,
+    .contact_container > .contact_1 > ul li .devicon-rails-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-mongodb-plain-wordmark,
+    .contact_container > .contact_1 > ul li .devicon-express-original-wordmark,
+    .contact_container > .contact_1 > ul li .fa-facebook-official,
+    .contact_container > .contact_1 > ul li .fa-twitter-square,
+    .contact_container > .contact_1 > ul li .fa-linkedin,
+    .contact_container > .contact_1 > ul li .fa-angellist,
+    .contact_container > .contact_1 > ul li .fa-envelope-o {
+      font-size: 4em; } }
+  .contact_container > .contact_1 > ul li a {
+    display: block; }
+.contact_container > .contact_1 > small {
+  display: block;
+  text-align: center; }
+
+.send_email {
+  position: relative; }
+  @media screen and (min-width: 320px) {
+    .send_email .devicon-html5-plain-wordmark,
+    .send_email .devicon-css3-plain-wordmark,
+    .send_email .devicon-sass-original,
+    .send_email .devicon-javascript-plain,
+    .send_email .devicon-jquery-plain-wordmark,
+    .send_email .devicon-angularjs-plain,
+    .send_email .devicon-bootstrap-plain-wordmark,
+    .send_email .devicon-java-plain,
+    .send_email .fa-database,
+    .send_email .devicon-git-plain-wordmark,
+    .send_email .devicon-github-plain-wordmark,
+    .send_email .fa-font-awesome,
+    .send_email .devicon-nodejs-plain,
+    .send_email .devicon-heroku-plain,
+    .send_email .devicon-postgresql-plain-wordmark,
+    .send_email .devicon-ruby-plain,
+    .send_email .devicon-rails-plain-wordmark,
+    .send_email .devicon-mongodb-plain-wordmark,
+    .send_email .devicon-express-original-wordmark,
+    .send_email .fa-facebook-official,
+    .send_email .fa-twitter-square,
+    .send_email .fa-linkedin,
+    .send_email .fa-angellist,
+    .send_email .fa-envelope-o {
+      font-size: 3.5em; } }
+  @media screen and (min-width: 768px) {
+    .send_email .devicon-html5-plain-wordmark,
+    .send_email .devicon-css3-plain-wordmark,
+    .send_email .devicon-sass-original,
+    .send_email .devicon-javascript-plain,
+    .send_email .devicon-jquery-plain-wordmark,
+    .send_email .devicon-angularjs-plain,
+    .send_email .devicon-bootstrap-plain-wordmark,
+    .send_email .devicon-java-plain,
+    .send_email .fa-database,
+    .send_email .devicon-git-plain-wordmark,
+    .send_email .devicon-github-plain-wordmark,
+    .send_email .fa-font-awesome,
+    .send_email .devicon-nodejs-plain,
+    .send_email .devicon-heroku-plain,
+    .send_email .devicon-postgresql-plain-wordmark,
+    .send_email .devicon-ruby-plain,
+    .send_email .devicon-rails-plain-wordmark,
+    .send_email .devicon-mongodb-plain-wordmark,
+    .send_email .devicon-express-original-wordmark,
+    .send_email .fa-facebook-official,
+    .send_email .fa-twitter-square,
+    .send_email .fa-linkedin,
+    .send_email .fa-angellist,
+    .send_email .fa-envelope-o {
+      font-size: 4em; } }
+  .send_email a {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0); }
+
+.contact_success {
+  position: relative;
+  text-align: center;
+  height: 87vh; }
+  .contact_success > .success_text {
+    position: absolute; }
+    .contact_success > .success_text .glyphicon-thumbs-up {
+      margin: 10px 0;
+      font-size: 3.5em;
+      color: green; }
+
+.form_div > form {
+  margin: 50px auto; }
+  @media screen and (min-width: 320px) {
+    .form_div > form {
+      max-width: 100%; } }
+  @media screen and (min-width: 768px) {
+    .form_div > form {
+      max-width: 70%; } }
+  @media screen and (min-width: 1441px) {
+    .form_div > form {
+      max-width: 900px; } }
+  .form_div > form .form-check-label {
+    margin-bottom: 30px; }
+  .form_div > form button {
+    margin-top: 30px; }
+
+/*# sourceMappingURL=main.css.map */

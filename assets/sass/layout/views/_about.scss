@@ -1,0 +1,85 @@
+//Layout for the about page cells
+.about-content {
+	.container {
+		.top_image {
+			text-align: center;
+			padding: 50px 50px 25px 50px;
+
+			img {
+				// width: 13em;
+
+				@media screen and (min-width: 320px) {
+					width: 10em;
+				}
+
+				@media screen and (min-width: 768px) {
+					width: 13em;
+				}
+
+				border: 1px solid $color-black;
+				border-radius: 100%; 
+			}
+		}
+
+		> .languages {
+			> .section-content {
+				@media screen and (min-width: 320px) {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-around;
+				}
+
+				@media screen and (min-width: 768px) {
+					display: inline-block;
+					flex-wrap: initial;
+					justify-content: initial;
+					// width: 13em;
+				}
+			}
+		}
+
+		.about-details {
+			padding: 25px 20px;
+
+			.section-title {
+				> h2 {
+					@include font-properties("Raleway", 30px, 400);
+					letter-spacing: 0.3px;
+					padding: 0 0 5px 0;
+					margin: 0;
+				}
+			}
+
+			.section-content {
+				padding: 10px 15px;
+				border-top: 1px solid $color-light-gray-2;
+
+				.content-subtitle {
+					@include font-properties("Raleway", 17px, 500);
+					padding: 5px 0;
+				}
+
+				.lang-icon {
+					display: inline-block;
+					padding: 10px;
+
+					@include icon-size(3.5em);
+
+				}
+
+				> ul {
+					padding-left: 1em;
+
+					> li {
+						list-style: none;
+						padding: 5px 0 15px 0;
+					}
+				}
+
+				> p {
+					padding: 5px 0 0 0;
+				}
+			}
+		}
+	}
+}

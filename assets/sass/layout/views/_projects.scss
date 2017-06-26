@@ -1,0 +1,159 @@
+// Top Section
+.top-section {
+	// min-height: 500px;
+	background: url($projects-top-section) no-repeat center;
+	background-size: cover;
+	background-color: #FFEBCD;
+
+	@media screen and (min-width: 320px) {
+		min-height: 250px;
+	}
+
+	@media screen and (min-width: 768px) {
+		min-height: 500px;
+	}
+}
+
+.all-projects {
+	.container {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+
+		>.row {
+			margin: 0;
+		}
+
+		.search {
+			padding: 0 25px;
+
+			.form-container {
+				max-width: 700px;
+				margin: 0 auto;
+
+				> .form-control,
+				> p {
+					margin: 25px 0;
+				}
+
+				> .form-control {
+					background-color: #f6f6f6;
+				}
+
+				> .form-control:focus {
+					background-color: #fff;
+					transition: 0.15s linear;
+				}
+
+				> p {
+					text-align: center;
+					font-size: 13px;
+				}
+			}
+		}
+
+		.projects {
+			// padding: 0 25px;
+
+			@media screen and (min-width: 320px) {
+				border-top: 1px solid lightgrey;
+				border-left: none;
+				margin: 0 25px;
+				padding: 0;
+			}
+
+			@media screen and (min-width: 992px) {
+				border-top: none;
+				border-left: 1px solid lightgrey;
+				padding: 0 25px;
+				margin: 0;
+			}
+
+			// Project Information
+			.project-description {
+
+				margin: 25px 0;
+
+				.container {
+					max-width: 700px;
+					border: 1px solid black;
+					padding: 20px;
+					margin: 0 auto;
+
+					.detail-row {
+						margin: 0;
+						min-height: 15px;
+
+						.long-text {
+							padding: 0 10px 0 0;
+
+							> h2 {
+								@media screen and (min-width: 320px) {
+									margin: 0 0 10px 0;
+								}
+							}
+						}
+
+						.project-details {
+
+							@media screen and (min-width: 320px) {
+								border-left: none;
+								border-top: 1px solid black;
+								padding: 10px 0 0 0;
+								margin-top: 10px;
+							}
+
+							@media screen and (min-width: 768px) {
+								border-left: 1px solid $color-black;
+								border-top: none;
+								padding: 0 0 0 20px;
+								margin-top: 0;
+							}
+
+							ul {
+								padding-left: 15px;
+
+								@media screen and (min-width: 320px) {
+									display: flex;
+									margin: 0;
+									padding: 0;
+									justify-content: space-between;
+									flex-wrap: wrap;
+								}
+
+								@media screen and (min-width: 768px) {
+									display: block;
+									margin: 0 0 10px 0;
+									padding: 0 0 0 15px;
+									justify-content: initial;
+								}
+
+								li {
+									padding-top: 10px;
+									padding-right: 5px;
+									list-style: none;
+									@include icon-size(2.5em);
+									display: inline-block;
+								}
+							}
+
+							a {
+								@include font-properties('Raleway', 17px, 200);
+								display: block;
+								width: 100%;
+								background: $color-burnt-orange;
+								text-decoration: none;
+								color: $color-white;
+							}
+						}
+
+						.project-footer {
+							padding: 0;
+							font-size: 13px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
