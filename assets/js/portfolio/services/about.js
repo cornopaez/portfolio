@@ -1,7 +1,7 @@
 app.factory("aboutData", ["$http", function($http){
-	return $http.get("js/portfolio/data/about.js")
+	return $http.get("data/about")
 	.success(function(data){
-		return data;
+		return data.body;
 	})
 	.error(function(err){
 		return err;
