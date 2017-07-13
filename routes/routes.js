@@ -1,6 +1,7 @@
 const express = require("express");
 const validation = require("./vendor/reCaptcha-validation.js")
 const router = express.Router();
+const connection = require("./mongo-connection.js");
 
 module.exports = router;
 
@@ -28,15 +29,17 @@ router.post("/contact", function(req,res){
 		// Check for success
 		if (body.success = true) {
 
+			var db = connection.getDb();
 			var urgent = req.body.urgent_message = "on" ? true : false;
-
-			// Write to db
-			db.collection('contact').insertOne({
+			var query = {
 				"name": req.body.user_given_name,
 				"email": req.body.user_email,
 				"text": req.body.user_message,
 				"urgent": urgent
-			})
+			};
+
+			// Write to db
+			db.collection('contact').insertOne(query)
 			.then(function(){
 				// Redirect if successful
 				console.log("Contact request written to database.")

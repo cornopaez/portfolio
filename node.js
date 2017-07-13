@@ -1,4 +1,5 @@
 const express = require('express');
+const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const app = express();
 const routes = require("./routes/routes.js");
@@ -13,6 +14,9 @@ connection.connect()
 		console.log("Cannot conntect to db. Exiting program: " + data);
 		process.exit(1);
 	});
+
+// Use Helmet for security
+app.use(helmet());
 
 // Make use of the prerenderer for search engines
 app.use(require('prerender-node').set('prerenderToken', process.env.PRERENDER_TOKEN));

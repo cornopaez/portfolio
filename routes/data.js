@@ -26,12 +26,11 @@ router.get('/:name', function(req, res) {
 	var projection = {
 		"_id": 0
 	}
-	var cursor = db.collection('projects').find(query, projection)
+	var cursor = db.collection(name).find(query, projection)
 
 	cursor.next(function(err, docs){
 		if (docs === null || docs === undefined) {
 			res.redirect("/error");
-			console.log("Bad route. Sending you to error...");
 		} else {
 			res.json(docs);
 		}
