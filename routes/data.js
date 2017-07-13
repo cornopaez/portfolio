@@ -4,29 +4,36 @@ const connection = require("./mongo-connection.js");
 
 module.exports = router;
 
-router.get('/main', function(req, res) {
-
-	var db = connection.getDb();
-
-	db.collection('main').find({}, {"_id":0}).next(function(err, docs){
-		res.json(docs);
-	});
-});
-
-router.get('/about', function(req, res) {
-
-	var db = connection.getDb();
-
-	db.collection('about').find({}, {"_id":0}).next(function(err, docs){
-		res.json(docs);
-	});
-});
-
 router.get('/projects', function(req, res) {
 
 	var db = connection.getDb();
+	var query = {};
+	var projection = {
+		"_id": 0
+	}
+	var cursor = db.collection('projects').find(query, projection)
 
-	db.collection('projects').find({}, {"_id":0}).toArray(function(err, docs){
+	cursor.toArray(function(err, docs){
 		res.json(docs);
+	});
+});
+
+router.get('/:name', function(req, res) {
+
+	var db = connection.getDb();
+	var name = req.params.name;
+	var query = {};
+	var projection = {
+		"_id": 0
+	}
+	var cursor = db.collection('projects').find(query, projection)
+
+	cursor.next(function(err, docs){
+		if (docs === null || docs === undefined) {
+			res.redirect("/error");
+			console.log("Bad route. Sending you to error...");
+		} else {
+			res.json(docs);
+		}
 	});
 });
