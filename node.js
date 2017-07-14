@@ -6,6 +6,7 @@ const routes = require("./routes/routes.js");
 const connection = require("./routes/mongo-connection.js");
 const data = require('./routes/data.js');
 
+// Start MongoDB connection
 connection.connect()
 	.then(function(response){
 		// console.log("I'm booted and connected. Moving on...");
