@@ -1,5 +1,4 @@
 const express = require("express");
-const dotenv = require('dotenv').config();
 const MongoClient = require('mongodb').MongoClient
 const assert = require('assert');
 var _db = null;

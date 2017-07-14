@@ -1,4 +1,5 @@
 const express = require('express');
+const dotenv = require('dotenv').config();
 const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const app = express();

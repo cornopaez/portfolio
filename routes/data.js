@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const connection = require("./mongo-connection.js");
+const blacklist = process.env.DB_BLACKLIST.split(" ");
 
 module.exports = router;
 
@@ -29,7 +30,7 @@ router.get('/:name', function(req, res) {
 	var cursor = db.collection(name).find(query, projection)
 
 	cursor.next(function(err, docs){
-		if (docs === null || docs === undefined) {
+		if (docs === null || docs === undefined || blacklist.indexOf(name) !== -1) {
 			res.redirect("/error");
 		} else {
 			res.json(docs);
