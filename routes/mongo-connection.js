@@ -1,4 +1,5 @@
 const express = require("express");
+const dotenv = require('dotenv').config();
 const MongoClient = require('mongodb').MongoClient
 const assert = require('assert');
 var _db = null;
@@ -8,7 +9,7 @@ module.exports =  {
 	connect: connect
 }
 
-const url = process.env.MONGODB_URI ? process.env.MONGODB_URI : "mongodb://portfolio:consumePaez007@127.0.0.1:27017/portfolio"
+const url = process.env.MONGODB_URI ? process.env.MONGODB_URI : process.env.MONGODB_LOCAL;
 
 // Creates a connection to MongoDB and returns the db object.
 function connect() {
