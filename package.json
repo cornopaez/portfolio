@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "cornopaez.com",
   "main": "node.js",
+  "engines": {
+    "node": "8.1.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,7 +28,6 @@
     "express": "^4.15.2",
     "helmet": "^3.6.1",
     "mongodb": "^2.2.27",
-    "prerender-node": "^2.7.1",
-    "node": "^8.1.4"
+    "prerender-node": "^2.7.1"
   }
 }
