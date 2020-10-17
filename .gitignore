@@ -39,3 +39,4 @@ Thumbs.db
 #Project specific files#
 ########################
 .env
+node_modules/

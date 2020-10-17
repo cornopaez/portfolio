@@ -1,0 +1,758 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ng-bind",
+				"ng-bind-html\tAngularJS"
+			],
+			[
+				"ng-bin",
+				"ng-bind-html\tAngularJS"
+			],
+			[
+				"ng-re",
+				"ng-repeat\tAngularJS"
+			],
+			[
+				"scope",
+				"$rootScope\tAngularJS"
+			],
+			[
+				"contro",
+				"controller\tAngularJS"
+			],
+			[
+				"ng-v",
+				"ng-view\tAngularJS"
+			],
+			[
+				"route",
+				"$routeProvider\tAngularJS"
+			],
+			[
+				"rou",
+				"$routeProvider\tAngularJS"
+			],
+			[
+				"whi",
+				"white-space: "
+			],
+			[
+				"me",
+				"meta\tTag"
+			],
+			[
+				"align",
+				"align-items: "
+			],
+			[
+				"alig",
+				"align-items: "
+			],
+			[
+				"padding",
+				"padding-right: "
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"max",
+				"max-width: "
+			],
+			[
+				"min-",
+				"min-width: "
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"border",
+				"border-left"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"paddi",
+				"padding-bottom"
+			],
+			[
+				"bot",
+				"border-top-width"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"bod",
+				"border"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"bor",
+				"border-top"
+			],
+			[
+				"bottom",
+				"margin-bottom"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"vali",
+				"validProcedure"
+			],
+			[
+				"valid",
+				"validProcedure"
+			],
+			[
+				"para",
+				"parametersArray"
+			],
+			[
+				"pro",
+				"Procedure"
+			],
+			[
+				"param",
+				"parametersArray"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"font-st",
+				"font-style"
+			],
+			[
+				"ti",
+				"title\tTag"
+			],
+			[
+				"min",
+				"min-height"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta name=viewport content=\"width=device-width, initial-scale=1\" charset=\"utf-8\">\n\t\t<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"sass/main.css\">\n\t\t<link rel=\"icon\" type=\"image/png\" href=\"img/favicon.ico\" sizes=\"32x32\" />\n\t\t<script src=\"https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js\"></script>\n\t\t<script src=\"https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js\"></script>\n\n\t\t<title>Mauricio_Páez | Developer</title>\n\t</head>\n\t<body ng-app=\"Portfolio\">\n\t\t<!-- <div ng-controller=\"HomeController\"> -->\n\t\t\t<nav class=\"navbar navbar-default header\">\n\t\t\t\t<div class=\"container-fluid\">\n\t\t\t\t\t<div class=\"navbar-header\">\n\t\t\t\t\t\t<button type=\"button\" class=\"navbar-toggle collapsed toggle-button-right\" data-toggle=\"collapse\" data-target=\"#right-pills\" aria-expanded=\"false\">\n\t\t\t\t\t\t<span class=\"sr-only\">Toggle navigation</span>\n\t\t\t\t\t\t\t<span class=\"icon-bar icon-line\"></span>\n\t\t\t\t\t\t\t<span class=\"icon-bar icon-line\"></span>\n\t\t\t\t\t\t\t<span class=\"icon-bar icon-line\"></span>\n\t\t\t\t\t\t</button>\n\t\t\t\t\t\t<a class=\"navbar-brand\" href=\"#/\">Mauricio_Páez</a>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"collapse navbar-collapse link-container\" id=\"right-pills\">\n\t\t\t\t\t\t<ul class=\"nav navbar-nav main-links\">\n\t\t\t\t\t\t\t<li class=\"list-item\">\n\t\t\t\t\t\t\t\t<a href=\"#/Projects\">Projects</a>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t<li class=\"list-item\">\n\t\t\t\t\t\t\t\t<a href=\"#About\">About</a>\n\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t</div>\n\t\t\t\t</div> \n\t\t\t</nav>\n\n\t\t\t<div ng-view></div>\n\n\t\t\t<footer class=\"footer\">\n\t\t\t\t<div class=\"social-media-links\">\n\t\t\t\t\t<ul class=\"nav nav-pills nav-stacked\">\n\t\t\t\t\t\t<li class=\"nav-item\">\n\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"https://twitter.com/cornopaez\">Twitter</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li class=\"nav-item\">\n\t\t\t\t\t\t\t<a href=\"https://www.github.com/cornopaez\">GitHub</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li class=\"nav-item\">\n\t\t\t\t\t\t\t<a href=\"https://www.codecademy.com/cornopaez\">Codecademy</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li class=\"nav-item\">\n\t\t\t\t\t\t\t<a href=\"https://www.codewars.com/users/cornopaez\">Codewars</a>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</footer>\n\t\t<!-- </div> -->\n\n\t\t<!-- Script Import -->\n\t\t<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n\t\t<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\" integrity=\"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa\" crossorigin=\"anonymous\"></script>\n\n\t\t<!-- Angular App -->\n\t\t<script src=\"js/portfolio/app.js\"></script>\n\n\t\t<!-- Abgular Controllers -->\n\t\t<script src=\"js/portfolio/controllers/HomeController.js\"></script>\n\t\t<script src=\"js/portfolio/controllers/ProjectsController.js\"></script>\n\t\t<script src=\"js/portfolio/controllers/AboutController.js\"></script>\n\t</body>\n</html>\n",
+			"file": "index.html",
+			"file_size": 3045,
+			"file_write_time": 131338179460000000,
+			"settings":
+			{
+				"buffer_size": 2938,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<div class=\"jumbotron\">\n\t<h1>{{ homeText.jumbotron }}</h1>\n</div>\n<div class=\"support-1\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<p>{{ homeText.support.paragraph }}</p>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-4\" ng-repeat=\"point in homeText.support.points\">\n\t\t\t\t<h2>{{ point.title }}</h2>\n\t\t\t\t<p>{{ point.text }}</p>\n\t\t\t</div>\n\t\t</div>\n\n\t</div>\n</div>\n<div class=\"support-2\">\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-6\">\n\t\t\t\t<a href=\"#/Projects\" class=\"btn\">See some of my projects</a>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-6\">\n\t\t\t\t<a href=\"pages/about.html\" class=\"btn\">Learn more about me</a>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n",
+			"file": "views/home.html",
+			"file_size": 699,
+			"file_write_time": 131338179180000000,
+			"settings":
+			{
+				"buffer_size": 708,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<div class=\"all-projects\">\n\t<div class=\"project-description\" ng-repeat=\"project in projects\">\n\t\t<div class=\"container\">\n\t    \t<div class=\"row detail-row\">\n\t    \t\t<div class=\"col-sm-8 long-text\">\n\t    \t\t\t<h2> {{ project.title }} </h2>\n\t    \t\t\t<p>{{ project.description }}</p>\n\t        \t</div>\n\t        \t<div class=\"col-sm-4 project-details\">\n\t\t          \t<span>Implemented using:</span>\n\t\t        \t<ul>\n\t\t            \t<li ng-repeat=\"icon in project.icons\">\n\t\t            \t\t<i class=\"{{ icon }}\"></i>\n\t\t            \t</li>\n\t\t          \t</ul>\n\t\t          \t<div class=\"row detail-row\">\n\t\t\t    \t\t\t</div>\n\t\t        \t<a href=\"{{ project.button.href }}\" class=\"{{ project.button.classes }}\">{{ project.button.text }}</a>\n\t        \t</div>\n\t    \t</div>\n\t    \t<div class=\"row detail-row\">\n\t    \t</div>\n\t    \t<div class=\"row detail-row\">\n\t    \t\t<div class=\"col-sm-12 project-footer\">\n\t    \t\t\t{{ project.footer }}\n\t        </div>\n\t      </div>\n\t\t</div>\n\t</div>\n</div>",
+			"file": "views/projects.html",
+			"file_size": 953,
+			"file_write_time": 131338118920000000,
+			"settings":
+			{
+				"buffer_size": 953,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<div class=\"about-content\">\n\t<div class=\"container\">\n\t\t<div class=\"row top_image\">\n\t\t\t<img ng-src=\"../img/close-up.png\" title=\"Caricature of the developer\" />\n\t\t</div>\n\t\t<div class=\"row background about-details\" id=\"background\">\n\t\t\t<div class=\"col-md-4 section-title\">\n\t\t\t\t<h2>{{ aboutText.background[0].title }}</h2>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-8 section-content\">\n\t\t\t\t<p>{{ aboutText.background[0].text }}</p>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row languages about-details\" id=\"languages\">\n\t\t\t<div class=\"col-md-4 section-title\">\n\t\t\t\t<h2>{{ aboutText.languages[0].title }}</h2>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-8 section-content\">\n\t\t\t\t<span class=\"lang-icon\" ng-repeat=\"icon in aboutText.languages[0].icons\">\n\t\t\t\t\t<i class=\"{{ icon }}\"></i>\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row work-experience about-details\" id=\"work-experience\">\n\t\t\t<div class=\"col-md-4 section-title\">\n\t\t\t\t<h2>{{ aboutText.experience[0].title }}</h2>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-8 section-content\">\n\t\t\t\t<div ng-repeat=\"entity in aboutText.experience[0].entities\">\n\t\t\t\t\t<div class=\"content-subtitle\">{{ entity.title }}</div>\n\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li ng-repeat=\"point in entity.points\" ng-bind-html=\"point\"></li>\n\t\t\t\t\t</ul>\n\t\t\t\t\t<br>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row education about-details\" id=\"education\">\n\t\t\t<div class=\"col-md-4 section-title\">\n\t\t\t\t<h2>{{ aboutText.education[0].title }}</h2>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-8 section-content\">\n\t\t\t\t<div ng-repeat=\"entity in aboutText.education[0].entities\">\n\t\t\t\t\t<div class=\"content-subtitle\">{{ entity.title }}</div>\n\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li ng-repeat=\"point in entity.points\" ng-bind-html=\"point\"></li>\n\t\t\t\t\t</ul>\n\t\t\t\t\t<br>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>",
+			"file": "views/about.html",
+			"file_size": 1715,
+			"file_write_time": 131338175840000000,
+			"settings":
+			{
+				"buffer_size": 1715,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "var app = angular.module(\"Portfolio\", [\"ngRoute\", \"ngSanitize\"]);\n\napp.config(function($routeProvider) {\n\t$routeProvider\n\t.when(\"/\", {\n\t\tcontroller: \"HomeController\",\n\t\ttemplateUrl: \"views/home.html\"\n\t})\n\t.when(\"/Projects\", {\n\t\tcontroller: \"ProjectsController\",\n\t\ttemplateUrl: \"views/projects.html\"\n\t})\n\t.when(\"/About\", {\n\t\tcontroller: \"AboutController\",\n\t\ttemplateUrl: \"views/about.html\"\n\t})\n\t.otherwise({\n\t\tredirectTo: \"/\"\n\t});\n});",
+			"file": "js/portfolio/app.js",
+			"file_size": 433,
+			"file_write_time": 131338164130000000,
+			"settings":
+			{
+				"buffer_size": 433,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "app.controller(\"HomeController\", [\"$scope\", function($scope){\n\t$scope.homeText = {\n\t\tjumbotron: \"Hi. I like to code.\",\n\t\tsupport: {\n\t\t\tparagraph: \"I'm a Pittsburgh-based developer with enough knowledge of every aspect of the stack to be dangerous (and break things). \\n \\n What make me stand out from others?\",\n\t\t\tpoints: [\n\t\t\t\t{\n\t\t\t\t\ttitle: \"Dedication\",\n\t\t\t\t\ttext: \"Passion drives every project I own\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\ttitle: \"Character\",\n\t\t\t\t\ttext: \"Flexibility and thoroughness- the two things that define me.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\ttitle: \"Creativity\",\n\t\t\t\t\ttext: \"My main background has always been the creative side: a strength that cannot be improvised.\"\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t};\n}]);",
+			"file": "js/portfolio/controllers/HomeController.js",
+			"file_size": 683,
+			"file_write_time": 131338129880000000,
+			"settings":
+			{
+				"buffer_size": 683,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "app.controller(\"ProjectsController\", [\"$scope\", function($scope){\n\t$scope.projects = [\n\t\t{\n\t\t\ttitle: \"Portfolio\",\n\t\t\tdescription: \"This website is the first project I've taken on, at least on the Web Development front. It is designed with simplicity in mind following most of the concepts I have learned on Codecademy's HTML, CSS, SASS, and AngularJS tracks.\",\n\t\t\tbutton: {\n\t\t\t\ttext: \"Go to Main Page\",\n\t\t\t\tclasses: \"btn\",\n\t\t\t\thref: \"../index.html\"\n\t\t\t},\n\t\t\ticons: [\n\t\t\t\t\"devicon-html5-plain-wordmark\",\n\t\t\t\t\"devicon-bootstrap-plain-wordmark\",\n\t\t\t\t\"devicon-css3-plain-wordmark\",\n\t\t\t\t\"devicon-sass-original\",\n\t\t\t\t\"devicon-angularjs-plain\"\n\t\t\t],\n\t\t\tfooter: \"Made by: Mauricio Páez - Pittsburgh, 2017\"\n\t\t},\n\t\t{\n\t\t\ttitle: \"Adventure Game\",\n\t\t\tdescription: \"This game is in the vein of vintage 1980's text-based adventures. This one in particular is an adaptation of Edgar Allan Poe's \\\"Murders in the Rue Morgue\\\"\",\n\t\t\tbutton: {\n\t\t\t\ttext: \"Start Game\",\n\t\t\t\tclasses: \"btn\",\n\t\t\t\thref: \"adventure-game.html\"\n\t\t\t},\n\t\t\ticons: [\n\t\t\t\t\"devicon-html5-plain-wordmark\",\n\t\t\t\t\"devicon-css3-plain-wordmark\",\n\t\t\t\t\"devicon-sass-original\",\n\t\t\t\t\"devicon-javascript-plain\",\n\t\t\t\t\"devicon-jquery-plain-wordmark\"\n\t\t\t],\n\t\t\tfooter: \"Original text by: Edgar Allan Poe - Adated by: Elizabeth Páez - Made by: Mauricio Páez - Pittsburgh 2017\"\n\t\t},\n\t\t{\n\t\t\ttitle: \"Banking Application\",\n\t\t\tdescription: \"A simple banking application. Please bank with us- No fees, no nonsense. All your moneis are belong to us! Coming soon.\",\n\t\t\tbutton: {\n\t\t\t\ttext: \"Start Banking\",\n\t\t\t\tclasses: \"btn disabled\",\n\t\t\t\thref: \"#\"\n\t\t\t},\n\t\t\tbuttonText: \"Start Banking\",\n\t\t\ticons: [\n\t\t\t\t\"devicon-html5-plain-wordmark\",\n\t\t\t\t\"devicon-css3-plain-wordmark\",\n\t\t\t\t\"devicon-sass-original\",\n\t\t\t\t\"devicon-angularjs-plain\",\n\t\t\t\t\"fa fa-database\"\n\t\t\t],\n\t\t\tfooter: \"Made by: Mauricio Páez - Pittsburgh 2017\"\n\t\t}\n\t];\n}]);",
+			"file": "js/portfolio/controllers/ProjectsController.js",
+			"file_size": 1852,
+			"file_write_time": 131338082040000000,
+			"settings":
+			{
+				"buffer_size": 1848,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "app.controller(\"AboutController\", [\"$scope\", function($scope){\n\t$scope.aboutText = {\n\t\tbackground: [\n\t\t\t{\n\t\t\t\ttitle: \"Background\",\n\t\t\t\ttext: \"I am a former musician who's discovered the joy of coding. I initially learned to code in Java, building small programs for my classes. Relational databases proved fascinating as well, and SQL a powerful tool to access the data. I'm currently learning about web development and working to learn about the Full Stack, to round my knowledge. I am familiar and feel comfortable in the languages below. Feel free to poke around the site and contact me if you have any questions.\"\n\t\t\t}\n\t\t],\n\t\tlanguages: [\n\t\t\t{\n\t\t\t\ttitle: \"Languages\",\n\t\t\t\ticons: [\n\t\t\t\t\t\"devicon-html5-plain-wordmark\",\n\t\t\t\t\t\"devicon-css3-plain-wordmark\",\n\t\t\t\t\t\"devicon-sass-original\",\n\t\t\t\t\t\"devicon-javascript-plain\",\n\t\t\t\t\t\"devicon-jquery-plain-wordmark\",\n\t\t\t\t\t\"devicon-angularjs-plain\",\n\t\t\t\t\t\"devicon-bootstrap-plain-wordmark\",\n\t\t\t\t\t\"devicon-git-plain-wordmark\",\n\t\t\t\t\t\"devicon-github-plain-wordmark\",\n\t\t\t\t\t\"devicon-java-plain\",\n\t\t\t\t\t\"fa fa-database\"\n\t\t\t\t]\n\t\t\t}\n\t\t],\n\t\texperience: [\n\t\t\t{\n\t\t\t\ttitle: \"Experience\",\n\t\t\t\tentities: [\n\t\t\t\t\t{\n\t\t\t\t\t\ttitle: \"Corporate\",\n\t\t\t\t\t\tpoints: [\n\t\t\t\t\t\t\t\"Proposed and built a database in MS Access for better data management. Front-end in VisualBasic for Applications, SQL queries in AccessSQL/JetSQL.\",\n\t\t\t\t\t\t\t\"Contributed and maintained code in documents necessary for the course of business. Lots of Excel sheets with VisualBasic for calculations. Reviewed formulas provided by Business Analysts for those documents to assure accuracy.\",\n\t\t\t\t\t\t\t\"Assisted in transition from legacy systems and databases to new ones.\",\n\t\t\t\t\t\t\t\"Participated in one Hackaton at the company.\"\n\t\t\t\t\t\t]\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\ttitle: \"Freelance Work\",\n\t\t\t\t\t\tpoints: [\n\t\t\t\t\t\t\t\"I've built and maintained this website on my own. It is a permanent work in progress, so look for continual improvements.\",\n\t\t\t\t\t\t\t\"Solid foundation in front-end web development with HTML & CSS.\",\n\t\t\t\t\t\t\t\"Familiarity with CSS pre-processing with SASS\",\n\t\t\t\t\t\t\t\"Experience with JavaScript and JQuery.\",\n\t\t\t\t\t\t\t\"Experience with Twitter's Bootstrap framework and CSS3's Flexbox for building responsive websites.\"\n\t\t\t\t\t\t]\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\ttitle: \"Extras\",\n\t\t\t\t\t\tpoints: [\n\t\t\t\t\t\t\t\"I use <a href=\\\"https://www.codewars.com/users/cornopaez\\\">Codewars</a> to keep up with the languages I know.\"\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t],\n\t\teducation: [\n\t\t\t{\n\t\t\t\ttitle: \"Education\",\n\t\t\t\tentities: [\n\t\t\t\t\t{\n\t\t\t\t\t\ttitle: \"Codecademy\",\n\t\t\t\t\t\tpoints: [\n\t\t\t\t\t\t\t\"Freelance Website Developer - 2017 - [ <a href=\\\"https://ready.codecademy.com\\\">View Program Website</a> ]\",\n\t\t\t\t\t\t\t\"Full Stack Track - [ <a href=\\\"https://www.codecademy.com/cornopaez\\\">View my profile</a> ]\"\n\t\t\t\t\t\t]\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\ttitle: \"University of Pittsburgh\",\n\t\t\t\t\t\tpoints: [\n\t\t\t\t\t\t\t\"Coursework completed for Bachelor of Science in Information Science\"\n\t\t\t\t\t\t]\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\ttitle: \"Carnegie Mellon University\",\n\t\t\t\t\t\tpoints: [\n\t\t\t\t\t\t\t\"Master of Music - 2012\"\n\t\t\t\t\t\t]\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\ttitle: \"University of Utah\",\n\t\t\t\t\t\tpoints: [\n\t\t\t\t\t\t\t\"Bachelor of Music in Music Performance - 2010\"\n\t\t\t\t\t\t]\n\t\t\t\t\t},\n\t\t\t\t]\n\t\t\t}\n\t\t]\n\t};\n}])",
+			"file": "js/portfolio/controllers/AboutController.js",
+			"file_size": 3175,
+			"file_write_time": 131338175000000000,
+			"settings":
+			{
+				"buffer_size": 3175,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "var http = require('http');\nvar fs = require('fs');\nvar url = require('url');\n\n// Create a server\nhttp.createServer( function (request, response) {  \n   // Parse the request containing file name\n   var pathname = url.parse(request.url).pathname;\n   \n   // Print the name of the file for which request is made.\n   console.log(\"Request for \" + pathname + \" received.\");\n   \n   // Read the requested file content from file system\n   fs.readFile(pathname.substr(1), function (err, data) {\n      if (err) {\n         console.log(err);\n         // HTTP Status: 404 : NOT FOUND\n         // Content Type: text/plain\n         response.writeHead(404, {'Content-Type': 'text/html'});\n      }else {\t\n         //Page found\t  \n         // HTTP Status: 200 : OK\n         // Content Type: text/plain\n         response.writeHead(200, {'Content-Type': 'text/html'});\n         \t\n         \n         // Write the content of the file to response body\n         response.write(data.toString());\t\t\n      }\n      // Send the response body \n      response.end();\n   });   \n}).listen(8081);\n\n// Console will print the message\nconsole.log('Server running at http://127.0.0.1:8081/');",
+			"file": "node.js",
+			"file_size": 1153,
+			"file_write_time": 131338076490000000,
+			"settings":
+			{
+				"buffer_size": 1153,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "control",
+		"selected_items":
+		[
+			[
+				"control",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/sass/layout/_macro-layout.scss",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/sass/layout/_header.scss",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/sass/layout/_footer.scss",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/views/projects.html",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/pages/about.html",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/pages/projects.html",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/js/projects/controllers/MainController.js",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/js/portfolio/controllers/MainController.js",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/js/text/indexText.json",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/js/portfolio/app.js",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/js/app.js",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/sass/main.css",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/sass/main.scss",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/index.html",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/sass/base/_variables.scss",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/sass/base/_mixins.scss",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/sass/sass.sublime-workspace",
+		"/Users/mauriciopaez/Documents/Projects/Websites/codecademy/dasmotos/resources/css/main.css",
+		"/Users/mauriciopaez/Documents/Projects/Websites/codecademy/dasmotos/index.html",
+		"/Users/mauriciopaez/Documents/Projects/Websites/codecademy/BeachParadise/resources/css/main.css",
+		"/Users/mauriciopaez/Documents/Projects/Websites/codecademy/BeachParadise/index.html",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/sass/themes/_themes.scss",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/sass/base/_variables.sass",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/sass/layout/_macro-layout.sass",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/sass/themes/_themes.sass",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/sass/modules/_micro-layout.sass",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/sass/base/_mixins.sass",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/sass/_mixins.sass",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/sass/_variables.sass",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/css/main-1.css",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/css/main-1.scss",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/portfolio.sublime-workspace",
+		"/Users/mauriciopaez/Documents/Projects/Websites/Portfolio/css/main.css",
+		"/Users/mauriciopaez/Desktop/Portfolio/css/main.css",
+		"/Users/mauriciopaez/Desktop/Portfolio/pages/projects.html",
+		"/Users/mauriciopaez/Desktop/Portfolio/pages/about.html",
+		"/Users/mauriciopaez/Desktop/Portfolio/index.html",
+		"/Users/mauriciopaez/Desktop/PNCAPIFest/index.html",
+		"/Users/mauriciopaez/Desktop/PNCAPIFest/css/main.css",
+		"/Users/mauriciopaez/Desktop/PNCAPIFest/script/script.js",
+		"/Users/mauriciopaez/Desktop/query.sql",
+		"/Users/mauriciopaez/Desktop/PNCAPIFest/css/main.scss",
+		"/Users/mauriciopaez/Desktop/Portfolio/css/untitled.js",
+		"/Users/mauriciopaez/Desktop/Portfolio/css/untitled.scss",
+		"/Users/mauriciopaez/Desktop/untitled.html"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"'",
+			"\t\t\t\n",
+			"exp",
+			".support",
+			"a"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"&#39",
+			".support-1"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2938,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1589,
+								1589
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 347.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/home.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 708,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								635,
+								619
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "views/projects.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 953,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								270,
+								270
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views/about.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1715,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1681,
+								1681
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/portfolio/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 433,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								54,
+								54
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/portfolio/controllers/HomeController.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 683,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								678,
+								678
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "js/portfolio/controllers/ProjectsController.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1848,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								74,
+								74
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "js/portfolio/controllers/AboutController.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3175,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2563,
+								2563
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 1.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "node.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1153,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								847,
+								847
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "portfolio.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
