@@ -13,12 +13,19 @@ const url = process.env.MONGODB_URI ? process.env.MONGODB_URI : process.env.MONG
 // Creates a connection to MongoDB and returns the db object.
 function connect() {
 
-	return new Promise(function(resolve, reject){
-		MongoClient.connect(url, function(err, db) {
+	options = {
+		useUnifiedTopology: true
+	};
+
+	return new Promise((resolve, reject) =>{
+		MongoClient.connect(url, options, (err, db) => {
 			if (err) reject(err);
 
 			console.log("Connected successfully to database");
-			_db = db;
+			var dbName = db.s.options.dbName
+			// console.log(db.s.options.dbName)
+			_db = db.db(dbName);
+			// _db = db;
 			resolve(db);
 		});
 	});

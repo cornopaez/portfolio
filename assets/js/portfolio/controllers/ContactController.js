@@ -22,9 +22,9 @@ app.controller('ContactController', ['$scope', function($scope){
     // reCaptcha information
 	$scope.response = null;
     $scope.widgetId = null;
-    $scope.model = {
-        key: '6LfqQyQUAAAAAEUzPV8U48Vr3qiGxHAyaFA0YCBG'
-    };
+    // $scope.model = {
+    //     key: '6LfqQyQUAAAAAFySY1Hde5_whqMyA7kpcvQiYkO6'
+    // };
     $scope.setResponse = function (response) {
         console.info('Response available');
         $scope.response = response;
